@@ -14,6 +14,8 @@ import SpecificProduct from "./products/pages/SpecificProduct";
 import WishlistrankingTop50 from "./products/pages/WishlistrankingTop50";
 import NewlyAddedRankingTop50 from "./products/pages/NewlyAddedRankingTop50";
 import BestSellerRankingTop50 from "./products/pages/BestSellerRankingTop50";
+import Overview from "./accounts/overview/pages/Overview";
+import OrderHistory from "./accounts/order-history/pages/OrderHistory";
 
 function App() {
   let routes;
@@ -83,6 +85,14 @@ function App() {
       <Route path="/product/:productId" exact>
         <SpecificProduct />
       </Route>
+
+      {/* account */}
+      <Route path="/account/overview" exact>
+        <Overview />
+      </Route>
+      <Route path="/account/order-history" exact>
+        <OrderHistory />
+      </Route>
     </Switch>
   );
 
@@ -121,6 +131,12 @@ function App() {
                 <Link to={"/product/bestseller/:category"}>
                   Best seller ranking top 50
                 </Link>
+              </li>
+              <li>
+                <Link to={"/account/overview"}>account overview</Link>
+              </li>
+              <li>
+                <Link to={"/account/order-history"}>order history</Link>
               </li>
             </ul>
           </nav>
