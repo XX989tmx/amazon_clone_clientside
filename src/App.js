@@ -13,6 +13,7 @@ import NewProduct from "./products/pages/NewProduct";
 import SpecificProduct from "./products/pages/SpecificProduct";
 import WishlistrankingTop50 from "./products/pages/WishlistrankingTop50";
 import NewlyAddedRankingTop50 from "./products/pages/NewlyAddedRankingTop50";
+import BestSellerRankingTop50 from "./products/pages/BestSellerRankingTop50";
 
 function App() {
   let routes;
@@ -60,23 +61,26 @@ function App() {
 
        */}
       {/* home */}
-      <Route path="/home">
+      <Route path="/home" exact>
         <Home />
       </Route>
       {/* product */}
-      <Route path="/product/new">
+      <Route path="/product/new" exact>
         <NewProduct />
       </Route>
-      <Route path="/product/productIndex/:category">
+      <Route path="/product/productIndex/:category" exact>
         <ProductIndex />
       </Route>
-      <Route path="/product/wishlistRanking/:category">
+      <Route path="/product/wishlistRanking/:category" exact>
         <WishlistrankingTop50 />
       </Route>
-      <Route path="/product/newlyAdded/:category">
+      <Route path="/product/newlyAdded/:category" exact>
         <NewlyAddedRankingTop50 />
       </Route>
-      <Route path="/product/:productId">
+      <Route path="/product/bestseller/:category" exact>
+        <BestSellerRankingTop50 />
+      </Route>
+      <Route path="/product/:productId" exact>
         <SpecificProduct />
       </Route>
     </Switch>
@@ -111,6 +115,11 @@ function App() {
               <li>
                 <Link to={"/product/newlyAdded/:category"}>
                   Newly added rankin top 50
+                </Link>
+              </li>
+              <li>
+                <Link to={"/product/bestseller/:category"}>
+                  Best seller ranking top 50
                 </Link>
               </li>
             </ul>
