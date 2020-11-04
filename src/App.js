@@ -18,6 +18,7 @@ import Overview from "./accounts/overview/pages/Overview";
 import OrderHistory from "./accounts/order-history/pages/OrderHistory";
 import Addresses from "./accounts/addresses/pages/Addresses";
 import NewAddress from "./accounts/addresses/pages/NewAddress";
+import UpdateAddress from "./accounts/addresses/pages/UpdateAddress";
 
 function App() {
   let routes;
@@ -101,6 +102,9 @@ function App() {
       <Route path="/account/addresses/new" exact>
         <NewAddress />
       </Route>
+      <Route path="/account/addresses/update" exact>
+        <UpdateAddress />
+      </Route>
     </Switch>
   );
 
@@ -151,6 +155,9 @@ function App() {
               </li>
               <li>
                 <Link to={"/account/addresses/new"}>add address</Link>
+              </li>
+              <li>
+                <Link to={"/account/addresses/update"}>update address</Link>
               </li>
             </ul>
           </nav>
