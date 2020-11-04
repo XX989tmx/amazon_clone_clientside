@@ -23,6 +23,7 @@ import PaymentMethods from "./accounts/payments/payment-methods/pages/PaymentMet
 import NewPaymentMethod from "./accounts/payments/payment-methods/pages/NewPaymentMethod";
 import UpdatePaymentMethod from "./accounts/payments/payment-methods/pages/UpdatePaymentMethod";
 import TransactionHistory from "./accounts/payments/transactions/pages/TransactionHistory";
+import Cart from "./cart/page/Cart";
 
 function App() {
   let routes;
@@ -91,6 +92,11 @@ function App() {
       </Route>
       <Route path="/product/:productId" exact>
         <SpecificProduct />
+      </Route>
+
+      {/* cart */}
+      <Route path="/cart" exact> 
+        <Cart />
       </Route>
 
       {/* account */}
@@ -197,6 +203,9 @@ function App() {
                 <Link to={"/account/your-payments/transaction-history"}>
                   transaction history
                 </Link>
+              </li>
+              <li>
+                <Link to={"/cart"}>cart page</Link>
               </li>
             </ul>
           </nav>
