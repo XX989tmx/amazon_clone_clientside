@@ -20,6 +20,7 @@ import Addresses from "./accounts/addresses/pages/Addresses";
 import NewAddress from "./accounts/addresses/pages/NewAddress";
 import UpdateAddress from "./accounts/addresses/pages/UpdateAddress";
 import PaymentMethods from "./accounts/payments/payment-methods/pages/PaymentMethods";
+import NewPaymentMethod from "./accounts/payments/payment-methods/pages/NewPaymentMethod";
 
 function App() {
   let routes;
@@ -111,6 +112,9 @@ function App() {
       <Route path="/account/your-payments/payment-methods" exact>
         <PaymentMethods />
       </Route>
+      <Route path="/account/your-payments/payment-methods/new" exact>
+        <NewPaymentMethod />
+      </Route>
     </Switch>
   );
 
@@ -169,6 +173,11 @@ function App() {
                 <Link to={"/account/your-payments/payment-methods"}>
                   {" "}
                   payment methods index
+                </Link>
+              </li>
+              <li>
+                <Link to={"/account/your-payments/payment-methods/new"}>
+                  add new payment method
                 </Link>
               </li>
             </ul>
