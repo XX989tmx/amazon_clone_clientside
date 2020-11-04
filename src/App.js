@@ -8,6 +8,9 @@ import {
 import React from "react";
 import "./App.css";
 import Home from "./static/pages/Home";
+import ProductIndex from "./products/pages/ProductIndex";
+import NewProduct from "./products/pages/NewProduct";
+import SpecificProduct from "./products/pages/SpecificProduct";
 
 function App() {
   let routes;
@@ -54,8 +57,19 @@ function App() {
       // api/admin/auth/signup
 
        */}
+       {/* home */}
       <Route path="/home">
         <Home />
+      </Route>
+      {/* product */}
+      <Route path="/product/new">
+        <NewProduct />
+      </Route>
+      <Route path="/product/productIndex/:category">
+        <ProductIndex />
+      </Route>
+      <Route path="/product/:productId">
+        <SpecificProduct />
       </Route>
     </Switch>
   );
@@ -69,6 +83,17 @@ function App() {
             <ul>
               <li>
                 <Link to={"/home"}>Home Page</Link>
+              </li>
+              <li>
+                <Link to={"/product/productIndex/:category"}>
+                  product index
+                </Link>
+              </li>
+              <li>
+                <Link to={"/product/new"}>add product</Link>
+              </li>
+              <li>
+                <Link to={"/product/:productId"}>specific product</Link>
               </li>
             </ul>
           </nav>
