@@ -16,6 +16,8 @@ import NewlyAddedRankingTop50 from "./products/pages/NewlyAddedRankingTop50";
 import BestSellerRankingTop50 from "./products/pages/BestSellerRankingTop50";
 import Overview from "./accounts/overview/pages/Overview";
 import OrderHistory from "./accounts/order-history/pages/OrderHistory";
+import Addresses from "./accounts/addresses/pages/Addresses";
+import NewAddress from "./accounts/addresses/pages/NewAddress";
 
 function App() {
   let routes;
@@ -93,6 +95,12 @@ function App() {
       <Route path="/account/order-history" exact>
         <OrderHistory />
       </Route>
+      <Route path="/account/addresses" exact>
+        <Addresses />
+      </Route>
+      <Route path="/account/addresses/new" exact>
+        <NewAddress />
+      </Route>
     </Switch>
   );
 
@@ -137,6 +145,12 @@ function App() {
               </li>
               <li>
                 <Link to={"/account/order-history"}>order history</Link>
+              </li>
+              <li>
+                <Link to={"/account/addresses"}>address index</Link>
+              </li>
+              <li>
+                <Link to={"/account/addresses/new"}>add address</Link>
               </li>
             </ul>
           </nav>
