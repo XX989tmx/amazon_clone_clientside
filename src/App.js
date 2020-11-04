@@ -11,6 +11,8 @@ import Home from "./static/pages/Home";
 import ProductIndex from "./products/pages/ProductIndex";
 import NewProduct from "./products/pages/NewProduct";
 import SpecificProduct from "./products/pages/SpecificProduct";
+import WishlistrankingTop50 from "./products/pages/WishlistrankingTop50";
+import NewlyAddedRankingTop50 from "./products/pages/NewlyAddedRankingTop50";
 
 function App() {
   let routes;
@@ -57,7 +59,7 @@ function App() {
       // api/admin/auth/signup
 
        */}
-       {/* home */}
+      {/* home */}
       <Route path="/home">
         <Home />
       </Route>
@@ -67,6 +69,12 @@ function App() {
       </Route>
       <Route path="/product/productIndex/:category">
         <ProductIndex />
+      </Route>
+      <Route path="/product/wishlistRanking/:category">
+        <WishlistrankingTop50 />
+      </Route>
+      <Route path="/product/newlyAdded/:category">
+        <NewlyAddedRankingTop50 />
       </Route>
       <Route path="/product/:productId">
         <SpecificProduct />
@@ -94,6 +102,16 @@ function App() {
               </li>
               <li>
                 <Link to={"/product/:productId"}>specific product</Link>
+              </li>
+              <li>
+                <Link to={"/product/wishlistRanking/:category"}>
+                  wish list ranking top 50
+                </Link>
+              </li>
+              <li>
+                <Link to={"/product/newlyAdded/:category"}>
+                  Newly added rankin top 50
+                </Link>
               </li>
             </ul>
           </nav>
