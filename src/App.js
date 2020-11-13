@@ -24,8 +24,12 @@ import NewPaymentMethod from "./accounts/payments/payment-methods/pages/NewPayme
 import UpdatePaymentMethod from "./accounts/payments/payment-methods/pages/UpdatePaymentMethod";
 import TransactionHistory from "./accounts/payments/transactions/pages/TransactionHistory";
 import Cart from "./cart/page/Cart";
+import { useAuth } from "./shared/hooks/auth-hook";
+import { AuthContext } from "./shared/context/auth-context";
 
 function App() {
+  const { Token, login, logout, UserId } = useAuth();
+
   let routes;
   routes = (
     <Switch>
@@ -95,7 +99,7 @@ function App() {
       </Route>
 
       {/* cart */}
-      <Route path="/cart" exact> 
+      <Route path="/cart" exact>
         <Cart />
       </Route>
 
@@ -134,85 +138,95 @@ function App() {
 
   return (
     <div>
-      <Router>
-        {/* temporary header */}
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to={"/home"}>Home Page</Link>
-              </li>
-              <li>
-                <Link to={"/product/productIndex/:category"}>
-                  product index
-                </Link>
-              </li>
-              <li>
-                <Link to={"/product/new"}>add product</Link>
-              </li>
-              <li>
-                <Link to={"/product/:productId"}>specific product</Link>
-              </li>
-              <li>
-                <Link to={"/product/wishlistRanking/:category"}>
-                  wish list ranking top 50
-                </Link>
-              </li>
-              <li>
-                <Link to={"/product/newlyAdded/:category"}>
-                  Newly added rankin top 50
-                </Link>
-              </li>
-              <li>
-                <Link to={"/product/bestseller/:category"}>
-                  Best seller ranking top 50
-                </Link>
-              </li>
-              <li>
-                <Link to={"/account/overview"}>account overview</Link>
-              </li>
-              <li>
-                <Link to={"/account/order-history"}>order history</Link>
-              </li>
-              <li>
-                <Link to={"/account/addresses"}>address index</Link>
-              </li>
-              <li>
-                <Link to={"/account/addresses/new"}>add address</Link>
-              </li>
-              <li>
-                <Link to={"/account/addresses/update"}>update address</Link>
-              </li>
-              <li>
-                <Link to={"/account/your-payments/payment-methods"}>
-                  {" "}
-                  payment methods index
-                </Link>
-              </li>
-              <li>
-                <Link to={"/account/your-payments/payment-methods/new"}>
-                  add new payment method
-                </Link>
-              </li>
-              <li>
-                <Link to={"/account/your-payments/payment-methods/update"}>
-                  update payment method
-                </Link>
-              </li>
-              <li>
-                <Link to={"/account/your-payments/transaction-history"}>
-                  transaction history
-                </Link>
-              </li>
-              <li>
-                <Link to={"/cart"}>cart page</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        {/* main */}
-        <main> {routes}</main>
-      </Router>
+      <AuthContext.Provider
+        value={{
+          isLoggedIn: !!Token,
+          token: Token,
+          userId: UserId,
+          login: login,
+          logout: logout,
+        }}
+      >
+        <Router>
+          {/* temporary header */}
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to={"/home"}>Home Page</Link>
+                </li>
+                <li>
+                  <Link to={"/product/productIndex/:category"}>
+                    product index
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/product/new"}>add product</Link>
+                </li>
+                <li>
+                  <Link to={"/product/:productId"}>specific product</Link>
+                </li>
+                <li>
+                  <Link to={"/product/wishlistRanking/:category"}>
+                    wish list ranking top 50
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/product/newlyAdded/:category"}>
+                    Newly added rankin top 50
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/product/bestseller/:category"}>
+                    Best seller ranking top 50
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/account/overview"}>account overview</Link>
+                </li>
+                <li>
+                  <Link to={"/account/order-history"}>order history</Link>
+                </li>
+                <li>
+                  <Link to={"/account/addresses"}>address index</Link>
+                </li>
+                <li>
+                  <Link to={"/account/addresses/new"}>add address</Link>
+                </li>
+                <li>
+                  <Link to={"/account/addresses/update"}>update address</Link>
+                </li>
+                <li>
+                  <Link to={"/account/your-payments/payment-methods"}>
+                    {" "}
+                    payment methods index
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/account/your-payments/payment-methods/new"}>
+                    add new payment method
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/account/your-payments/payment-methods/update"}>
+                    update payment method
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/account/your-payments/transaction-history"}>
+                    transaction history
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/cart"}>cart page</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          {/* main */}
+          <main> {routes}</main>
+        </Router>
+      </AuthContext.Provider>
     </div>
   );
 }
