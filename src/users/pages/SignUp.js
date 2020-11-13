@@ -6,9 +6,9 @@ import { AuthContext } from "../../shared/context/auth-context";
 const SignUp = () => {
   const auth = useContext(AuthContext);
   const history = useHistory();
-  const [Name, setName] = useState('');
-  const [Email, setEmail] = useState('');
-  const [Password, setPassword] = useState('');
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
 
   const SignupSubmitHandler = async (event) => {
     event.preventDefault();
@@ -20,11 +20,10 @@ const SignUp = () => {
     };
     console.log(data);
     try {
-      response = await fetch(`http://localhost:8080/api/users/signup`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json"},
-        data: data,
-      });
+      response = await Axios.post(
+        `http://localhost:8080/api/users/signup`,
+        data
+      );
     } catch (error) {
       console.log(error);
     }
