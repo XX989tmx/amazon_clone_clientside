@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import React from "react";
+import SellerSignup from "./sellers/pages/SellerSignup";
 import "./App.css";
 import Home from "./static/pages/Home";
 import ProductIndex from "./products/pages/ProductIndex";
@@ -28,6 +29,7 @@ import { useAuth } from "./shared/hooks/auth-hook";
 import { AuthContext } from "./shared/context/auth-context";
 import SignUp from "./users/pages/SignUp";
 import Login from "./users/pages/Login";
+import SellerLogin from "./sellers/pages/SellerLogin";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -82,12 +84,20 @@ function App() {
       </Route>
 
       {/* auth */}
-      <Route path="/auth/signup" exact>
+      <Route path="/user/auth/signup" exact>
         <SignUp />
       </Route>
-      <Route path="/auth/login" exact>
+      <Route path="/user/auth/login" exact>
         <Login />
       </Route>
+      {/* seller */}
+      <Router path="/seller/auth/signup" exact>
+        <SellerSignup />
+      </Router>
+      <Router path="/seller/auth/login" exact>
+        <SellerLogin />
+      </Router>
+
       {/* product */}
       <Route path="/product/new" exact>
         <NewProduct />
@@ -231,10 +241,10 @@ function App() {
                   <Link to={"/cart"}>cart page</Link>
                 </li>
                 <li>
-                  <Link to={"/auth/signup"}>signup</Link>
+                  <Link to={"/user/auth/signup"}>signup</Link>
                 </li>
                 <li>
-                  <Link to={"/auth/login"}>login</Link>
+                  <Link to={"/user/auth/login"}>login</Link>
                 </li>
               </ul>
             </nav>
