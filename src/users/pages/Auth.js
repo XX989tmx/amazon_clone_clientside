@@ -1,13 +1,13 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import { AuthContext } from "../../shared/context/auth-context";
+// import React, { useContext, useState } from "react";
+// import { useHistory } from "react-router-dom";
+// import { AuthContext } from "../../shared/context/auth-context";
 
-const Auth = () => {
-  const auth = useContext(AuthContext);
-  const [IsLoginMode, setIsLoginMode] = useState(true);
-  const history = useHistory();
+// const Auth = () => {
+//   const auth = useContext(AuthContext);
+//   const [IsLoginMode, setIsLoginMode] = useState(true);
+//   const history = useHistory();
 
-  return <div></div>;
-};
+//   return <div></div>;
+// };
 
-export default Auth;
+// export default Auth;

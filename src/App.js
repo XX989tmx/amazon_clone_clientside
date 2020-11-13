@@ -26,6 +26,8 @@ import TransactionHistory from "./accounts/payments/transactions/pages/Transacti
 import Cart from "./cart/page/Cart";
 import { useAuth } from "./shared/hooks/auth-hook";
 import { AuthContext } from "./shared/context/auth-context";
+import SignUp from "./users/pages/SignUp";
+import Login from "./users/pages/Login";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -77,6 +79,14 @@ function App() {
       {/* home */}
       <Route path="/home" exact>
         <Home />
+      </Route>
+
+      {/* auth */}
+      <Route path="/auth/signup" exact>
+        <SignUp />
+      </Route>
+      <Route path="/auth/login" exact>
+        <Login />
       </Route>
       {/* product */}
       <Route path="/product/new" exact>
@@ -219,6 +229,12 @@ function App() {
                 </li>
                 <li>
                   <Link to={"/cart"}>cart page</Link>
+                </li>
+                <li>
+                  <Link to={"/auth/signup"}>signup</Link>
+                </li>
+                <li>
+                  <Link to={"/auth/login"}>login</Link>
                 </li>
               </ul>
             </nav>
