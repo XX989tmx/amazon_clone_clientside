@@ -80,7 +80,17 @@ const HeaderNavigation = () => {
           <li>
             <Link to={"/user/auth/login"}>login</Link>
           </li>
-          <li><button onClick={auth.logout}>logout</button></li>
+          <li>
+            <button onClick={auth.logout}>logout</button>
+          </li>
+
+          <li>
+            <Link to={"/seller/auth/signup"}>seller signup</Link>
+          </li>
+
+          <li>
+            <Link to={"/seller/auth/login"}>seller login</Link>
+          </li>
         </ul>
       </nav>
     </header>

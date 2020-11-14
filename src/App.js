@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import React from "react";
 import SellerSignup from "./sellers/pages/SellerSignup";
+import { useAuthSeller } from "./shared/hooks/seller-auth-hook";
 import "./App.css";
 import Home from "./static/pages/Home";
 import ProductIndex from "./products/pages/ProductIndex";
@@ -34,7 +35,7 @@ import HeaderNavigation from "./shared/components/navigation/HeaderNavigation";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
-
+  const { sellerToken, sellerLogin, sellerLogout, SellerId } = useAuthSeller();
   let routes;
   routes = (
     <Switch>
@@ -166,6 +167,12 @@ function App() {
           userId: UserId,
           login: login,
           logout: logout,
+
+          isSellerLoggedIn: !!sellerToken,
+          sellerId: SellerId,
+          sellerToken: sellerToken,
+          sellerLogin: sellerLogin,
+          sellerLogout: sellerLogout,
         }}
       >
         <Router>

@@ -6,4 +6,10 @@ export const AuthContext = createContext({
   token: null,
   login: () => {},
   logout: () => {},
+
+  isSellerLoggedIn: false,
+  sellerId: null,
+  sellerToken: null,
+  sellerLogin: () => {},
+  sellerLogout: () => {},
 });
