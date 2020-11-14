@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/auth-context";
 
 const HeaderNavigation = () => {
-    const auth = useContext(AuthContext);
+  const auth = useContext(AuthContext);
   return (
     <header>
       <nav>
@@ -90,6 +90,9 @@ const HeaderNavigation = () => {
 
           <li>
             <Link to={"/seller/auth/login"}>seller login</Link>
+          </li>
+          <li>
+            <button onClick={auth.sellerLogout}>seller logout</button>
           </li>
         </ul>
       </nav>
