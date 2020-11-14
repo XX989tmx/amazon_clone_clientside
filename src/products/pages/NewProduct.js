@@ -24,6 +24,21 @@ const NewProduct = () => {
 
     try {
       const formData = new FormData();
+      formData.append("name", Name);
+      formData.append("price", Price);
+      formData.append("deliveryDate", DeliveryDate);
+      formData.append("brand", Brand);
+      formData.append("stockQuantity", StockQuantity);
+      formData.append("isStock", IsStock);
+      formData.append("parentCategory", ParentCategory);
+      formData.append("categories", Category);
+      formData.append("ancestorCategories", AncestorCategory);
+      formData.append("images", Image1);
+      formData.append("images", Image2);
+      formData.append("images", Image3);
+      formData.append("images", Image4);
+      formData.append("images", Image5);
+      console.log(formData);
     } catch (error) {
       console.log(error);
     }
@@ -84,7 +99,11 @@ const NewProduct = () => {
         <input type="date" onChange={deliveryDateChangeHandler} />
         <input type="text" onChange={brandChangeHandler} />
         <input type="number" onChange={stockQuantityChangeHandler} />
-        <input type="text" onChange={isStockChangeHandler} />
+        <select name="" id="isStock" onChange={isStockChangeHandler}>
+          <option value="">在庫の有無</option>
+          <option value="true">あり</option>
+          <option value="false">なし</option>
+        </select>
         <input type="text" onChange={parentCategoryChangeHandler} />
         <input type="text" onChange={categoryChangeHandler} />
         <input type="text" onChange={ancestorCategoryChangeHandler} />
