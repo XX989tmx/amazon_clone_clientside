@@ -19,6 +19,7 @@ const NewProduct = () => {
   const [Image3, setImage3] = useState();
   const [Image4, setImage4] = useState();
   const [Image5, setImage5] = useState();
+  const [Message, setMessage] = useState('');
 
   const productDataSubmitHandler = async (event) => {
     event.preventDefault();
@@ -44,10 +45,13 @@ const NewProduct = () => {
       response = await Axios.post(
         `http://localhost:8080/api/sellers/createProduct/${encodeURIComponent(
           auth.sellerId
-        )}?token=${encodeURIComponent(auth.sellerToken)}`,formData
+        )}?token=${encodeURIComponent(auth.sellerToken)}`,
+        formData
       );
+      setMessage(response.data.message);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
+      setMessage(error.message);
     }
     console.log(response);
   };
@@ -101,25 +105,67 @@ const NewProduct = () => {
   return (
     <div>
       <h1>NewProduct</h1>
+      {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={productDataSubmitHandler}>
         <input type="text" value={Name} onChange={nameChangeHandler} />
         <input type="number" value={Price} onChange={priceChangeHandler} />
-        <input type="date" value={DeliveryDate} onChange={deliveryDateChangeHandler} />
+        <input
+          type="date"
+          value={DeliveryDate}
+          onChange={deliveryDateChangeHandler}
+        />
         <input type="text" value={Brand} onChange={brandChangeHandler} />
-        <input type="number" value={StockQuantity} onChange={stockQuantityChangeHandler} />
+        <input
+          type="number"
+          value={StockQuantity}
+          onChange={stockQuantityChangeHandler}
+        />
         <select name="" id="isStock" onChange={isStockChangeHandler}>
           <option value="">在庫の有無</option>
           <option value="true">あり</option>
           <option value="false">なし</option>
         </select>
-        <input type="text" value={ParentCategory} onChange={parentCategoryChangeHandler} />
+        <input
+          type="text"
+          value={ParentCategory}
+          onChange={parentCategoryChangeHandler}
+        />
         <input type="text" value={Category} onChange={categoryChangeHandler} />
-        <input type="text" value={AncestorCategory} onChange={ancestorCategoryChangeHandler} />
-        <input type="file" value={Image1} id="image1" onChange={image1ChangeHandler} />
-        <input type="file" value={Image2} id="image2" onChange={image2ChangeHandler} />
-        <input type="file" value={Image3} id="image3" onChange={image3ChangeHandler} />
-        <input type="file" value={Image4} id="image4" onChange={image4ChangeHandler} />
-        <input type="file" value={Image5} id="image5" onChange={image5ChangeHandler} />
+        <input
+          type="text"
+          value={AncestorCategory}
+          onChange={ancestorCategoryChangeHandler}
+        />
+        <input
+          type="file"
+          value={Image1}
+          id="image1"
+          onChange={image1ChangeHandler}
+        />
+        <input
+          type="file"
+          value={Image2}
+          id="image2"
+          onChange={image2ChangeHandler}
+        />
+        <input
+          type="file"
+          value={Image3}
+          id="image3"
+          onChange={image3ChangeHandler}
+        />
+        <input
+          type="file"
+          value={Image4}
+          id="image4"
+          onChange={image4ChangeHandler}
+        />
+        <input
+          type="file"
+          value={Image5}
+          id="image5"
+          onChange={image5ChangeHandler}
+        />
         <button type="submit">add product</button>
       </form>
     </div>
