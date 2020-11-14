@@ -9,6 +9,7 @@ const SellerSignup = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [Message, setMessage] = useState("");
 
   const signupSubmitHandler = async (event) => {
     event.preventDefault();
@@ -23,11 +24,13 @@ const SellerSignup = () => {
         "http://localhost:8080/api/sellers/signup",
         body
       );
+      auth.sellerLogin(response.data.sellerId, response.data.token);
+      console.log(response);
+      setMessage(response.data.message);
     } catch (error) {
       console.log(error);
+      setMessage(error.message);
     }
-    auth.sellerLogin(response.data.sellerId, response.data.token);
-    console.log(response);
   };
   const nameChangeHandler = (event) => {
     setName(event.target.value);
@@ -43,6 +46,7 @@ const SellerSignup = () => {
 
   return (
     <div>
+      {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={signupSubmitHandler}>
         <input type="text" value={Name} onChange={nameChangeHandler} />
         <input type="email" value={Email} onChange={emailChangeHandler} />
