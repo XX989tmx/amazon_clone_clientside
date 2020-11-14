@@ -8,6 +8,7 @@ const SellerLogin = () => {
   const history = useHistory();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [Message, setMessage] = useState("");
 
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
@@ -21,11 +22,13 @@ const SellerLogin = () => {
         "http://localhost:8080/api/sellers/login",
         body
       );
+      console.log(response);
+      auth.sellerLogin(response.data.sellerId, response.data.token);
+      setMessage(response.data.message);
     } catch (error) {
       console.log(error);
+      setMessage(error.message);
     }
-    console.log(response);
-    auth.sellerLogin(response.data.sellerId, response.data.token);
   };
 
   const emailChangeHandler = (event) => {
@@ -36,6 +39,7 @@ const SellerLogin = () => {
   };
   return (
     <div>
+      {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={loginSubmitHandler}>
         <input type="email" value={Email} onChange={emailChangeHandler} />
         <input
