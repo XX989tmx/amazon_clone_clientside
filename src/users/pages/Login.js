@@ -8,7 +8,7 @@ const Login = () => {
   const history = useHistory();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [Message, setMessage] = useState('');
+  const [Message, setMessage] = useState("");
 
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
@@ -23,14 +23,13 @@ const Login = () => {
         "http://localhost:8080/api/users/login",
         body
       );
-      setMessage(response.data.message)
+      console.log(response);
+      auth.login(response.data.userId, response.data.token);
+      setMessage(response.data.message);
     } catch (error) {
       console.log(error);
-      setMessage(error.message)
+      setMessage(error.message);
     }
-
-    console.log(response);
-    auth.login(response.data.userId, response.data.token);
   };
 
   const emailChangeHandler = (event) => {
@@ -43,7 +42,7 @@ const Login = () => {
 
   return (
     <div>
-    {Message && <h3>{Message}</h3>}
+      {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={loginSubmitHandler}>
         <input
           id="email"

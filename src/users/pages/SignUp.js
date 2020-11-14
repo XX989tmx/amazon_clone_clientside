@@ -9,6 +9,7 @@ const SignUp = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [Message, setMessage] = useState("");
 
   const SignupSubmitHandler = async (event) => {
     event.preventDefault();
@@ -24,12 +25,13 @@ const SignUp = () => {
         `http://localhost:8080/api/users/signup`,
         data
       );
+      auth.login(response.data.userId, response.data.token);
+      console.log(response);
+      setMessage(response.data.message);
     } catch (error) {
       console.log(error);
+      setMessage(error.message);
     }
-    
-    auth.login(response.data.userId, response.data.token);
-    console.log(response);
   };
 
   const nameChangeHandler = (event) => {
@@ -44,6 +46,7 @@ const SignUp = () => {
   };
   return (
     <div>
+      {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={SignupSubmitHandler}>
         <input
           id="name"

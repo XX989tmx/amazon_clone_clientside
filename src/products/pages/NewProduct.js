@@ -19,7 +19,7 @@ const NewProduct = () => {
   const [Image3, setImage3] = useState();
   const [Image4, setImage4] = useState();
   const [Image5, setImage5] = useState();
-  const [Message, setMessage] = useState('');
+  const [Message, setMessage] = useState("");
 
   const productDataSubmitHandler = async (event) => {
     event.preventDefault();
@@ -48,12 +48,12 @@ const NewProduct = () => {
         )}?token=${encodeURIComponent(auth.sellerToken)}`,
         formData
       );
+      console.log(response);
       setMessage(response.data.message);
     } catch (error) {
       console.log(error.message);
       setMessage(error.message);
     }
-    console.log(response);
   };
 
   const nameChangeHandler = (event) => {
