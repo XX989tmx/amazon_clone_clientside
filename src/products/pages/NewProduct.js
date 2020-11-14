@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const NewProduct = () => {
+  const auth = useContext(AuthContext);
   const [Name, setName] = useState();
   const [Price, setPrice] = useState();
   const [DeliveryDate, setDeliveryDate] = useState();
@@ -19,9 +20,9 @@ const NewProduct = () => {
   const [Image4, setImage4] = useState();
   const [Image5, setImage5] = useState();
 
-  const productDataSubmitHandler = (event) => {
+  const productDataSubmitHandler = async (event) => {
     event.preventDefault();
-
+    let response;
     try {
       const formData = new FormData();
       formData.append("name", Name);
@@ -39,9 +40,16 @@ const NewProduct = () => {
       formData.append("images", Image4);
       formData.append("images", Image5);
       console.log(formData);
+
+      response = await Axios.post(
+        `http://localhost:8080/api/sellers/createProduct/${encodeURIComponent(
+          auth.sellerId
+        )}?token=${encodeURIComponent(auth.sellerToken)}`,formData
+      );
     } catch (error) {
       console.log(error);
     }
+    console.log(response);
   };
 
   const nameChangeHandler = (event) => {
@@ -94,24 +102,24 @@ const NewProduct = () => {
     <div>
       <h1>NewProduct</h1>
       <form action="" onSubmit={productDataSubmitHandler}>
-        <input type="text" onChange={nameChangeHandler} />
-        <input type="number" onChange={priceChangeHandler} />
-        <input type="date" onChange={deliveryDateChangeHandler} />
-        <input type="text" onChange={brandChangeHandler} />
-        <input type="number" onChange={stockQuantityChangeHandler} />
+        <input type="text" value={Name} onChange={nameChangeHandler} />
+        <input type="number" value={Price} onChange={priceChangeHandler} />
+        <input type="date" value={DeliveryDate} onChange={deliveryDateChangeHandler} />
+        <input type="text" value={Brand} onChange={brandChangeHandler} />
+        <input type="number" value={StockQuantity} onChange={stockQuantityChangeHandler} />
         <select name="" id="isStock" onChange={isStockChangeHandler}>
           <option value="">在庫の有無</option>
           <option value="true">あり</option>
           <option value="false">なし</option>
         </select>
-        <input type="text" onChange={parentCategoryChangeHandler} />
-        <input type="text" onChange={categoryChangeHandler} />
-        <input type="text" onChange={ancestorCategoryChangeHandler} />
-        <input type="file" id="image1" onChange={image1ChangeHandler} />
-        <input type="file" id="image2" onChange={image2ChangeHandler} />
-        <input type="file" id="image3" onChange={image3ChangeHandler} />
-        <input type="file" id="image4" onChange={image4ChangeHandler} />
-        <input type="file" id="image5" onChange={image5ChangeHandler} />
+        <input type="text" value={ParentCategory} onChange={parentCategoryChangeHandler} />
+        <input type="text" value={Category} onChange={categoryChangeHandler} />
+        <input type="text" value={AncestorCategory} onChange={ancestorCategoryChangeHandler} />
+        <input type="file" value={Image1} id="image1" onChange={image1ChangeHandler} />
+        <input type="file" value={Image2} id="image2" onChange={image2ChangeHandler} />
+        <input type="file" value={Image3} id="image3" onChange={image3ChangeHandler} />
+        <input type="file" value={Image4} id="image4" onChange={image4ChangeHandler} />
+        <input type="file" value={Image5} id="image5" onChange={image5ChangeHandler} />
         <button type="submit">add product</button>
       </form>
     </div>
