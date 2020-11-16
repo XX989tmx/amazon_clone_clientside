@@ -18,7 +18,9 @@ const HeaderNavigation = () => {
             <Link to={"/product/new"}>add product</Link>
           </li>
           <li>
-            <Link to={`/product/5fb001c11b95f410bad1805a`}>specific product</Link>
+            <Link to={`/product/5fb001c11b95f410bad1805a`}>
+              specific product
+            </Link>
           </li>
           <li>
             <Link to={"/product/wishlistRanking/:category"}>
@@ -96,6 +98,11 @@ const HeaderNavigation = () => {
           </li>
           <li>
             <Link to={"/order/checkout"}>Checkout</Link>
+          </li>
+          <li>
+            <Link to={`/account/wishlists/all`}>
+              wishlist all
+            </Link>
           </li>
         </ul>
       </nav>

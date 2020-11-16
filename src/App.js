@@ -34,6 +34,7 @@ import SellerLogin from "./sellers/pages/SellerLogin";
 import HeaderNavigation from "./shared/components/navigation/HeaderNavigation";
 import Checkout from "./order/pages/Checkout";
 import OrderComplete from "./order/pages/OrderComplete";
+import WishlistAll from "./accounts/wishlist/pages/WishlistAll";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -172,6 +173,11 @@ function App() {
       </Route>
       <Route path="/account/addresses/update" exact>
         <UpdateAddress />
+      </Route>
+      {/* account / wishlist */}
+      {/* /account/wishlist/all pagination15 */}
+      <Route path="/account/wishlists/all" exact>
+        <WishlistAll />
       </Route>
 
       {/* your-payments */}
