@@ -39,8 +39,10 @@ const Checkout = () => {
         body
       );
       console.log(response);
+      const data = response.data;
+      const orderId = data.createdOrder._id;
       // order cpmplete page へhistory.push
-      history.push("/order/orderComplete");
+      history.push(`/order/orderComplete/${orderId}`);
     } catch (error) {
       console.log(error);
     }

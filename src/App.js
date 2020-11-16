@@ -153,7 +153,7 @@ function App() {
       </Route>
 
       {/* order compete page */}
-      <Route path="/order/orderComplete" exact>
+      <Route path="/order/orderComplete/:orderId" exact>
         <OrderComplete />
       </Route>
 
