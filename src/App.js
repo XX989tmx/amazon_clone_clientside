@@ -45,11 +45,29 @@ function App() {
 
       // api/home
       // api/product/new (admin用)
-      // api/product/productIndex/:category
+      // api/product/productIndex/:category =>これは不要
       (カテゴリー単位が最大 index allはない
       大カテゴリーがインデックスの最大単位でそこから小カテゴリをネスト的にインデックス.実際にProductをインデックスするのは小カテゴリからで、しかしその場合も、配列の先頭何個かにキャップをかけて部分表示。新着、注目、人気、価格帯、購入履歴、セール中、などのトピックごとに角度を変え表示。各角度ごとにサーバーにReq送り、受け取った配列を、角度ごとにコンポーネントに渡す。それぞれのカテゴリごとに同じPageをダイナミックに使い、渡す配列データだけが変わっている。大カテゴリー＝＞いくつかの角度ごとに配列先頭１０個表示とリンクをおく、というのが、Index型の表示形式の上限。　indexAll的な表示はむしろSearchクエリPageで行う。　一応カテゴリーの全商品をページネーションで読めはする。２４件が最大。なので各カテゴリごとに１ページ２４件でIndexALLをしている。
       構成：ほしい物リストの人気商品、注目の新着アイテム、注目のセール、あなたのお買い物傾向から、人気のクーポン、0-1500円、数量限定タイムセール、レビュー高評価商品、人気のギフト商品、売れ筋ランキング。それぞれ各自の基準でソートされた配列。複数の配列をレシポンスとして受け取り、コンポーネント化してレンダリング. //ページ下部にはグローバルに表示するコンポーネントとして、こちらもおすすめ、がある。// 大カテゴリのページでは、注目のカテゴリ、として、小カテゴリへのリンクが５個くらいある。
       )
+
+        //カテゴリーについて
+        // grandparent => parent = > child => grandchild => grandgrandchild というネスト関係
+        // 例炊飯器の場合
+        // 家電、カメラ、AV機器(grandparent) => 家電、カメラ、AV機器", "中古ストア(parent) => キッチン家電(child) => 炊飯器、精米機（grand child） => 圧力IH炊飯器（grand grand child）
+        //カテゴリーごとのProductIndexPageは複数作る必要がある。具体的には、'parent'の段階から、カテゴリでのIndexページを作る必要があり、parent, child, grand child, grand grand childの4つのIndexページを作る必要がある。それぞれのページではそれぞれのカテゴリーノードをキーワードにしてリクエストを送り、レスポンスを受け取り展開。レンダリング方法の違いがあり、4つのうち、grand grand childのページだけが、純粋にProductLinkをIndexするのみであり、それ以外の情報（カテゴリごとの角度で切った配列の表示）はない。grand grand child以外の3つは、productLinkのIndexに加え、新着、などの角度ごとに切った配列を表示する。pagenation数にも違いがあり、grand gran child では１６、それ以外の3つでは２４。
+        
+        // /product/index/:parentCategory pagination24+multiple array
+        // /product/index/:childCategory pagination24+multiple array
+        // /product/index/:grandChildCategory pagination24+multiple array
+        // /product/index/:grandGrandChildCategory pagination16
+
+
+      //ブランド、出品者、カテゴリごとのランキング５０、それぞれに、Pageを用意する必要がある。（ブランド、出品者、カテゴリーランキング５０ごとのレスポンスを展開）
+      // /product/brand/:prand
+      // /product/seller/:seller
+      // /product/ranking50/category
+
       // api/product/wishlistRanking/:category (欲しいものリストの人気商品 50個をインデックス表示。配列の先頭５０個 popularProductOdWhishlists)
       // api/product/newlyAdded/:category (新着の人気ランキング５０ 50個インデックス表示。)
       // api/product/bestseller/:category (ベストセラーアイテム５０　５０個インデックス表示。)

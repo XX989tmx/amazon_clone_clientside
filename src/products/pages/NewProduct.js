@@ -125,17 +125,27 @@ const NewProduct = () => {
           <option value="true">あり</option>
           <option value="false">なし</option>
         </select>
-        <input
-          type="text"
-          value={ParentCategory}
-          onChange={parentCategoryChangeHandler}
-        />
-        <input type="text" value={Category} onChange={categoryChangeHandler} />
+
+        {/* //大カテゴリー */}
+        {/* 後でコンポーネント化 */}
+        {/* grand child からgrand parent までの全カテゴリー */}
         <input
           type="text"
           value={AncestorCategory}
           onChange={ancestorCategoryChangeHandler}
         />
+        {/* 中カテゴリー */}
+        {/* 後でコンポーネント化 */}
+        {/* grand child カテゴリー */}
+        <input
+          type="text"
+          value={ParentCategory}
+          onChange={parentCategoryChangeHandler}
+        />
+        {/* 小カテゴリー */}
+        {/* 後でコンポーネント化 */}
+        {/* 最も末端のgrand grand childカテゴリー */}
+        <input type="text" value={Category} onChange={categoryChangeHandler} />
         <input
           type="file"
           value={Image1}

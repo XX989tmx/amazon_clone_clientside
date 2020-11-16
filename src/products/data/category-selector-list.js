@@ -1,4 +1,4 @@
-// input用
+// input用. new product のカテゴリーInputSelectorで使うためのデータ。
 // grandparent => parent = > child => grandchild => grandgrandchild というネスト関係
 // 例炊飯器の場合
 // 家電、カメラ、AV機器(grandparent) => 家電、カメラ、AV機器", "中古ストア(parent) => キッチン家電(child) => 炊飯器、精米機（grand child） => 圧力IH炊飯器（grand grand child）
