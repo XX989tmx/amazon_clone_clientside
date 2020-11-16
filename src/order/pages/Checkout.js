@@ -1,12 +1,27 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const Checkout = () => {
   const auth = useContext(AuthContext);
   const [PaymentMethod, setPaymentMethod] = useState();
-
+  const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
+  useEffect(() => {
+    async function fetch(params) {
+      let response;
+      try {
+        response = await Axios.get(
+          `http://localhost:8080/api/users/getLatestContentOfCart/${auth.userId}?token=${auth.token}`
+        );
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetch();
+  }, []);
 
   const paymentMethodHandler = (event) => {
     setPaymentMethod(event.target.value);
@@ -25,6 +40,7 @@ const Checkout = () => {
       );
       console.log(response);
       // order cpmplete page へhistory.push
+      history.push("/order/orderComplete");
     } catch (error) {
       console.log(error);
     }
