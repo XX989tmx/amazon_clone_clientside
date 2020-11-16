@@ -57,7 +57,7 @@ let category = [
   },
   {
     grandParentCategory: "DVD、ミュージック、ゲーム",
-    parentCategory: [],
+    parentCategory: ["DVD、Blue-Ray", "ゲーム", "DVD、ミュージック、ゲーム"],
     childCategory: [
       "DVD",
       "ブルーレイ",
@@ -73,7 +73,7 @@ let category = [
   },
   {
     grandParentCategory: "家電、カメラ、AV機器",
-    parentCategory: [],
+    parentCategory: ["家電、カメラ、AV機器", "中古ストア"],
     childCategory: [
       "キッチン家電",
       "生活家電",
@@ -103,7 +103,7 @@ let category = [
   },
   {
     grandParentCategory: "パソコン、オフィス用品",
-    parentCategory: [],
+    parentCategory: ["パソコン、周辺機器", "PCソフト", "文房具、オフィス用品"],
     childCategory: [
       "パソコン、タブレット",
       "ディスプレイ、モニタ－",
