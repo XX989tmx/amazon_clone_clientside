@@ -10,6 +10,8 @@ const SpecificProduct = () => {
   const [Quantity, setQuantity] = useState(1);
   const [CartStatusMessage, setCartStatusMessage] = useState();
   const [NameOfWishlist, setNameOfWishlist] = useState();
+  const [ExistingWishlists, setExistingWishlists] = useState([]);
+  const [WishlistToAdd, setWishlistToAdd] = useState();
 
   useEffect(() => {
     async function fetch(params) {
@@ -24,6 +26,28 @@ const SpecificProduct = () => {
       console.log(response);
     }
     fetch();
+
+    async function getAllWishlists(params) {
+      let response;
+      try {
+        response = await Axios.get(
+          `http://localhost:8080/api/wishlists/getAllWishlists/${auth.userId}?token=${auth.token}`
+        );
+        const data = response.data;
+        const wishlists = data.wishlists;
+        const existingWishlists = wishlists.map((v, i) => {
+          return (
+            <option value={v.id} key={i}>
+              {v.name}
+            </option>
+          );
+        });
+        setExistingWishlists(existingWishlists);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getAllWishlists();
   }, []);
 
   const addToCartHandler = async (event) => {
@@ -80,6 +104,26 @@ const SpecificProduct = () => {
     setNameOfWishlist(event.target.value);
   };
 
+  const wishlistToAddChangeHandler = (event) => {
+    setWishlistToAdd(event.target.value);
+  };
+
+  const addProductToWishlistSubmitHandler = async (event) => {
+    event.preventDefault();
+    let response;
+    let wishlistId = WishlistToAdd; // value of options, which is existing wishlists id
+    try {
+      response = await Axios.post(
+        `http://localhost:8080/api/wishlists/addProductToWishlist/${auth.userId}/${productId}/${wishlistId}?token=${auth.token}`
+      );
+      console.log(response);
+      setMessage(response.data.message);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.message);
+    }
+  };
+
   return (
     <div>
       <h3>{Message}</h3>
@@ -103,6 +147,14 @@ const SpecificProduct = () => {
           onChange={nameOfWishlistChangeHandler}
         />
         <button type="submit">create new wishlist</button>
+      </form>
+
+      <form action="" onSubmit={addProductToWishlistSubmitHandler}>
+        <select name="" id="" onChange={wishlistToAddChangeHandler}>
+          <option value="">追加するウィッシュリストを選ぶ</option>
+          {ExistingWishlists}
+        </select>
+        <button type="submit">ウィッシュリストに追加する</button>
       </form>
     </div>
   );
