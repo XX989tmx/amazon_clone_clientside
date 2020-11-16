@@ -9,6 +9,7 @@ const SpecificProduct = () => {
   const auth = useContext(AuthContext);
   const [Quantity, setQuantity] = useState(1);
   const [CartStatusMessage, setCartStatusMessage] = useState();
+  const [NameOfWishlist, setNameOfWishlist] = useState();
 
   useEffect(() => {
     async function fetch(params) {
@@ -44,7 +45,7 @@ const SpecificProduct = () => {
       }
       const countOfCart = response.data.cart.totalCount;
       const joinedCartStatusString =
-        "現在" + countOfCart + "点の商品がカートに入っています。"
+        "現在" + countOfCart + "点の商品がカートに入っています。";
       if (joinedCartStatusString) {
         setCartStatusMessage(joinedCartStatusString);
       }
@@ -57,6 +58,28 @@ const SpecificProduct = () => {
   const quantityChangeHandler = (event) => {
     setQuantity(event.target.value);
   };
+
+  const createNewWishlistHandler = async (event) => {
+    event.preventDefault();
+    let response;
+    let body = { nameOfWishlist: NameOfWishlist };
+    try {
+      response = await Axios.post(
+        `http://localhost:8080/api/wishlists/createNewWishlist/${auth.userId}?token=${auth.token}`,
+        body
+      );
+      console.log(response);
+      setMessage(response.data.message);
+    } catch (error) {
+      console.log(error);
+      setMessage(error.message);
+    }
+  };
+
+  const nameOfWishlistChangeHandler = (event) => {
+    setNameOfWishlist(event.target.value);
+  };
+
   return (
     <div>
       <h3>{Message}</h3>
@@ -71,6 +94,15 @@ const SpecificProduct = () => {
           onChange={quantityChangeHandler}
         />
         <button type="submit">add to cart</button>
+      </form>
+
+      <form action="" onSubmit={createNewWishlistHandler}>
+        <input
+          type="text"
+          value={NameOfWishlist}
+          onChange={nameOfWishlistChangeHandler}
+        />
+        <button type="submit">create new wishlist</button>
       </form>
     </div>
   );
