@@ -5,7 +5,7 @@
 //
 
 //大カテゴリー
-let parentCategory = [
+let grandParentCategory = [
   "本、コミック、雑誌",
   "DVD、ミュージック、ゲーム",
   "家電、カメラ、AV機器",
@@ -25,7 +25,13 @@ let childCategory = [];
 // 以下はナビゲーション用
 let category = [
   {
-    parentCategory: "本、コミック、雑誌",
+    grandParentCategory: "本、コミック、雑誌",
+    parentCategory: [
+      "本、コミック、雑誌",
+      "Kindleストア",
+      "Audibleオーディオブック",
+      "本、コミック、雑誌＆Audible",
+    ],
     childCategory: [
       "本",
       "洋書",
@@ -39,10 +45,19 @@ let category = [
       "まとめ買い、セット本",
       "アウトレット本",
       "古本（古本、古書）",
+      "Kindle本",
+      "Kindleコミック",
+      "Kindle洋書",
+      "Kindle Unlimited",
+      "Prime Reading",
+      "Audible オーディオブック",
+      "Audible　会員プラン無料体験",
+      "買い取りサービス",
     ],
   },
   {
-    parentCategory: "DVD、ミュージック、ゲーム",
+    grandParentCategory: "DVD、ミュージック、ゲーム",
+    parentCategory: [],
     childCategory: [
       "DVD",
       "ブルーレイ",
@@ -57,7 +72,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "家電、カメラ、AV機器",
+    grandParentCategory: "家電、カメラ、AV機器",
+    parentCategory: [],
     childCategory: [
       "キッチン家電",
       "生活家電",
@@ -86,7 +102,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "パソコン、オフィス用品",
+    grandParentCategory: "パソコン、オフィス用品",
+    parentCategory: [],
     childCategory: [
       "パソコン、タブレット",
       "ディスプレイ、モニタ－",
@@ -117,7 +134,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "ホーム＆キッチン、ペット、DIY",
+    grandParentCategory: "ホーム＆キッチン、ペット、DIY",
+    parentCategory: [],
     childCategory: [
       "キッチン用品、食器",
       "インテリア、雑貨",
@@ -141,7 +159,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "食品、飲料、お酒",
+    grandParentCategory: "食品、飲料、お酒",
+    parentCategory: [],
     childCategory: [
       "すべての食品＆飲料",
       "Amazonブランド",
@@ -168,7 +187,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "ドラッグストア、ビューティー",
+    grandParentCategory: "ドラッグストア、ビューティー",
+    parentCategory: [],
     childCategory: [
       "医薬品",
       "ヘルスケア、衛生用品",
@@ -197,7 +217,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "ベビー、おもちゃ、ホビー",
+    grandParentCategory: "ベビー、おもちゃ、ホビー",
+    parentCategory: [],
     childCategory: [
       "ベビー＆マタニティ",
       "おもちゃ",
@@ -209,7 +230,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "服、シューズ、バッグ、腕時計",
+    grandParentCategory: "服、シューズ、バッグ、腕時計",
+    parentCategory: [],
     childCategory: [
       "レディース",
       "メンズ",
@@ -221,7 +243,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "スポーツ＆アウトドア",
+    grandParentCategory: "スポーツ＆アウトドア",
+    parentCategory: [],
     childCategory: [
       "自転車",
       "アウトドア",
@@ -233,7 +256,8 @@ let category = [
     ],
   },
   {
-    parentCategory: "車、バイク、産業、研究開発",
+    grandParentCategory: "車、バイク、産業、研究開発",
+    parentCategory: [],
     childCategory: [
       "カー用品",
       "バイク用品",
