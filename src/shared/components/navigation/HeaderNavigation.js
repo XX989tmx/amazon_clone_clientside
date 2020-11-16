@@ -100,7 +100,9 @@ const HeaderNavigation = () => {
             <Link to={"/order/checkout"}>Checkout</Link>
           </li>
           <li>
-            <Link to={`/account/wishlists/all`}>
+            <Link
+              to={`/account/wishlists/all`}
+            >
               wishlist all
             </Link>
           </li>

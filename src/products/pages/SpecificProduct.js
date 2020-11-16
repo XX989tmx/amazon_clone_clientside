@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SpecificProduct = () => {
@@ -156,6 +156,9 @@ const SpecificProduct = () => {
         </select>
         <button type="submit">ウィッシュリストに追加する</button>
       </form>
+      <Link to={`/account/wishlists/all?wishlistId=5fb2f03e3971ce7b8e9efb28`}>
+        wishlist all
+      </Link>
     </div>
   );
 };

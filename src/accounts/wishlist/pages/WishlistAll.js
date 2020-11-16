@@ -33,10 +33,17 @@ const WishlistAll = () => {
       await getAllWishlist();
 
       async function getSpecificWishlist(params) {
+        const queryString = window.location.search;
+        console.log(queryString);
+        const searchParams = new URLSearchParams(queryString);
+        const parsedWishlistId = searchParams.get("wishlistId");
+        console.log(parsedWishlistId);
         let response;
         let WishlistId;
         WishlistId = idOfDefaultWishlists; // response.data.wishlists[0].id　AccountOverviewからきた場合はParamsIdが使えないので、AllWishlistのresponseの一番先頭（できればデフォルトプロパティをスキーマレベルで指定した方がいい）のもののIdを使う。
-
+        if (parsedWishlistId) {
+          WishlistId = parsedWishlistId;
+        }
         //product pageのりんくからきた場合はIdがURLセグメントにあるので、Idを使える。// product pageからのリンクで来る際は、クエリパラメーターにIdをのせる。
 
         try {
