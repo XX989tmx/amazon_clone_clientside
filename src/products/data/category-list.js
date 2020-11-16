@@ -135,7 +135,7 @@ let category = [
   },
   {
     grandParentCategory: "ホーム＆キッチン、ペット、DIY",
-    parentCategory: [],
+    parentCategory: ["ホーム＆キッチン", "DIY、工具、ガーデン", "ペット"],
     childCategory: [
       "キッチン用品、食器",
       "インテリア、雑貨",
@@ -160,7 +160,7 @@ let category = [
   },
   {
     grandParentCategory: "食品、飲料、お酒",
-    parentCategory: [],
+    parentCategory: ["食品＆飲料", "お酒"],
     childCategory: [
       "すべての食品＆飲料",
       "Amazonブランド",
@@ -188,7 +188,7 @@ let category = [
   },
   {
     grandParentCategory: "ドラッグストア、ビューティー",
-    parentCategory: [],
+    parentCategory: ["ドラッグストア", "ビューティーストア"],
     childCategory: [
       "医薬品",
       "ヘルスケア、衛生用品",
@@ -218,7 +218,7 @@ let category = [
   },
   {
     grandParentCategory: "ベビー、おもちゃ、ホビー",
-    parentCategory: [],
+    parentCategory: ["ベビー、おもちゃ、ホビー"],
     childCategory: [
       "ベビー＆マタニティ",
       "おもちゃ",
@@ -231,7 +231,7 @@ let category = [
   },
   {
     grandParentCategory: "服、シューズ、バッグ、腕時計",
-    parentCategory: [],
+    parentCategory: ["Amazon Fashion"],
     childCategory: [
       "レディース",
       "メンズ",
@@ -244,7 +244,7 @@ let category = [
   },
   {
     grandParentCategory: "スポーツ＆アウトドア",
-    parentCategory: [],
+    parentCategory: ["スポーツ＆アウトドア"],
     childCategory: [
       "自転車",
       "アウトドア",
@@ -257,7 +257,7 @@ let category = [
   },
   {
     grandParentCategory: "車、バイク、産業、研究開発",
-    parentCategory: [],
+    parentCategory: ["車、バイク、産業、研究開発"],
     childCategory: [
       "カー用品",
       "バイク用品",
