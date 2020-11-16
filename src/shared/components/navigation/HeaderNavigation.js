@@ -94,6 +94,9 @@ const HeaderNavigation = () => {
           <li>
             <button onClick={auth.sellerLogout}>seller logout</button>
           </li>
+          <li>
+            <Link to={"/order/checkout"}>Checkout</Link>
+          </li>
         </ul>
       </nav>
     </header>

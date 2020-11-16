@@ -32,6 +32,8 @@ import SignUp from "./users/pages/SignUp";
 import Login from "./users/pages/Login";
 import SellerLogin from "./sellers/pages/SellerLogin";
 import HeaderNavigation from "./shared/components/navigation/HeaderNavigation";
+import Checkout from "./order/pages/Checkout";
+import OrderComplete from "./order/pages/OrderComplete";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -139,8 +141,20 @@ function App() {
       </Route>
 
       {/* cart */}
+      {/* show cart content page */}
       <Route path="/cart" exact>
         <Cart />
+      </Route>
+
+      {/* order */}
+      {/* order confirmation page/ checkout */}
+      <Route path="/order/checkout" exact>
+        <Checkout />
+      </Route>
+
+      {/* order compete page */}
+      <Route path="/order/orderComplete" exact>
+        <OrderComplete />
       </Route>
 
       {/* account */}
