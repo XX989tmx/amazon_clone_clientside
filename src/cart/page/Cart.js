@@ -13,7 +13,8 @@ const Cart = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/users/getLatestContentOfCart/${auth.userId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/users/getLatestContentOfCart/${auth.userId}?token=${auth.token}`
         );
         console.log(response);
       } catch (error) {
@@ -30,21 +31,24 @@ const Cart = () => {
   };
 
   //カートを空に
-  const emptyCartHandler = async(event) => {
+  const emptyCartHandler = async (event) => {
     event.preventDefault();
     let response;
     try {
-      response = await Axios.get(`http://localhost:8080/api/users/clearCart/${auth.userId}?token=${auth.token}`);
+      response = await Axios.get(
+        process.env.REACT_APP_BACKEND_URL +
+          `/users/clearCart/${auth.userId}?token=${auth.token}`
+      );
       console.log(response);
-      setMessage(response.data.message)
+      setMessage(response.data.message);
     } catch (error) {
       console.log();
       setMessage(error.message);
     }
-  }
+  };
   return (
     <div>
-     <h3>{Message}</h3>
+      <h3>{Message}</h3>
       <h1>Cart page</h1>
 
       {/* checkout pageへ移動 */}

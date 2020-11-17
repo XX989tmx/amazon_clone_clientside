@@ -10,7 +10,8 @@ const OrderHistory = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/orders/getAllOrderHistory/${auth.userId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/orders/getAllOrderHistory/${auth.userId}?token=${auth.token}`
         );
         console.log(response);
       } catch (error) {

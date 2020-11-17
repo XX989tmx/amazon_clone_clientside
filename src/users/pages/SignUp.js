@@ -22,7 +22,7 @@ const SignUp = () => {
     console.log(data);
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/users/signup`,
+        process.env.REACT_APP_BACKEND_URL + `/users/signup`,
         data
       );
       auth.login(response.data.userId, response.data.token);

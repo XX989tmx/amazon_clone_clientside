@@ -21,7 +21,7 @@ const SellerSignup = () => {
     };
     try {
       response = await Axios.post(
-        "http://localhost:8080/api/sellers/signup",
+        process.env.REACT_APP_BACKEND_URL + "/sellers/signup",
         body
       );
       auth.sellerLogin(response.data.sellerId, response.data.token);

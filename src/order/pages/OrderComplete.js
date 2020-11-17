@@ -13,7 +13,8 @@ const OrderComplete = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/orders/getLatestOrderData/${orderId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/orders/getLatestOrderData/${orderId}?token=${auth.token}`
         );
         // このデータを元に、OrderHistoryへのリンクをつくる。その際、このデータのidを使う。確定された注文、という表示形式で。
         console.log(response);

@@ -20,7 +20,7 @@ const Login = () => {
     };
     try {
       response = await Axios.post(
-        "http://localhost:8080/api/users/login",
+        process.env.REACT_APP_BACKEND_URL + "/users/login",
         body
       );
       console.log(response);

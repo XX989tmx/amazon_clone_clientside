@@ -16,7 +16,8 @@ const WishlistAll = () => {
         let response;
         try {
           response = await Axios.get(
-            `http://localhost:8080/api/wishlists/getAllWishlists/${auth.userId}?token=${auth.token}`
+            process.env.REACT_APP_BACKEND_URL +
+              `/wishlists/getAllWishlists/${auth.userId}?token=${auth.token}`
           );
           console.log(response);
           const data = response.data;
@@ -48,7 +49,8 @@ const WishlistAll = () => {
 
         try {
           response = await Axios.get(
-            `http://localhost:8080/api/wishlists/getSpecificWishlist/${auth.userId}/${WishlistId}?token=${auth.token}`
+            process.env.REACT_APP_BACKEND_URL +
+              `/wishlists/getSpecificWishlist/${auth.userId}/${WishlistId}?token=${auth.token}`
           );
           console.log(response);
         } catch (error) {

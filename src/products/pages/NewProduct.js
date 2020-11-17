@@ -43,9 +43,10 @@ const NewProduct = () => {
       console.log(formData);
 
       response = await Axios.post(
-        `http://localhost:8080/api/sellers/createProduct/${encodeURIComponent(
-          auth.sellerId
-        )}?token=${encodeURIComponent(auth.sellerToken)}`,
+        process.env.REACT_APP_BACKEND_URL +
+          `/sellers/createProduct/${encodeURIComponent(
+            auth.sellerId
+          )}?token=${encodeURIComponent(auth.sellerToken)}`,
         formData
       );
       console.log(response);

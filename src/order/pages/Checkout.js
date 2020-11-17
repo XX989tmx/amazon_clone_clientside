@@ -13,7 +13,8 @@ const Checkout = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/users/getLatestContentOfCart/${auth.userId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/users/getLatestContentOfCart/${auth.userId}?token=${auth.token}`
         );
         console.log(response);
       } catch (error) {
@@ -35,7 +36,8 @@ const Checkout = () => {
     };
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/orders/createOrder/${auth.userId}/5fb2be90be17035930da9466?token=${auth.token}`,
+        process.env.REACT_APP_BACKEND_URL +
+          `/orders/createOrder/${auth.userId}/5fb2be90be17035930da9466?token=${auth.token}`,
         body
       );
       console.log(response);

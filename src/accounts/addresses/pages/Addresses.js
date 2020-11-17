@@ -12,7 +12,8 @@ const Addresses = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/addresses/getAllAddresses/${auth.userId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/addresses/getAllAddresses/${auth.userId}?token=${auth.token}`
         );
         console.log(response);
         const data = response.data;

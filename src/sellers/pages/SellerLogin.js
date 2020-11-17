@@ -19,7 +19,8 @@ const SellerLogin = () => {
     };
     try {
       response = await Axios.post(
-        "http://localhost:8080/api/sellers/login",
+        process.env.REACT_APP_BACKEND_URL +
+          "/sellers/login",
         body
       );
       console.log(response);

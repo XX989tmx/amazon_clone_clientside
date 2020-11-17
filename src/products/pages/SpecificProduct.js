@@ -18,7 +18,8 @@ const SpecificProduct = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/products/getSpecificProductById/${productId}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/products/getSpecificProductById/${productId}`
         );
       } catch (error) {
         console.log(error);
@@ -31,7 +32,8 @@ const SpecificProduct = () => {
       let response;
       try {
         response = await Axios.get(
-          `http://localhost:8080/api/wishlists/getAllWishlists/${auth.userId}?token=${auth.token}`
+          process.env.REACT_APP_BACKEND_URL +
+            `/wishlists/getAllWishlists/${auth.userId}?token=${auth.token}`
         );
         const data = response.data;
         const wishlists = data.wishlists;
@@ -58,7 +60,8 @@ const SpecificProduct = () => {
     };
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/users/addToCart/${auth.userId}/${productId}?token=${auth.token}`,
+        process.env.REACT_APP_BACKEND_URL +
+          `/users/addToCart/${auth.userId}/${productId}?token=${auth.token}`,
         body
       );
       console.log(response);
@@ -89,7 +92,8 @@ const SpecificProduct = () => {
     let body = { nameOfWishlist: NameOfWishlist };
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/wishlists/createNewWishlist/${auth.userId}?token=${auth.token}`,
+        process.env.REACT_APP_BACKEND_URL +
+          `/wishlists/createNewWishlist/${auth.userId}?token=${auth.token}`,
         body
       );
       console.log(response);
@@ -114,7 +118,8 @@ const SpecificProduct = () => {
     let wishlistId = WishlistToAdd; // value of options, which is existing wishlists id
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/wishlists/addProductToWishlist/${auth.userId}/${productId}/${wishlistId}?token=${auth.token}`
+        process.env.REACT_APP_BACKEND_URL +
+          `/wishlists/addProductToWishlist/${auth.userId}/${productId}/${wishlistId}?token=${auth.token}`
       );
       console.log(response);
       setMessage(response.data.message);
