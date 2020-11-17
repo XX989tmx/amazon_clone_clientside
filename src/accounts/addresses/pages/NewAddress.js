@@ -53,7 +53,7 @@ const NewAddress = () => {
     let response;
     try {
       response = await Axios.post(
-        `http://localhost:8080/api/addresses/createAddress/${auth.userId}?token=${auth.token}`,
+        process.env.REACT_APP_BACKEND_URL + `/addresses/createAddress/${auth.userId}?token=${auth.token}`,
         body
       );
       console.log(response);
