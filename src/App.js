@@ -172,7 +172,7 @@ function App() {
       <Route path="/account/addresses/new" exact>
         <NewAddress />
       </Route>
-      <Route path="/account/addresses/update" exact>
+      <Route path="/account/addresses/update/:addressId" exact>
         <UpdateAddress />
       </Route>
       {/* account / wishlist */}

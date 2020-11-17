@@ -50,7 +50,7 @@ const HeaderNavigation = () => {
             <Link to={"/account/addresses/new"}>add address</Link>
           </li>
           <li>
-            <Link to={"/account/addresses/update"}>update address</Link>
+            <Link to={"/account/addresses/update/5fb434d64756c1c23399669e"}>update address</Link>
           </li>
           <li>
             <Link to={"/account/your-payments/payment-methods"}>

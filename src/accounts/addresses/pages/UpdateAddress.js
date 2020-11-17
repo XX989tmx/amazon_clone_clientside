@@ -35,7 +35,7 @@ const UpdateAddress = () => {
     };
     let response;
     try {
-      response = await Axios.post(
+      response = await Axios.patch(
         process.env.REACT_APP_BACKEND_URL +
           `/addresses/updateAddress/${addressId}?token=${auth.token}`,
         body
