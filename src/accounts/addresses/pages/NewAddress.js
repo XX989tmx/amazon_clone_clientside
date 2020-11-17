@@ -1,11 +1,13 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import CountrySelector from "../components/CountrySelector";
 import todoufuken from "../data/todoufuken";
 
 const NewAddress = () => {
   const auth = useContext(AuthContext);
+  const history = useHistory()
   const [Todoufuken, setTodoufuken] = useState([]);
   const [Country, setCountry] = useState();
   const [Name, setName] = useState();
@@ -55,7 +57,15 @@ const NewAddress = () => {
         body
       );
       console.log(response);
-      setMessage(response.data.message);
+      const responseMessage = response.data.message;
+      const redirectMessage = "５秒以内に自動的にリダイレクトされます。"
+      const resultMessage = responseMessage + redirectMessage;
+      setMessage(resultMessage);
+      if (response) {
+        setTimeout(() => {
+          history.push("/account/addresses");
+        }, 3000);
+      }
     } catch (error) {
       console.log(error);
       setMessage(error.message);
