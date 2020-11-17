@@ -1,11 +1,13 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import CountrySelector from "../components/CountrySelector";
 import TodoufukenSelector from "../components/TodoufukenSelector";
 
 const UpdateAddress = () => {
   const auth = useContext(AuthContext);
+  const addressId = useParams().addressId;
   const [Name, setName] = useState();
   const [Country, setCountry] = useState();
   const [Zipcode1, setZipcode1] = useState();
@@ -19,6 +21,29 @@ const UpdateAddress = () => {
 
   const addressUpdateSubmitHandler = async (event) => {
     event.preventDefault();
+    const zipCode = String(Zipcode1) + "-" + String(Zipcode2);
+    let body = {
+      zipCode: zipCode,
+      country: Country,
+      name: Name,
+      todoufuken: TodoufukenValue,
+      addressInfo1: Address1,
+      addressInfo2: Address2,
+      email: Email,
+      phoneNumber: PhoneNumber,
+      company: Company,
+    };
+    let response;
+    try {
+      response = await Axios.post(
+        process.env.REACT_APP_BACKEND_URL +
+          `/addresses/updateAddress/${addressId}?token=${auth.token}`,
+        body
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const nameChangeHandler = (event) => {
