@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import CountrySelector from "../components/CountrySelector";
 import TodoufukenSelector from "../components/TodoufukenSelector";
@@ -8,6 +8,7 @@ import TodoufukenSelector from "../components/TodoufukenSelector";
 const UpdateAddress = () => {
   const auth = useContext(AuthContext);
   const addressId = useParams().addressId;
+  const history = useHistory();
   const [Name, setName] = useState();
   const [Country, setCountry] = useState();
   const [Zipcode1, setZipcode1] = useState();
@@ -18,6 +19,7 @@ const UpdateAddress = () => {
   const [Company, setCompany] = useState();
   const [Email, setEmail] = useState();
   const [PhoneNumber, setPhoneNumber] = useState();
+  const [Message, setMessage] = useState();
 
   const addressUpdateSubmitHandler = async (event) => {
     event.preventDefault();
@@ -41,8 +43,18 @@ const UpdateAddress = () => {
         body
       );
       console.log(response);
+      const responseMessage = response.data.message;
+      const redirectMessage = "５秒以内に自動的にリダイレクトされます。";
+      const joinedMessage = responseMessage + redirectMessage;
+      setMessage(joinedMessage);
+      if (response) {
+        setTimeout(() => {
+          history.push("/account/addresses");
+        }, 3000);
+      }
     } catch (error) {
       console.log(error);
+      setMessage(error.message);
     }
   };
 
@@ -79,6 +91,7 @@ const UpdateAddress = () => {
 
   return (
     <div>
+      <h3>{Message}</h3>
       <h1>UpdateAddress</h1>
 
       <form action="" onSubmit={addressUpdateSubmitHandler}>
