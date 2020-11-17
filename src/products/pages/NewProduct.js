@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
+import categoryData from "../data/category-selector-list";
 
 const NewProduct = () => {
   const auth = useContext(AuthContext);
@@ -20,6 +21,12 @@ const NewProduct = () => {
   const [Image4, setImage4] = useState();
   const [Image5, setImage5] = useState();
   const [Message, setMessage] = useState("");
+
+  // 最初にすべてのgrandParentCategoryをCateogryDataから読み出し、配列にしOptionにする。
+  //次に出品者にそのOptionからgrandParentCategoryを選ばせたら、その選ばれたカテゴリーをstatevariableにセットしクエリにする。そのクエリを使い、そのguranParentCategory配下のオブジェクトをfindで見つけ、変数にいれる。
+  // そのオブジェクトを使い、parentCategory,childcategory,GrandChildCategory,GrandGrnadChildcategoryそれぞれの配列を取り出し、各自変数に入れる。それらの変数を使い、それぞれoptionタグにする。それらを出品者に選ばせる。選んだ後は、grandGrandChild category を'categories' filedに、grandChild categoryを、'parent category' filedに、それよりも上のすべてのカテゴリー種を、'ancestors categories' filedに変数を使いセットする。
+  //表示形式としては、grandParentCategoryが選択されるまでは、配下のSelectorはconditional renderingで非表示にしてもいい（grandParentCategoryが選択された段階で、trueにする）。
+  // parentCategory,childcategory,GrandChildCategory,GrandGrnadChildcategoryらカテゴリーの表示名は、上から順に、大カテゴリー、中カテゴリー、小カテゴリー、個別カテゴリー、という表示名にでもする。
 
   const productDataSubmitHandler = async (event) => {
     event.preventDefault();
