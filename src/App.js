@@ -165,6 +165,7 @@ function App() {
       <Route path="/account/order-history" exact>
         <OrderHistory />
       </Route>
+      {/* address all */}
       <Route path="/account/addresses" exact>
         <Addresses />
       </Route>
