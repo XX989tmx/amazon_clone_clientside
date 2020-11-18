@@ -216,6 +216,26 @@ const NewProduct = () => {
     setIsGrandParentCategoriesSelected(true);
   };
 
+  const chosenGrandParentCategoryOptionsChangeHandler = (event) => {
+    const selectedChosenGrandParentCategoryOption = event.target.value;
+  };
+
+  const chosenParentCategoryOptionsChangeHandler = (event) => {
+    const selectedChosenParentCategoryOption = event.target.value;
+  };
+
+  const chosenChildCategoryOptionsChangeHandler = (event) => {
+    const selectedChosenChildCategoryOption = event.target.value;
+  };
+
+  const chosenGrandChildCategoryOptionsChangeHandler = (event) => {
+    const selectedChosenGrandChildCategoryOption = event.target.value;
+  };
+
+  const chosenGrandGrandChildCategoryOptionsChangeHandler = (event) => {
+    const selectedChosenGrandGrandChildCategoryOption = event.target.value;
+  };
+
   return (
     <div>
       <h1>NewProduct</h1>
@@ -250,31 +270,51 @@ const NewProduct = () => {
         </select>
 
         {/* grand parent category */}
-        <select name="" id="">
+        <select
+          name=""
+          id=""
+          onChange={chosenGrandParentCategoryOptionsChangeHandler}
+        >
           <option value="">grand parent category</option>
           {ChosenGrandParentCategoryOptions}
         </select>
 
         {/* parent category */}
-        <select name="" id="">
+        <select
+          name=""
+          id=""
+          onChange={chosenParentCategoryOptionsChangeHandler}
+        >
           <option value="">parent category</option>
           {ChosenParentCategoryOptions}
         </select>
 
         {/* child category */}
-        <select name="" id="">
+        <select
+          name=""
+          id=""
+          onChange={chosenChildCategoryOptionsChangeHandler}
+        >
           <option value="">child category</option>
           {ChosenChildCategoryOptions}
         </select>
 
         {/* grand child category */}
-        <select name="" id="">
+        <select
+          name=""
+          id=""
+          onChange={chosenGrandChildCategoryOptionsChangeHandler}
+        >
           <option value=""></option>
           {ChosenGrandChildOptions}
         </select>
 
         {/* grand grand child category */}
-        <select name="" id="">
+        <select
+          name=""
+          id=""
+          onChange={chosenGrandGrandChildCategoryOptionsChangeHandler}
+        >
           <option value="">grand grand child category</option>
           {ChosenGrandGrandChildOptions}
         </select>
