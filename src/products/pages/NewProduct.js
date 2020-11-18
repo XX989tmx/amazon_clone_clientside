@@ -1,5 +1,5 @@
 import Axios from "axios";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 import categoryData from "../data/category-selector-list";
@@ -22,11 +22,50 @@ const NewProduct = () => {
   const [Image5, setImage5] = useState();
   const [Message, setMessage] = useState("");
 
+  const [GrandParentCategories, setGrandParentCategories] = useState([]);
+  const [categoryQuery, setCategoryQuery] = useState();
+  const [
+    IsGrandParentCategoriesSelected,
+    setIsGrandParentCategoriesSelected,
+  ] = useState(false);
+
+  const [
+    ChosenGrandParentCategoryOptions,
+    setChosenGrandParentCategoryOptions,
+  ] = useState();
+  const [
+    ChosenParentCategoryOptions,
+    setChosenParentCategoryOptions,
+  ] = useState();
+  const [
+    ChosenChildCategoryOptions,
+    setChosenChildCategoryOptions,
+  ] = useState();
+  const [ChosenGrandChildOptions, setChosenGrandChildOptions] = useState();
+  const [
+    ChosenGrandGrandChildOptions,
+    setChosenGrandGrandChildOptions,
+  ] = useState();
+
   // 最初にすべてのgrandParentCategoryをCateogryDataから読み出し、配列にしOptionにする。
   //次に出品者にそのOptionからgrandParentCategoryを選ばせたら、その選ばれたカテゴリーをstatevariableにセットしクエリにする。そのクエリを使い、そのguranParentCategory配下のオブジェクトをfindで見つけ、変数にいれる。
   // そのオブジェクトを使い、parentCategory,childcategory,GrandChildCategory,GrandGrnadChildcategoryそれぞれの配列を取り出し、各自変数に入れる。それらの変数を使い、それぞれoptionタグにする。それらを出品者に選ばせる。選んだ後は、grandGrandChild category を'categories' filedに、grandChild categoryを、'parent category' filedに、それよりも上のすべてのカテゴリー種を、'ancestors categories' filedに変数を使いセットする。
   //表示形式としては、grandParentCategoryが選択されるまでは、配下のSelectorはconditional renderingで非表示にしてもいい（grandParentCategoryが選択された段階で、trueにする）。
   // parentCategory,childcategory,GrandChildCategory,GrandGrnadChildcategoryらカテゴリーの表示名は、上から順に、大カテゴリー、中カテゴリー、小カテゴリー、個別カテゴリー、という表示名にでもする。
+
+  useEffect(() => {
+    async function onLoad(params) {
+      const grandParentCategories = categoryData.map((v, i) => (
+        <option key={i} value={v.grandParentCategory}>
+          {" "}
+          {v.grandParentCategory}
+        </option>
+      ));
+      console.log(grandParentCategories);
+      setGrandParentCategories(grandParentCategories);
+    }
+    onLoad();
+  }, []);
 
   const productDataSubmitHandler = async (event) => {
     event.preventDefault();
@@ -110,6 +149,73 @@ const NewProduct = () => {
     setImage5(event.target.value);
   };
 
+  const grandParentCategoryInitializerChangeHandler = (event) => {
+    setCategoryQuery(event.target.value);
+    const categoryQuery = event.target.value;
+    const targetIndex = categoryData.findIndex(
+      (v) => v.grandParentCategory === categoryQuery
+    );
+    const chosenCategoryTree = categoryData[targetIndex];
+    console.log(chosenCategoryTree);
+
+    //grandParentCategory :string
+    const chosenGrandParentCategory = chosenCategoryTree.grandParentCategory;
+    console.log(chosenGrandParentCategory);
+    // create options
+    const chosenGrandParentCategoryOption = (
+      <option value={chosenGrandParentCategory}>
+        {chosenGrandParentCategory}
+      </option>
+    );
+    setChosenGrandParentCategoryOptions(chosenGrandParentCategoryOption);
+    //parentCategory :array
+    const chosenParentCategory = chosenCategoryTree.parentCategory;
+    console.log(chosenParentCategory);
+    // create options
+    const chosenParentCategoryOptions = chosenParentCategory.map((v, i) => (
+      <option key={i} value={v}>
+        {v}
+      </option>
+    ));
+    setChosenParentCategoryOptions(chosenParentCategoryOptions);
+    //childCategory array
+    const chosenChildCategory = chosenCategoryTree.childCategory;
+    console.log(chosenChildCategory);
+    // create options
+    const chosenChildCategoryOptions = chosenChildCategory.map((v, i) => (
+      <option key={i} value={v}>
+        {v}
+      </option>
+    ));
+    setChosenChildCategoryOptions(chosenChildCategoryOptions);
+    //grandChildCategory string
+    const chosenGrandChildCategory =
+      chosenCategoryTree.grandChildCategory[0].grandChildCategory;
+    console.log(chosenGrandChildCategory);
+    // create options
+    const chosenGrandChildCategoryOption = (
+      <option value={chosenGrandChildCategory}>
+        {chosenGrandChildCategory}
+      </option>
+    );
+    setChosenGrandChildOptions(chosenGrandChildCategoryOption);
+    //grandGrandChildCategory :array
+    const chosenGrandGrandChildCategory =
+      chosenCategoryTree.grandChildCategory[0].grandGrandChildCategory;
+    console.log(chosenGrandGrandChildCategory);
+    // create options
+    const chosenGrandGrandChildCategoryOptions = chosenGrandGrandChildCategory.map(
+      (v, i) => (
+        <option key={i} value={v}>
+          {v}
+        </option>
+      )
+    );
+    setChosenGrandGrandChildOptions(chosenGrandGrandChildCategoryOptions);
+
+    setIsGrandParentCategoriesSelected(true);
+  };
+
   return (
     <div>
       <h1>NewProduct</h1>
@@ -132,6 +238,45 @@ const NewProduct = () => {
           <option value="">在庫の有無</option>
           <option value="true">あり</option>
           <option value="false">なし</option>
+        </select>
+
+        <select
+          name=""
+          id=""
+          onChange={grandParentCategoryInitializerChangeHandler}
+        >
+          <option value="">カテゴリーを選択してください</option>
+          {GrandParentCategories}
+        </select>
+
+        {/* grand parent category */}
+        <select name="" id="">
+          <option value="">grand parent category</option>
+          {ChosenGrandParentCategoryOptions}
+        </select>
+
+        {/* parent category */}
+        <select name="" id="">
+          <option value="">parent category</option>
+          {ChosenParentCategoryOptions}
+        </select>
+
+        {/* child category */}
+        <select name="" id="">
+          <option value="">child category</option>
+          {ChosenChildCategoryOptions}
+        </select>
+
+        {/* grand child category */}
+        <select name="" id="">
+          <option value=""></option>
+          {ChosenGrandChildOptions}
+        </select>
+
+        {/* grand grand child category */}
+        <select name="" id="">
+          <option value="">grand grand child category</option>
+          {ChosenGrandGrandChildOptions}
         </select>
 
         {/* //大カテゴリー */}
