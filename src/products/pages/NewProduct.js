@@ -287,6 +287,19 @@ const NewProduct = () => {
     );
   };
 
+  const resetCategorySelector = (event) => {
+    event.preventDefault()
+    setIsGrandParentCategoriesSelected(false);
+    const grandParentCategories = categoryData.map((v, i) => (
+      <option key={i} value={v.grandParentCategory}>
+        {" "}
+        {v.grandParentCategory}
+      </option>
+    ));
+    console.log(grandParentCategories);
+    setGrandParentCategories(grandParentCategories);
+  };
+
   return (
     <div>
       <h1>NewProduct</h1>
@@ -310,7 +323,9 @@ const NewProduct = () => {
           <option value="true">あり</option>
           <option value="false">なし</option>
         </select>
-
+        <button onClick={resetCategorySelector}>
+          カテゴリーをリセットする
+        </button>
         <select
           name=""
           id=""
@@ -320,55 +335,56 @@ const NewProduct = () => {
           {GrandParentCategories}
         </select>
 
-        {/* grand parent category */}
-        <select
-          name=""
-          id=""
-          onChange={chosenGrandParentCategoryOptionsChangeHandler}
-        >
-          <option value="">grand parent category</option>
-          {ChosenGrandParentCategoryOptions}
-        </select>
-
-        {/* parent category */}
-        <select
-          name=""
-          id=""
-          onChange={chosenParentCategoryOptionsChangeHandler}
-        >
-          <option value="">parent category</option>
-          {ChosenParentCategoryOptions}
-        </select>
-
-        {/* child category */}
-        <select
-          name=""
-          id=""
-          onChange={chosenChildCategoryOptionsChangeHandler}
-        >
-          <option value="">child category</option>
-          {ChosenChildCategoryOptions}
-        </select>
-
-        {/* grand child category */}
-        <select
-          name=""
-          id=""
-          onChange={chosenGrandChildCategoryOptionsChangeHandler}
-        >
-          <option value=""></option>
-          {ChosenGrandChildOptions}
-        </select>
-
-        {/* grand grand child category */}
-        <select
-          name=""
-          id=""
-          onChange={chosenGrandGrandChildCategoryOptionsChangeHandler}
-        >
-          <option value="">grand grand child category</option>
-          {ChosenGrandGrandChildOptions}
-        </select>
+        {IsGrandParentCategoriesSelected && (
+          <div>
+            {" "}
+            {/* grand parent category */}
+            <select
+              name=""
+              id=""
+              onChange={chosenGrandParentCategoryOptionsChangeHandler}
+            >
+              <option value="">grand parent category</option>
+              {ChosenGrandParentCategoryOptions}
+            </select>
+            {/* parent category */}
+            <select
+              name=""
+              id=""
+              onChange={chosenParentCategoryOptionsChangeHandler}
+            >
+              <option value="">parent category</option>
+              {ChosenParentCategoryOptions}
+            </select>
+            {/* child category */}
+            <select
+              name=""
+              id=""
+              onChange={chosenChildCategoryOptionsChangeHandler}
+            >
+              <option value="">child category</option>
+              {ChosenChildCategoryOptions}
+            </select>
+            {/* grand child category */}
+            <select
+              name=""
+              id=""
+              onChange={chosenGrandChildCategoryOptionsChangeHandler}
+            >
+              <option value=""></option>
+              {ChosenGrandChildOptions}
+            </select>
+            {/* grand grand child category */}
+            <select
+              name=""
+              id=""
+              onChange={chosenGrandGrandChildCategoryOptionsChangeHandler}
+            >
+              <option value="">grand grand child category</option>
+              {ChosenGrandGrandChildOptions}
+            </select>
+          </div>
+        )}
 
         {/* //大カテゴリー */}
         {/* 後でコンポーネント化 */}
