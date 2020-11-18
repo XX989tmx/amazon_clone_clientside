@@ -47,6 +47,27 @@ const NewProduct = () => {
     setChosenGrandGrandChildOptions,
   ] = useState();
 
+  const [
+    SelectedChosenGrandParentCategoryOption,
+    setSelectedChosenGrandParentCategoryOption,
+  ] = useState();
+  const [
+    SelectedChosenParentCategoryOption,
+    setSelectedChosenParentCategoryOption,
+  ] = useState();
+  const [
+    SelectedChosenChildCategoryOption,
+    setSelectedChosenChildCategoryOption,
+  ] = useState();
+  const [
+    SelectedChosenGrandChildCategoryOption,
+    setSelectedChosenGrandChildCategoryOption,
+  ] = useState();
+  const [
+    SelectedChosenGrandGrandChildCategoryOption,
+    setSelectedChosenGrandGrandChildCategoryOption,
+  ] = useState();
+
   // 最初にすべてのgrandParentCategoryをCateogryDataから読み出し、配列にしOptionにする。
   //次に出品者にそのOptionからgrandParentCategoryを選ばせたら、その選ばれたカテゴリーをstatevariableにセットしクエリにする。そのクエリを使い、そのguranParentCategory配下のオブジェクトをfindで見つけ、変数にいれる。
   // そのオブジェクトを使い、parentCategory,childcategory,GrandChildCategory,GrandGrnadChildcategoryそれぞれの配列を取り出し、各自変数に入れる。それらの変数を使い、それぞれoptionタグにする。それらを出品者に選ばせる。選んだ後は、grandGrandChild category を'categories' filedに、grandChild categoryを、'parent category' filedに、それよりも上のすべてのカテゴリー種を、'ancestors categories' filedに変数を使いセットする。
@@ -218,22 +239,38 @@ const NewProduct = () => {
 
   const chosenGrandParentCategoryOptionsChangeHandler = (event) => {
     const selectedChosenGrandParentCategoryOption = event.target.value;
+    console.log(selectedChosenGrandParentCategoryOption);
+    setSelectedChosenGrandParentCategoryOption(
+      selectedChosenGrandParentCategoryOption
+    );
   };
 
   const chosenParentCategoryOptionsChangeHandler = (event) => {
     const selectedChosenParentCategoryOption = event.target.value;
+    console.log(selectedChosenParentCategoryOption);
+    setSelectedChosenParentCategoryOption(selectedChosenParentCategoryOption);
   };
 
   const chosenChildCategoryOptionsChangeHandler = (event) => {
     const selectedChosenChildCategoryOption = event.target.value;
+    console.log(selectedChosenChildCategoryOption);
+    setSelectedChosenChildCategoryOption(selectedChosenChildCategoryOption);
   };
 
   const chosenGrandChildCategoryOptionsChangeHandler = (event) => {
     const selectedChosenGrandChildCategoryOption = event.target.value;
+    console.log(selectedChosenGrandChildCategoryOption);
+    setSelectedChosenGrandChildCategoryOption(
+      selectedChosenGrandChildCategoryOption
+    );
   };
 
   const chosenGrandGrandChildCategoryOptionsChangeHandler = (event) => {
     const selectedChosenGrandGrandChildCategoryOption = event.target.value;
+    console.log(selectedChosenGrandGrandChildCategoryOption);
+    setSelectedChosenGrandGrandChildCategoryOption(
+      selectedChosenGrandGrandChildCategoryOption
+    );
   };
 
   return (
