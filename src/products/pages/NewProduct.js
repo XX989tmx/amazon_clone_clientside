@@ -91,6 +91,20 @@ const NewProduct = () => {
   const productDataSubmitHandler = async (event) => {
     event.preventDefault();
     let response;
+
+    const separator = ",";
+    const joinedCategories =
+      SelectedChosenGrandParentCategoryOption +
+      separator +
+      SelectedChosenParentCategoryOption +
+      separator +
+      SelectedChosenChildCategoryOption;
+    console.log(joinedCategories);
+    const ancestorCategories = joinedCategories;
+
+    const parentCategory = SelectedChosenGrandChildCategoryOption;
+    const category = SelectedChosenGrandGrandChildCategoryOption;
+
     try {
       const formData = new FormData();
       formData.append("name", Name);
@@ -99,9 +113,9 @@ const NewProduct = () => {
       formData.append("brand", Brand);
       formData.append("stockQuantity", StockQuantity);
       formData.append("isStock", IsStock);
-      formData.append("parentCategory", ParentCategory);
-      formData.append("categories", Category);
-      formData.append("ancestorCategories", AncestorCategory);
+      formData.append("parentCategory", parentCategory);
+      formData.append("categories", category);
+      formData.append("ancestorCategories", ancestorCategories);
       formData.append("images", Image1);
       formData.append("images", Image2);
       formData.append("images", Image3);
