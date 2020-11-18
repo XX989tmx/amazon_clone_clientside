@@ -2,11 +2,17 @@ import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
+import GrandChildCategoryIndexList from "../components/GrandChildCategoryIndexList";
 
 const GrandChildCategoryIndex = () => {
+  const [
+    GrandChildCategoryMatchedProducts,
+    setGrandChildCategoryMatchedProducts,
+  ] = useState([]);
   // grandChildCategory(スキーマ上は'parent categories')にマッチした配列を受け取る
   const grandChildCategory = useParams().grandChildCategory;
   console.log(grandChildCategory);
+  //pagination24。list,itemコンポーネントにし、個々のProductをspecificProductpageへのLinkで囲む。
   useEffect(() => {
     async function getGrandChildCategoryMatchedProducts(params) {
       let response;
@@ -16,6 +22,9 @@ const GrandChildCategoryIndex = () => {
             `/products/getProductIndexByParentCategory/${grandChildCategory}`
         );
         console.log(response);
+        const data = response.data;
+        const products = data.products;
+        setGrandChildCategoryMatchedProducts(products);
       } catch (error) {
         console.log(error);
       }
@@ -23,7 +32,14 @@ const GrandChildCategoryIndex = () => {
     getGrandChildCategoryMatchedProducts();
   }, []);
 
-  return <div>grand child category index</div>;
+  return (
+    <div>
+      grand child category index{" "}
+      <GrandChildCategoryIndexList
+        GrandChildCategoryMatchedProducts={GrandChildCategoryMatchedProducts}
+      />
+    </div>
+  );
 };
 
 export default GrandChildCategoryIndex;
