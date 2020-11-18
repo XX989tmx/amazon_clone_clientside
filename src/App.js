@@ -35,6 +35,10 @@ import HeaderNavigation from "./shared/components/navigation/HeaderNavigation";
 import Checkout from "./order/pages/Checkout";
 import OrderComplete from "./order/pages/OrderComplete";
 import WishlistAll from "./accounts/wishlist/pages/WishlistAll";
+import ParentCategoryIndex from "./products/pages/ParentCategoryIndex";
+import ChildCategoryIndex from "./products/pages/ChildCategoryIndex";
+import GrandChildCategoryIndex from "./products/pages/GrandChildCategoryIndex";
+import GrandGrandChildCategoryIndex from "./products/pages/GrandGrandChildCategoryIndex";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -60,10 +64,10 @@ function App() {
         // 家電、カメラ、AV機器(grandparent) => 家電、カメラ、AV機器", "中古ストア(parent) => キッチン家電(child) => 炊飯器、精米機（grand child） => 圧力IH炊飯器（grand grand child）
         //カテゴリーごとのProductIndexPageは複数作る必要がある。具体的には、'parent'の段階から、カテゴリでのIndexページを作る必要があり、parent, child, grand child, grand grand childの4つのIndexページを作る必要がある。それぞれのページではそれぞれのカテゴリーノードをキーワードにしてリクエストを送り、レスポンスを受け取り展開。レンダリング方法の違いがあり、4つのうち、grand grand childのページだけが、純粋にProductLinkをIndexするのみであり、それ以外の情報（カテゴリごとの角度で切った配列の表示）はない。grand grand child以外の3つは、productLinkのIndexに加え、新着、などの角度ごとに切った配列を表示する。pagenation数にも違いがあり、grand gran child では１６、それ以外の3つでは２４。
         
-        // /product/index/:parentCategory pagination24+multiple array
-        // /product/index/:childCategory pagination24+multiple array
-        // /product/index/:grandChildCategory pagination24+multiple array
-        // /product/index/:grandGrandChildCategory pagination16
+        // /product/index/parentCategory/:parentCategory pagination24+multiple array
+        // /product/index/childCategory/:childCategory pagination24+multiple array
+        // /product/index/grandChildCategory/:grandChildCategory pagination24+multiple array
+        // /product/index/grandGrandChildCategory/:grandGrandChildCategory pagination16
 
 
       //ブランド、出品者、カテゴリごとのランキング５０、それぞれに、Pageを用意する必要がある。（ブランド、出品者、カテゴリーランキング５０ごとのレスポンスを展開）
@@ -125,6 +129,27 @@ function App() {
       <Route path="/product/new" exact>
         <NewProduct />
       </Route>
+      {/* parent category index */}
+      <Route path="/product/index/parentCategory/:parentCategory" exact>
+        <ParentCategoryIndex />
+      </Route>
+      {/* child category index */}
+      <Route path="/product/index/childCategory/:childCategory" exact>
+        <ChildCategoryIndex />
+      </Route>
+      {/* grand child category index */}
+      <Route path="/product/index/grandChildCategory/:grandChildCategory" exact>
+        <GrandChildCategoryIndex />
+      </Route>
+      {/* grand grand child category index */}
+      <Route
+        path="/product/index/grandGrandChildCategory/:grandGrandChildCategory"
+        exact
+      >
+        <GrandGrandChildCategoryIndex />
+      </Route>
+
+      {/* 下のは不要なので消す */}
       <Route path="/product/productIndex/:category" exact>
         <ProductIndex />
       </Route>

@@ -50,7 +50,9 @@ const HeaderNavigation = () => {
             <Link to={"/account/addresses/new"}>add address</Link>
           </li>
           <li>
-            <Link to={"/account/addresses/update/5fb434d64756c1c23399669e"}>update address</Link>
+            <Link to={"/account/addresses/update/5fb434d64756c1c23399669e"}>
+              update address
+            </Link>
           </li>
           <li>
             <Link to={"/account/your-payments/payment-methods"}>
@@ -100,10 +102,28 @@ const HeaderNavigation = () => {
             <Link to={"/order/checkout"}>Checkout</Link>
           </li>
           <li>
+            <Link to={`/account/wishlists/all`}>wishlist all</Link>
+          </li>
+          <li>
+            <Link to={`/product/index/parentCategory/食品＆飲料`}>
+              parent category index
+            </Link>
+          </li>
+          <li>
+            <Link to={`/product/index/childCategory/すべての食品＆飲料`}>
+              child category index
+            </Link>
+          </li>
+          <li>
+            <Link to={`/product/index/grandChildCategory/ドリンク`}>
+              grand child category index
+            </Link>
+          </li>
+          <li>
             <Link
-              to={`/account/wishlists/all`}
+              to={`/product/index/grandGrandChildCategory/ミネラルウォーター`}
             >
-              wishlist all
+              grand grand child category index
             </Link>
           </li>
         </ul>
