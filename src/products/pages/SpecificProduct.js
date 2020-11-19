@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SpecificProduct = () => {
@@ -12,7 +12,7 @@ const SpecificProduct = () => {
   const [NameOfWishlist, setNameOfWishlist] = useState();
   const [ExistingWishlists, setExistingWishlists] = useState([]);
   const [WishlistToAdd, setWishlistToAdd] = useState();
-
+  const location = useLocation()
   useEffect(() => {
     async function fetch(params) {
       let response;
@@ -50,7 +50,7 @@ const SpecificProduct = () => {
       }
     }
     getAllWishlists();
-  }, []);
+  }, [location]);
 
   const addToCartHandler = async (event) => {
     event.preventDefault();

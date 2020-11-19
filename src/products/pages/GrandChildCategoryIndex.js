@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 import GrandChildCategoryIndexList from "../components/GrandChildCategoryIndexList";
 
@@ -12,6 +12,7 @@ const GrandChildCategoryIndex = () => {
   // grandChildCategory(スキーマ上は'parent categories')にマッチした配列を受け取る
   const grandChildCategory = useParams().grandChildCategory;
   console.log(grandChildCategory);
+  const location = useLocation()
   //pagination24。list,itemコンポーネントにし、個々のProductをspecificProductpageへのLinkで囲む。
   useEffect(() => {
     async function getGrandChildCategoryMatchedProducts(params) {
@@ -30,7 +31,7 @@ const GrandChildCategoryIndex = () => {
       }
     }
     getGrandChildCategoryMatchedProducts();
-  }, []);
+  }, [location]);
 
   return (
     <div>

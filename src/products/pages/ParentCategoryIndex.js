@@ -1,10 +1,11 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const ParentCategoryIndex = () => {
   const parentCategory = useParams().parentCategory;
   console.log(parentCategory);
+  const location = useLocation()
   useEffect(() => {
     async function getParentCategoryMatchedProducts(params) {
       let response;
@@ -19,7 +20,7 @@ const ParentCategoryIndex = () => {
       }
     }
     getParentCategoryMatchedProducts();
-  }, []);
+  }, [location]);
   return <div>parent category</div>;
 };
 

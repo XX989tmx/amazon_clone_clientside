@@ -1,11 +1,12 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const ChildCategoryIndex = () => {
   const childCategory = useParams().childCategory;
   console.log(childCategory);
+  const location = useLocation()
   useEffect(() => {
     async function getChildCategoryMatchedProducts(params) {
       let response;
@@ -20,7 +21,7 @@ const ChildCategoryIndex = () => {
       }
     }
     getChildCategoryMatchedProducts();
-  }, []);
+  }, [location]);
 
   return <div>child category index</div>;
 };
