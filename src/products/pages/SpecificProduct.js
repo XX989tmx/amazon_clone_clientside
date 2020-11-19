@@ -26,6 +26,7 @@ const SpecificProduct = () => {
         );
 
         function createStockQuantityOptions(stockQuantity) {
+          //残り在庫数がダイナミックに反映されるようにする。カートに入った段階では、データベースレベルでの在庫数更新はしないが、注文が確定した段階で、データベースから注文個数分を在庫数から差し引く。その段階で、ここのstockQuantityも更新される。カートに入れた段階では、コンフリクトを心配しいなくていい。
           const arr = new Array(stockQuantity).fill(1);
           const stockQuantityOptions = arr.map((v, i) => (
             <option key={i} value={i + 1}>
@@ -103,6 +104,7 @@ const SpecificProduct = () => {
 
   const quantityChangeHandler = (event) => {
     setQuantity(event.target.value);
+    console.log(event.target.value);
   };
 
   const createNewWishlistHandler = async (event) => {
@@ -154,13 +156,17 @@ const SpecificProduct = () => {
       <h5>{CartStatusMessage}</h5>
       <h1>SpecificProduct</h1>
       <form action="" onSubmit={addToCartHandler}>
-        <input
+        {/* <input
           type="number"
           name=""
           id=""
           value={Quantity}
           onChange={quantityChangeHandler}
-        />
+        /> */}
+        <select name="" id="" onChange={quantityChangeHandler}>
+          <option value="">数量</option>
+          {StockQuantityOptions}
+        </select>
         <button type="submit">カートに入れる</button>
       </form>
 
