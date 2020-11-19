@@ -5,7 +5,7 @@ const GrandGrandChildCategoryIndexList = (props) => {
   //一部のみ
   return (
     <div>
-      {props.GrandGrandChildCategoryMatchedProducts.map((v, i) => (
+      {props.GrandGrandChildCategoryMatchedProducts.data.map((v, i) => (
         <GrandGrandChildCategoryIndexItem
           key={i}
           ancestorCategories={v.ancestorCategories}

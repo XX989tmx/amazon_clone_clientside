@@ -121,7 +121,7 @@ const HeaderNavigation = () => {
           </li>
           <li>
             <Link
-              to={`/product/index/grandGrandChildCategory/ミネラルウォーター`}
+              to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=1`}
             >
               grand grand child category index
             </Link>
