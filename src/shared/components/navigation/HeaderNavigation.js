@@ -126,6 +126,9 @@ const HeaderNavigation = () => {
               grand grand child category index
             </Link>
           </li>
+          <li>
+            <Link to={`/product/brand/サントリー`}>brand product index</Link>
+          </li>
         </ul>
       </nav>
     </header>

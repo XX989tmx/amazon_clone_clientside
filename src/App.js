@@ -39,6 +39,7 @@ import ParentCategoryIndex from "./products/pages/ParentCategoryIndex";
 import ChildCategoryIndex from "./products/pages/ChildCategoryIndex";
 import GrandChildCategoryIndex from "./products/pages/GrandChildCategoryIndex";
 import GrandGrandChildCategoryIndex from "./products/pages/GrandGrandChildCategoryIndex";
+import GetProductsByBrand from "./products/pages/GetProductsByBrand";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -164,6 +165,9 @@ function App() {
       </Route>
       <Route path="/product/:productId" exact>
         <SpecificProduct />
+      </Route>
+      <Route path="/product/brand/:brand" exact>
+        <GetProductsByBrand />
       </Route>
 
       {/* cart */}
