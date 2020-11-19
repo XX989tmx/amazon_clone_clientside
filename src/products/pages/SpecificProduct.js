@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
+import SpecificProductList from "../components/SpecificProductList";
 
 const SpecificProduct = () => {
   const productId = useParams().productId;
@@ -12,7 +13,9 @@ const SpecificProduct = () => {
   const [NameOfWishlist, setNameOfWishlist] = useState();
   const [ExistingWishlists, setExistingWishlists] = useState([]);
   const [WishlistToAdd, setWishlistToAdd] = useState();
-  const location = useLocation()
+  const location = useLocation();
+  const [SpecificProduct, setSpecificProduct] = useState([]);
+  const [StockQuantityOptions, setStockQuantityOptions] = useState([]);
   useEffect(() => {
     async function fetch(params) {
       let response;
@@ -21,10 +24,26 @@ const SpecificProduct = () => {
           process.env.REACT_APP_BACKEND_URL +
             `/products/getSpecificProductById/${productId}`
         );
+
+        function createStockQuantityOptions(stockQuantity) {
+          const arr = new Array(stockQuantity).fill(1);
+          const stockQuantityOptions = arr.map((v, i) => (
+            <option key={i} value={i + 1}>
+              {i + 1}
+            </option>
+          ));
+          console.log(stockQuantityOptions);
+          setStockQuantityOptions(stockQuantityOptions);
+        }
+        createStockQuantityOptions(
+          response.data.specificProduct[0].stockQuantity
+        );
+
+        console.log(response);
+        setSpecificProduct(response.data.specificProduct);
       } catch (error) {
         console.log(error);
       }
-      console.log(response);
     }
     fetch();
 
@@ -142,7 +161,7 @@ const SpecificProduct = () => {
           value={Quantity}
           onChange={quantityChangeHandler}
         />
-        <button type="submit">add to cart</button>
+        <button type="submit">カートに入れる</button>
       </form>
 
       <form action="" onSubmit={createNewWishlistHandler}>
@@ -151,7 +170,7 @@ const SpecificProduct = () => {
           value={NameOfWishlist}
           onChange={nameOfWishlistChangeHandler}
         />
-        <button type="submit">create new wishlist</button>
+        <button type="submit">新しくウィッシュリストを作成する</button>
       </form>
 
       <form action="" onSubmit={addProductToWishlistSubmitHandler}>
@@ -164,6 +183,13 @@ const SpecificProduct = () => {
       <Link to={`/account/wishlists/all?wishlistId=5fb2f03e3971ce7b8e9efb28`}>
         wishlist all
       </Link>
+
+      <div>
+        <SpecificProductList
+          SpecificProduct={SpecificProduct}
+          StockQuantityOptions={StockQuantityOptions}
+        />
+      </div>
     </div>
   );
 };
