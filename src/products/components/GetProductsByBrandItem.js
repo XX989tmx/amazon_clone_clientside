@@ -1,10 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GetProductsByBrandItem = (props) => {
     return (
-        <div>
-            
-        </div>
+      <div>
+        <Link to={`/product/${props.id}`}>
+          <div>
+            {" "}
+            {props.name}
+            {props.price}
+            {props.brand}
+          </div>
+        </Link>
+      </div>
     );
 }
 

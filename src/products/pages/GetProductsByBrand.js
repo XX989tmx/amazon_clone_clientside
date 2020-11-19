@@ -7,6 +7,7 @@ const GetProductsByBrand = () => {
   const location = useLocation();
   const { brand } = useParams();
   const history = useHistory();
+  const [BrandMatchedProducts, setBrandMatchedProducts] = useState([]);
   useEffect(() => {
     async function getBrandMatchedProducts(params) {
       const search = window.location.search;
@@ -18,6 +19,8 @@ const GetProductsByBrand = () => {
             `/products/getProductIndexByBrand/${brand}?page=${queryValue}`
         );
         console.log(response);
+        const data = response.data;
+        setBrandMatchedProducts(data.products);
       } catch (error) {
         console.log(error);
       }
@@ -27,7 +30,7 @@ const GetProductsByBrand = () => {
   return (
     <div>
       brand product index
-      <GetProductsByBrandList />
+      <GetProductsByBrandList BrandMatchedProducts={BrandMatchedProducts} />
     </div>
   );
 };
