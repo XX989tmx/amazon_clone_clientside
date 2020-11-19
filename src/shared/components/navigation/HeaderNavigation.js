@@ -127,7 +127,7 @@ const HeaderNavigation = () => {
             </Link>
           </li>
           <li>
-            <Link to={`/product/brand/サントリー`}>brand product index</Link>
+            <Link to={`/product/brand/サントリー?page=1`}>brand product index</Link>
           </li>
         </ul>
       </nav>
