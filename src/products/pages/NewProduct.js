@@ -22,6 +22,11 @@ const NewProduct = () => {
   const [Image5, setImage5] = useState();
   const [Message, setMessage] = useState("");
   const [previewUrl1, setPreviewUrl1] = useState(null);
+  const [PreviewUrl2, setPreviewUrl2] = useState(null);
+  const [PreviewUrl3, setPreviewUrl3] = useState(null);
+  const [PreviewUrl4, setPreviewUrl4] = useState(null);
+  const [PreviewUrl5, setPreviewUrl5] = useState(null);
+  
 
   const [GrandParentCategories, setGrandParentCategories] = useState([]);
   const [categoryQuery, setCategoryQuery] = useState();
@@ -171,23 +176,49 @@ const NewProduct = () => {
   const image1ChangeHandler = (event) => {
     // const previewUrl = URL.createObjectURL(event.target.files[0]);
     // setPreviewUrl1(previewUrl);
-    const fileReader = new FileReader()
-    fileReader.onload = () => { setPreviewUrl1(fileReader.result)}
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      setPreviewUrl1(fileReader.result);
+    };
     fileReader.readAsDataURL(event.target.files[0]);
     console.log(event.target.files[0]);
     setImage1(event.target.files[0]);
   };
   const image2ChangeHandler = (event) => {
-    setImage2(event.target.value);
+    const file = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      setPreviewUrl2(fileReader.result);
+    };
+    fileReader.readAsDataURL(file);
+    setImage2(file);
   };
   const image3ChangeHandler = (event) => {
-    setImage3(event.target.value);
+    const file = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      setPreviewUrl3(fileReader.result);
+    };
+    fileReader.readAsDataURL(file);
+    setImage3(file);
   };
   const image4ChangeHandler = (event) => {
-    setImage4(event.target.value);
+    const file = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      setPreviewUrl4(fileReader.result);
+    };
+    fileReader.readAsDataURL(file);
+    setImage4(file);
   };
   const image5ChangeHandler = (event) => {
-    setImage5(event.target.value);
+    const file = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      setPreviewUrl5(fileReader.result);
+    };
+    fileReader.readAsDataURL(file);
+    setImage5(file);
   };
 
   const grandParentCategoryInitializerChangeHandler = (event) => {
@@ -416,32 +447,67 @@ const NewProduct = () => {
             alt=""
             style={{ width: "150px", height: "150px" }}
           />
-          <input type="file" id="image1" onChange={image1ChangeHandler} />
+          <input
+            type="file"
+            id="image1"
+            accept=".jpg, .jpeg,.png"
+            onChange={image1ChangeHandler}
+          />
         </div>
-        {/* <input
-          type="file"
-          value={Image2}
-          id="image2"
-          onChange={image2ChangeHandler}
-        />
-        <input
-          type="file"
-          value={Image3}
-          id="image3"
-          onChange={image3ChangeHandler}
-        />
-        <input
-          type="file"
-          value={Image4}
-          id="image4"
-          onChange={image4ChangeHandler}
-        />
-        <input
-          type="file"
-          value={Image5}
-          id="image5"
-          onChange={image5ChangeHandler}
-        /> */}
+        <div>
+          <img
+            src={PreviewUrl2}
+            alt=""
+            style={{ width: "150px", height: "150px" }}
+          />
+          <input
+            type="file"
+            id="image2"
+            accept=".jpg, .jpeg,.png"
+            onChange={image2ChangeHandler}
+          />
+        </div>
+        <div>
+          <img
+            src={PreviewUrl3}
+            alt=""
+            style={{ width: "150px", height: "150px" }}
+          />
+          <input
+            type="file"
+            accept=".jpg, .jpeg,.png"
+            id="image3"
+            onChange={image3ChangeHandler}
+          />
+        </div>
+
+        <div>
+          <img
+            src={PreviewUrl4}
+            alt=""
+            style={{ width: "150px", height: "150px" }}
+          />
+          <input
+            type="file"
+            accept=".jpg, .jpeg,.png"
+            id="image4"
+            onChange={image4ChangeHandler}
+          />
+        </div>
+        <div>
+          <img
+            src={PreviewUrl5}
+            alt=""
+            style={{ width: "150px", height: "150px" }}
+          />{" "}
+          <input
+            type="file"
+            accept=".jpg, .jpeg,.png"
+            id="image5"
+            onChange={image5ChangeHandler}
+          />
+        </div>
+
         <button type="submit">add product</button>
       </form>
     </div>
