@@ -424,23 +424,23 @@ const NewProduct = () => {
         {/* //大カテゴリー */}
         {/* 後でコンポーネント化 */}
         {/* grand child からgrand parent までの全カテゴリー */}
-        <input
+        {/* <input
           type="text"
           value={AncestorCategory}
           onChange={ancestorCategoryChangeHandler}
-        />
+        /> */}
         {/* 中カテゴリー */}
         {/* 後でコンポーネント化 */}
         {/* grand child カテゴリー */}
-        <input
+        {/* <input
           type="text"
           value={ParentCategory}
           onChange={parentCategoryChangeHandler}
-        />
+        /> */}
         {/* 小カテゴリー */}
         {/* 後でコンポーネント化 */}
         {/* 最も末端のgrand grand childカテゴリー */}
-        <input type="text" value={Category} onChange={categoryChangeHandler} />
+        {/* <input type="text" value={Category} onChange={categoryChangeHandler} /> */}
         <div>
           <img
             src={previewUrl1}
