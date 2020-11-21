@@ -21,6 +21,7 @@ const NewProduct = () => {
   const [Image4, setImage4] = useState();
   const [Image5, setImage5] = useState();
   const [Message, setMessage] = useState("");
+  const [previewUrl1, setPreviewUrl1] = useState(null);
 
   const [GrandParentCategories, setGrandParentCategories] = useState([]);
   const [categoryQuery, setCategoryQuery] = useState();
@@ -168,8 +169,13 @@ const NewProduct = () => {
   };
 
   const image1ChangeHandler = (event) => {
-    setImage1(event.target.value);
-    console.log(event.target.value);
+    // const previewUrl = URL.createObjectURL(event.target.files[0]);
+    // setPreviewUrl1(previewUrl);
+    const fileReader = new FileReader()
+    fileReader.onload = () => { setPreviewUrl1(fileReader.result)}
+    fileReader.readAsDataURL(event.target.files[0]);
+    console.log(event.target.files[0]);
+    setImage1(event.target.files[0]);
   };
   const image2ChangeHandler = (event) => {
     setImage2(event.target.value);
@@ -288,7 +294,7 @@ const NewProduct = () => {
   };
 
   const resetCategorySelector = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     setIsGrandParentCategoriesSelected(false);
     const grandParentCategories = categoryData.map((v, i) => (
       <option key={i} value={v.grandParentCategory}>
@@ -334,7 +340,6 @@ const NewProduct = () => {
           <option value="">カテゴリーを選択してください</option>
           {GrandParentCategories}
         </select>
-
         {IsGrandParentCategoriesSelected && (
           <div>
             {" "}
@@ -385,7 +390,6 @@ const NewProduct = () => {
             </select>
           </div>
         )}
-
         {/* //大カテゴリー */}
         {/* 後でコンポーネント化 */}
         {/* grand child からgrand parent までの全カテゴリー */}
@@ -406,13 +410,15 @@ const NewProduct = () => {
         {/* 後でコンポーネント化 */}
         {/* 最も末端のgrand grand childカテゴリー */}
         <input type="text" value={Category} onChange={categoryChangeHandler} />
-        <input
-          type="file"
-          value={Image1}
-          id="image1"
-          onChange={image1ChangeHandler}
-        />
-        <input
+        <div>
+          <img
+            src={previewUrl1}
+            alt=""
+            style={{ width: "150px", height: "150px" }}
+          />
+          <input type="file" id="image1" onChange={image1ChangeHandler} />
+        </div>
+        {/* <input
           type="file"
           value={Image2}
           id="image2"
@@ -435,7 +441,7 @@ const NewProduct = () => {
           value={Image5}
           id="image5"
           onChange={image5ChangeHandler}
-        />
+        /> */}
         <button type="submit">add product</button>
       </form>
     </div>
