@@ -54,7 +54,7 @@ const SellerLogin = () => {
     setPassword(event.target.value);
   };
   return (
-    <Container>
+    <Container fluid="md">
       <Alert variant={Message.variant}>{Message.message}</Alert>
       <Form action="" onSubmit={loginSubmitHandler}>
         <Form.Group controlId="email" value={Email} onChange={emailChangeHandler}>

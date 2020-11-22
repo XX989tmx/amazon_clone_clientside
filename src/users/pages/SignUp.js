@@ -1,7 +1,12 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
+import reactBootstrap, {
+  Alert,
+  Button,
+  Container,
+  Form,
+} from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SignUp = () => {
@@ -10,7 +15,12 @@ const SignUp = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [Message, setMessage] = useState("");
+  const [Message, setMessage] = useState({
+    message: "",
+    isSuccess: false,
+    isError: false,
+    variant: "",
+  });
 
   const SignupSubmitHandler = async (event) => {
     event.preventDefault();
@@ -28,10 +38,20 @@ const SignUp = () => {
       );
       auth.login(response.data.userId, response.data.token);
       console.log(response);
-      setMessage(response.data.message);
+      setMessage({
+        message: response.data.message,
+        isSuccess: true,
+        isError: false,
+        variant: "success",
+      });
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage({
+        message: error.message,
+        isSuccess: false,
+        isError: true,
+        variant: "danger",
+      });
     }
   };
 
@@ -47,7 +67,7 @@ const SignUp = () => {
   };
   return (
     <Container fluid="md">
-      {Message && <h3>{Message}</h3>}
+      <Alert variant={Message.variant}>{Message.message}</Alert>
       <Form action="" onSubmit={SignupSubmitHandler}>
         <Form.Group controlId="name" value={Name} onChange={nameChangeHandler}>
           <Form.Label>名前</Form.Label>
