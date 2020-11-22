@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import reactBootstrap, { Container } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import categoryData from "../data/category-selector-list";
 
@@ -26,7 +27,6 @@ const NewProduct = () => {
   const [PreviewUrl3, setPreviewUrl3] = useState(null);
   const [PreviewUrl4, setPreviewUrl4] = useState(null);
   const [PreviewUrl5, setPreviewUrl5] = useState(null);
-  
 
   const [GrandParentCategories, setGrandParentCategories] = useState([]);
   const [categoryQuery, setCategoryQuery] = useState();
@@ -338,7 +338,7 @@ const NewProduct = () => {
   };
 
   return (
-    <div>
+    <Container fluid="md">
       <h1>NewProduct</h1>
       {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={productDataSubmitHandler}>
@@ -510,7 +510,7 @@ const NewProduct = () => {
 
         <button type="submit">add product</button>
       </form>
-    </div>
+    </Container>
   );
 };
 
