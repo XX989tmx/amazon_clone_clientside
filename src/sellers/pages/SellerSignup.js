@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
+import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SellerSignup = () => {
@@ -45,19 +46,33 @@ const SellerSignup = () => {
   };
 
   return (
-    <div>
+    <Container>
       {Message && <h3>{Message}</h3>}
-      <form action="" onSubmit={signupSubmitHandler}>
-        <input type="text" value={Name} onChange={nameChangeHandler} />
-        <input type="email" value={Email} onChange={emailChangeHandler} />
-        <input
-          type="password"
+      <Form onSubmit={signupSubmitHandler}>
+        <Form.Group controlId="name" value={Name} onChange={nameChangeHandler}>
+          <Form.Label>お名前</Form.Label>
+          <Form.Control type="text" placeholder="お名前" />
+        </Form.Group>
+        <Form.Group
+          controlId="email"
+          value={Email}
+          onChange={emailChangeHandler}
+        >
+          <Form.Label>メールアドレス</Form.Label>
+          <Form.Control type="email" placeholder="email@example.com" />
+        </Form.Group>
+        <Form.Group
+          controlId="password"
           value={Password}
           onChange={passwordChangeHandler}
-        />
-        <button type="submit">Sign up</button>
-      </form>
-    </div>
+        >
+          <Form.Label>パスワード</Form.Label>
+          <Form.Control type="password" placeholder="半角英数字８文字以上" />
+        </Form.Group>
+
+        <Button type="submit">出品者アカウントに登録</Button>
+      </Form>
+    </Container>
   );
 };
 
