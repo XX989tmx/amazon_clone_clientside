@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
+import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SellerLogin = () => {
@@ -19,8 +20,7 @@ const SellerLogin = () => {
     };
     try {
       response = await Axios.post(
-        process.env.REACT_APP_BACKEND_URL +
-          "/sellers/login",
+        process.env.REACT_APP_BACKEND_URL + "/sellers/login",
         body
       );
       console.log(response);
@@ -39,18 +39,21 @@ const SellerLogin = () => {
     setPassword(event.target.value);
   };
   return (
-    <div>
+    <Container>
       {Message && <h3>{Message}</h3>}
-      <form action="" onSubmit={loginSubmitHandler}>
-        <input type="email" value={Email} onChange={emailChangeHandler} />
-        <input
-          type="password"
-          value={Password}
-          onChange={passwordChangeHandler}
-        />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+      <Form action="" onSubmit={loginSubmitHandler}>
+        <Form.Group value={Email} onChange={emailChangeHandler}>
+          <Form.Label>メールアドレス</Form.Label>
+          <Form.Control type="email" placeholder="eg login@example.com" />
+        </Form.Group>
+        <Form.Group value={Password} onChange={passwordChangeHandler}>
+          <Form.Label>パスワード</Form.Label>
+          <Form.Control type="password" placeholder="半角英数字８文字以上" />
+        </Form.Group>
+
+        <Button type="submit">出品者アカウントにログイン</Button>
+      </Form>
+    </Container>
   );
 };
 
