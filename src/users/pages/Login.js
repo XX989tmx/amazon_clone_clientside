@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <Container>
+    <Container fluid="md">
       {Message && <h3>{Message}</h3>}
       <Form action="" onSubmit={loginSubmitHandler}>
         <Form.Group

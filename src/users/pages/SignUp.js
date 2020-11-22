@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SignUp = () => {
@@ -45,30 +46,33 @@ const SignUp = () => {
     setPassword(event.target.value);
   };
   return (
-    <div>
+    <Container fluid="md">
       {Message && <h3>{Message}</h3>}
-      <form action="" onSubmit={SignupSubmitHandler}>
-        <input
-          id="name"
-          type="text"
-          value={Name}
-          onChange={nameChangeHandler}
-        />
-        <input
-          id="email"
-          type="email"
+      <Form action="" onSubmit={SignupSubmitHandler}>
+        <Form.Group controlId="name" value={Name} onChange={nameChangeHandler}>
+          <Form.Label>名前</Form.Label>
+          <Form.Control type="text" placeholder="お名前" />
+        </Form.Group>
+        <Form.Group
+          controlId="email"
           value={Email}
           onChange={emailChangeHandler}
-        />
-        <input
-          id="password"
-          type="password"
+        >
+          <Form.Label>メールアドレス</Form.Label>
+          <Form.Control type="email" placeholder="mail@example.com" />
+        </Form.Group>
+        <Form.Group
+          controlId="password"
           value={Password}
           onChange={passwordChangeHandler}
-        />
-        <button type="submit">Sign up</button>
-      </form>
-    </div>
+        >
+          <Form.Label>パスワード</Form.Label>
+          <Form.Control type="password" placeholder="半角英数字８文字以上" />
+        </Form.Group>
+
+        <Button type="submit">サインアップ</Button>
+      </Form>
+    </Container>
   );
 };
 
