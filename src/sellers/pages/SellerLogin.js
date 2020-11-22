@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
+import reactBootstrap, { Alert, Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SellerLogin = () => {
@@ -9,7 +9,12 @@ const SellerLogin = () => {
   const history = useHistory();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [Message, setMessage] = useState("");
+  const [Message, setMessage] = useState({
+    message: "",
+    isSuccess: false,
+    isError: false,
+    variant: "",
+  });
 
   const loginSubmitHandler = async (event) => {
     event.preventDefault();
@@ -25,10 +30,20 @@ const SellerLogin = () => {
       );
       console.log(response);
       auth.sellerLogin(response.data.sellerId, response.data.token);
-      setMessage(response.data.message);
+      setMessage({
+        message: response.data.message,
+        isSuccess: true,
+        isError: false,
+        variant: "success",
+      });
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage({
+        message: error.message,
+        isSuccess: false,
+        isError: true,
+        variant: "danger",
+      });
     }
   };
 
@@ -40,13 +55,13 @@ const SellerLogin = () => {
   };
   return (
     <Container>
-      {Message && <h3>{Message}</h3>}
+      <Alert variant={Message.variant}>{Message.message}</Alert>
       <Form action="" onSubmit={loginSubmitHandler}>
-        <Form.Group value={Email} onChange={emailChangeHandler}>
+        <Form.Group controlId="email" value={Email} onChange={emailChangeHandler}>
           <Form.Label>メールアドレス</Form.Label>
           <Form.Control type="email" placeholder="eg login@example.com" />
         </Form.Group>
-        <Form.Group value={Password} onChange={passwordChangeHandler}>
+        <Form.Group controlId="password" value={Password} onChange={passwordChangeHandler}>
           <Form.Label>パスワード</Form.Label>
           <Form.Control type="password" placeholder="半角英数字８文字以上" />
         </Form.Group>

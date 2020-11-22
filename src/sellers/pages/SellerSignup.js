@@ -1,7 +1,12 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
+import reactBootstrap, {
+  Alert,
+  Button,
+  Container,
+  Form,
+} from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SellerSignup = () => {
@@ -10,7 +15,12 @@ const SellerSignup = () => {
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [Message, setMessage] = useState("");
+  const [Message, setMessage] = useState({
+    message: "",
+    isSuccess: false,
+    isError: false,
+    variant: "",
+  });
 
   const signupSubmitHandler = async (event) => {
     event.preventDefault();
@@ -27,10 +37,20 @@ const SellerSignup = () => {
       );
       auth.sellerLogin(response.data.sellerId, response.data.token);
       console.log(response);
-      setMessage(response.data.message);
+      setMessage({
+        message: response.data.message,
+        isSuccess: true,
+        isError: false,
+        variant: "success",
+      });
     } catch (error) {
       console.log(error);
-      setMessage(error.message);
+      setMessage({
+        message: error.message,
+        isSuccess: false,
+        isError: true,
+        variant: "danger",
+      });
     }
   };
   const nameChangeHandler = (event) => {
@@ -47,7 +67,8 @@ const SellerSignup = () => {
 
   return (
     <Container>
-      {Message && <h3>{Message}</h3>}
+      <Alert variant={Message.variant}>{Message.message}</Alert>
+
       <Form onSubmit={signupSubmitHandler}>
         <Form.Group controlId="name" value={Name} onChange={nameChangeHandler}>
           <Form.Label>お名前</Form.Label>
