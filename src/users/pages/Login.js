@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import reactBootstrap, { Button, Container, Form } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const Login = () => {
@@ -41,24 +42,25 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <Container>
       {Message && <h3>{Message}</h3>}
-      <form action="" onSubmit={loginSubmitHandler}>
-        <input
-          id="email"
-          type="email"
+      <Form action="" onSubmit={loginSubmitHandler}>
+        <Form.Group
+          controlId="email"
           value={Email}
           onChange={emailChangeHandler}
-        />
-        <input
-          id="password"
-          value={Password}
-          type="password"
-          onChange={passwordChangeHandler}
-        />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+        >
+          <Form.Label>メールアドレス</Form.Label>
+          <Form.Control type="email" placeholder="login@example.com" />
+        </Form.Group>
+        <Form.Group controlId="password" value={Password} onChange={passwordChangeHandler}>
+          <Form.Label>パスワード</Form.Label>
+          <Form.Control type="password" placeholder="半角英数字８文字以上" />
+        </Form.Group>
+        
+        <Button type="submit">ログイン</Button>
+      </Form>
+    </Container>
   );
 };
 
