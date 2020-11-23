@@ -4,7 +4,7 @@ import SpecificProductItem from "./SpecificProductItem";
 const SpecificProductList = (props) => {
   return (
     <div>
-      {props.SpecificProduct.map((v, i) => (
+      {/* {props.SpecificProduct.map((v, i) => (
         <SpecificProductItem
           key={i}
           ancestorCategories={v.ancestorCategories}
@@ -20,7 +20,7 @@ const SpecificProductList = (props) => {
           reviews={v.reviews}
           StockQuantityOptions={props.StockQuantityOptions}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

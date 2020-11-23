@@ -1,8 +1,10 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
+import reactBootstrap, { Row, Col, Container } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import SpecificProductList from "../components/SpecificProductList";
+import UpperSection from "../components/UpperSection";
 
 const SpecificProduct = () => {
   const productId = useParams().productId;
@@ -152,18 +154,18 @@ const SpecificProduct = () => {
 
   return (
     <div>
-      <h3>{Message}</h3>
+      {/* <h3>{Message}</h3>
       <h5>{CartStatusMessage}</h5>
       <h1>SpecificProduct</h1>
-      <form action="" onSubmit={addToCartHandler}>
-        {/* <input
+      <form action="" onSubmit={addToCartHandler}> */}
+      {/* <input
           type="number"
           name=""
           id=""
           value={Quantity}
           onChange={quantityChangeHandler}
         /> */}
-        <select name="" id="" onChange={quantityChangeHandler}>
+      {/* <select name="" id="" onChange={quantityChangeHandler}>
           <option value="">数量</option>
           {StockQuantityOptions}
         </select>
@@ -195,7 +197,278 @@ const SpecificProduct = () => {
           SpecificProduct={SpecificProduct}
           StockQuantityOptions={StockQuantityOptions}
         />
-      </div>
+      </div> */}
+
+      {/* {SpecificProduct.map((v, i) => (
+        <UpperSection
+          key={i}
+          ancestorCategories={v.ancestorCategories}
+          brand={v.brand}
+          categories={v.categories}
+          deliveryDate={v.deliveryDate}
+          id={v.id}
+          isStock={v.isStock}
+          seller={v.seller}
+          name={v.name}
+          price={v.price}
+          parentCategory={v.parentCategory}
+          reviews={v.reviews}
+          StockQuantityOptions={StockQuantityOptions}
+        />
+      ))} */}
+
+      <Container
+        fluid
+        style={{
+          // paddingRight: "10%",
+          // paddingLeft: "10%",
+          minHeight: "100%",
+          backgroundColor: "grey",
+        }}
+      >
+        <Row>
+          <Col
+            md={10}
+            lg={10}
+            xl={10}
+            // style={{
+            //   paddingRight: "8%",
+            //   paddingLeft: "8%",
+            // }}
+          >
+            <Row>
+              <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+                <Row>
+                  <Col xs={6} xm={6} md={4} lg={3}>
+                    bread clums
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col xs={5} lg={5} style={{ height: "100%" }}>
+                <Row>
+                  <Col xs={{ offset: 1, span: 10 }} style={{ height: "220px" }}>
+                    pic1
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={6} sm={6} md={6} lg={3} style={{ height: "120px" }}>
+                    pic2
+                  </Col>
+                  <Col xs={6} sm={6} md={6} lg={3} style={{ height: "120px" }}>
+                    pic3
+                  </Col>
+                  <Col xs={6} sm={6} md={6} lg={3} style={{ height: "120px" }}>
+                    pic4
+                  </Col>
+                  <Col xs={6} sm={6} md={6} lg={3} style={{ height: "120px" }}>
+                    pic5
+                  </Col>
+                </Row>
+              </Col>
+              <Col xs={7} lg={4} style={{ height: "500px" }}>
+                <Row>
+                  <Col xs={12} style={{ height: "40px" }}>
+                    title
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>brand</Col>
+                </Row>
+                <Row>
+                  <Col>reqiew</Col>
+                </Row>
+                <Row>
+                  <Col>price</Col>
+                </Row>
+                <Row>
+                  <Col>description</Col>
+                </Row>
+              </Col>
+              <Col
+                xs={12}
+                lg={3}
+                style={{
+                  height: "100%",
+                  paddingRight: "20px",
+                  paddingLeft: "20px",
+                }}
+              >
+                <Row>
+                  <Col
+                    xs={{ span: 8, offset: 2 }}
+                    style={{ paddingTop: "10px", paddingBottom: "10px" }}
+                  >
+                    price
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>gettable point</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>delivery date</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>stock status</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>quantity</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>add to cart</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>seller</Col>
+                </Row>
+              </Col>{" "}
+            </Row>
+            <Row>
+              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
+                p1
+              </Col>
+              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
+                p2
+              </Col>
+              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
+                p3
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "100%" }}
+              >
+                <Row>
+                  <Col>prodPic1</Col>+<Col>prodPic2</Col>+<Col>prodPic3</Col>
+                </Row>
+                <Row>
+                  <Col>prodText1</Col>+<Col>prodText2</Col>+<Col>prodText3</Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>total sum</Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "408px" }}
+              >
+                kanrennsurusyouhinn
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "391px" }}
+              >
+                hoshi4tuizyou
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "160px" }}
+              >
+                fumeinatenn
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "317px" }}
+              >
+                campaine
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "740px" }}
+              >
+                oshirase
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "270px" }}
+              >
+                syouhinnnosetumei
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "1570px" }}
+              >
+                product detail information
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "363px" }}
+              >
+                recomendation
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "300px" }}
+              >
+                people buy this too
+              </Col>
+            </Row>
+          </Col>
+          <Col md={2} lg={2} xl={2}>
+            cart side bar
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
