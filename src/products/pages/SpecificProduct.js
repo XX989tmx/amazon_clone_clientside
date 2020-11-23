@@ -268,9 +268,15 @@ const SpecificProduct = () => {
                   </Col>
                 </Row>
               </Col>
-              <Col xs={7} lg={4} style={{ height: "500px" }}>
+              <Col
+                xs={7}
+                lg={4}
+                style={{
+                  height: "500px",
+                }}
+              >
                 <Row>
-                  <Col xs={12} style={{ height: "40px" }}>
+                  <Col xs={12} style={{ height: "40px"}}>
                     title
                   </Col>
                 </Row>
@@ -431,6 +437,96 @@ const SpecificProduct = () => {
                 </Row>
               </Col>
             </Row>
+
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "100%" }}
+              >
+                syouhinnnosetumei
+                <Row>
+                  <Col xs={12}>title</Col>{" "}
+                </Row>
+                <Row>
+                  <Col xs={12}>weight info</Col>{" "}
+                </Row>
+                <Row>
+                  <Col xs={12} sm={6} md={6} style={{ height: "300px" }}>
+                    info1
+                  </Col>
+                  <Col xs={12} sm={6} md={6} style={{ height: "300px" }}>
+                    info2
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "570px" }}
+              >
+                product detail information
+              </Col>
+            </Row>
+
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "100%" }}
+              >
+                <Row>people buy this too</Row>
+                <Row>
+                  <Col xs={1}>p</Col>
+                  <Col xs={10}>
+                    <Row>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        1
+                      </Col>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        2
+                      </Col>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        3
+                      </Col>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        4
+                      </Col>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        5
+                      </Col>
+                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
+                        6
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col xs={1}>n</Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col
+                xs={12}
+                sm={12}
+                md={12}
+                lg={12}
+                xl={12}
+                style={{ height: "363px" }}
+              >
+                recomendation
+              </Col>
+            </Row>
             <Row>
               <Col
                 xs={12}
@@ -465,68 +561,6 @@ const SpecificProduct = () => {
                 style={{ height: "740px" }}
               >
                 oshirase
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                xl={12}
-                style={{ height: "100%" }}
-              >
-                syouhinnnosetumei
-                <Row>
-                  <Col xs={12}>title</Col>{" "}
-                </Row>
-                <Row>
-                  <Col xs={12}>weight info</Col>{" "}
-                </Row>
-                <Row>
-                  <Col xs={12} sm={6} md={6} style={{ height: "300px" }}>
-                    info1
-                  </Col>
-                  <Col xs={12} sm={6} md={6} style={{ height: "300px" }}>
-                    info2
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                xl={12}
-                style={{ height: "1570px" }}
-              >
-                product detail information
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                xl={12}
-                style={{ height: "363px" }}
-              >
-                recomendation
-              </Col>
-            </Row>
-            <Row>
-              <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={12}
-                xl={12}
-                style={{ height: "300px" }}
-              >
-                people buy this too
               </Col>
             </Row>
           </Col>
