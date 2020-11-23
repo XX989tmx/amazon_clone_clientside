@@ -458,28 +458,106 @@ const SpecificProduct = () => {
                 xl={12}
                 style={{ height: "100%" }}
               >
+                <Row>kanrennsurusyouhinn</Row>
                 <Row style={{ height: "100%" }}>
                   <Col xs={1}>p</Col>
                   <Col xs={10}>
-                    kanrennsurusyouhinn
                     <Row>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        1
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        2
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        3
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        4
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        5
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        6
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
                     </Row>
                   </Col>
@@ -496,28 +574,106 @@ const SpecificProduct = () => {
                 xl={12}
                 style={{ height: "100%" }}
               >
+                <Row>hoshi 4tuizyou</Row>
                 <Row>
                   <Col xs={1}>p</Col>
                   <Col xs={10}>
-                    hoshi 4tuizyou
                     <Row>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        1
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        2
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        3
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        4
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        5
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={3} lg={2} style={{ height: "200px" }}>
-                        6
+                      <Col xs={6} md={3} lg={2} style={{ height: "100%" }}>
+                        <Row>
+                          <Col style={{ height: "200px" }}>prodImage</Col>
+                        </Row>
+                        <Row>
+                          <Col>text</Col>
+                        </Row>
+                        <Row>
+                          <Col>star</Col>
+                          <Col>review</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                          <Col>icon</Col>
+                        </Row>
                       </Col>
                     </Row>
                   </Col>
