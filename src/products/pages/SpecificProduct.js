@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
-import reactBootstrap, { Row, Col, Container } from "react-bootstrap";
+import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import SpecificProductList from "../components/SpecificProductList";
 import UpperSection from "../components/UpperSection";
@@ -276,7 +276,7 @@ const SpecificProduct = () => {
                 }}
               >
                 <Row>
-                  <Col xs={12} style={{ height: "40px"}}>
+                  <Col xs={12} style={{ height: "40px" }}>
                     title
                   </Col>
                 </Row>
@@ -320,25 +320,88 @@ const SpecificProduct = () => {
                   <Col xs={{ span: 8, offset: 2 }}>stock status</Col>
                 </Row>
                 <Row>
-                  <Col xs={{ span: 8, offset: 2 }}>quantity</Col>
+                  <Col xs={{ span: 8, offset: 2 }}>
+                    <select>
+                      <option>quantity</option>
+                    </select>
+                  </Col>
                 </Row>
                 <Row>
-                  <Col xs={{ span: 8, offset: 2 }}>add to cart</Col>
+                  <Col xs={{ span: 8, offset: 2 }}>
+                    <Button> add to cart</Button>
+                  </Col>
                 </Row>
                 <Row>
-                  <Col xs={{ span: 8, offset: 2 }}>seller</Col>
+                  <Col xs={{ span: 8, offset: 2 }}>
+                    <Link> seller</Link>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>
+                    <Link> your registered address</Link>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={{ span: 8, offset: 2 }}>
+                    <Button> add to wishlist</Button>
+                  </Col>
                 </Row>
               </Col>{" "}
             </Row>
             <Row>
-              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
-                p1
+              <Col xs={12} md={6} lg={4} style={{ height: "100px" }}>
+                <Row style={{ height: "100%" }}>
+                  <Col xs={4} lg={3}>
+                    pic
+                  </Col>
+                  <Col xs={8} lg={9}>
+                    <Row>
+                      <Col>name</Col>
+                    </Row>
+                    <Row>
+                      <Col>review</Col>
+                    </Row>
+                    <Row>
+                      <Col>price</Col>
+                    </Row>
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
-                p2
+              <Col xs={12} md={6} lg={4} style={{ height: "100px" }}>
+                <Row style={{ height: "100%" }}>
+                  <Col xs={4} lg={3}>
+                    pic2
+                  </Col>
+                  <Col xs={8} lg={9}>
+                    <Row>
+                      <Col>name</Col>
+                    </Row>
+                    <Row>
+                      <Col>review</Col>
+                    </Row>
+                    <Row>
+                      <Col>price</Col>
+                    </Row>
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={12} md={6} lg={4} style={{ height: "90px" }}>
-                p3
+              <Col xs={12} md={6} lg={4} style={{ height: "100px" }}>
+                <Row style={{ height: "100%" }}>
+                  <Col xs={4} lg={3}>
+                    pic3
+                  </Col>
+                  <Col xs={8} lg={9}>
+                    <Row>
+                      <Col>name</Col>
+                    </Row>
+                    <Row>
+                      <Col>review</Col>
+                    </Row>
+                    <Row>
+                      <Col>price</Col>
+                    </Row>
+                  </Col>
+                </Row>
               </Col>
             </Row>
             <Row>
