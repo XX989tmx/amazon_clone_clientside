@@ -1,6 +1,11 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ProductBrand from "./ProductBrand";
+import ProductDescription from "./ProductDescription";
+import ProductPrice from "./ProductPrice";
+import ProductReview from "./ProductReview";
+import ProductTitle from "./ProductTitle";
 
 const ProductDescriptionSection = (props) => {
   return (
@@ -11,23 +16,11 @@ const ProductDescriptionSection = (props) => {
         height: "500px",
       }}
     >
-      <Row>
-        <Col xs={12} style={{ height: "40px" }}>
-          title
-        </Col>
-      </Row>
-      <Row>
-        <Col>brand</Col>
-      </Row>
-      <Row>
-        <Col>reqiew</Col>
-      </Row>
-      <Row>
-        <Col>price</Col>
-      </Row>
-      <Row>
-        <Col>description</Col>
-      </Row>
+      <ProductTitle />
+      <ProductBrand />
+      <ProductReview />
+      <ProductPrice />
+      <ProductDescription />
     </Col>
   );
 };
