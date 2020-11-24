@@ -29,7 +29,7 @@ const ProductIndexSection = (props) => {
           props.GrandGrandChildCategoryMatchedProducts
         }
       />
-      <PaginationSection />
+      <PaginationSection PaginationData={props.PaginationData}/>
     </Col>
   );
 };

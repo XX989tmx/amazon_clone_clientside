@@ -12,7 +12,7 @@ const MainSectionOfGrandGrandChildCategoryIndex = (props) => {
         <ProductIndexSection
           GrandGrandChildCategoryMatchedProducts={
             props.GrandGrandChildCategoryMatchedProducts
-          }
+          } PaginationData={props.PaginationData}
         />
       </Row>
     </Col>

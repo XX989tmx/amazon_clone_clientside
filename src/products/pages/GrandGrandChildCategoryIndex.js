@@ -2,7 +2,13 @@ import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import reactBootstrap, {
+  Row,
+  Col,
+  Container,
+  Button,
+  Pagination,
+} from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import GrandGrandChildCategoryIndexList from "../components/GrandGrandChildCategoryIndexList";
 import CartSectionOfSpecificProduct from "../components/CartSectionOfSpecificProduct";
@@ -15,6 +21,7 @@ const GrandGrandChildCategoryIndex = (props) => {
   ] = useState({ data: [], isFetching: false });
   const [QueryValue, setQueryValue] = useState();
   const [TotalNumberOdPage, setTotalNumberOdPage] = useState();
+  const [PaginationData, setPaginationData] = useState({});
   // grandGrandChildCategory("categories":grandGrandChildCategory)に一致するproduct documentを配列の形で受け取る。pagination16 grandGrandChildCategoryIdをクエリにして、ドキュメントを検索。
 
   //pagination16。list,itemコンポーネントにし、個々のProductをspecificProductpageへのLinkで囲む。
@@ -47,6 +54,19 @@ const GrandGrandChildCategoryIndex = (props) => {
           data: products,
           isFetching: false,
         });
+        function PaginationSetting(params) {
+          const currentPage = data.pagination.currentPage;
+          const perPage = data.pagination.perPage;
+          const totalItems = data.pagination.totalItems;
+          const nextPage = data.pagination.nextPage;
+          const previousPage = data.pagination.previousPage;
+          const hasNextPage = data.pagination.hasNextPage;
+          const hasPreviousPage = data.pagination.hasPreviousPage;
+          const lastPage = data.pagination.lastPage;
+
+          setPaginationData(data.pagination);
+        }
+        PaginationSetting();
       } catch (error) {
         console.log(error);
       }
@@ -85,7 +105,12 @@ const GrandGrandChildCategoryIndex = (props) => {
       </section> */}
       <Container fluid>
         <Row>
-          <MainSectionOfGrandGrandChildCategoryIndex GrandGrandChildCategoryMatchedProducts={GrandGrandChildCategoryMatchedProducts.data}/>
+          <MainSectionOfGrandGrandChildCategoryIndex
+            GrandGrandChildCategoryMatchedProducts={
+              GrandGrandChildCategoryMatchedProducts.data
+            }
+            PaginationData={PaginationData}
+          />
           <CartSectionOfSpecificProduct />
         </Row>
       </Container>
