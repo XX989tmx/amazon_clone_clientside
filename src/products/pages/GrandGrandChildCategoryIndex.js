@@ -101,7 +101,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                   <Col xs={12}>
                     <Row>欲しいものリストの人気商品</Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -115,7 +123,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -129,7 +145,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -143,7 +167,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -157,7 +189,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -171,7 +211,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -192,7 +240,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                   <Col xs={12}>
                     <Row>レビュー高評価商品</Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -206,7 +262,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -220,7 +284,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -234,7 +306,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -248,7 +328,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -262,7 +350,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -283,7 +379,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                   <Col xs={12}>
                     <Row>あなたのお買い物傾向から</Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -297,7 +401,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -311,7 +423,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -325,7 +445,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -339,7 +467,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -353,7 +489,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -374,7 +518,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                   <Col xs={12}>
                     <Row>0-500円</Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -388,7 +540,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -402,7 +562,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -416,7 +584,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -430,7 +606,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -444,7 +628,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -472,7 +664,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -486,7 +686,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -500,7 +708,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -514,7 +730,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -528,7 +752,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -542,7 +774,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                           <Col>review</Col>
                         </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
                         <Row style={{ height: "250px" }}>
                           <Col>image</Col>
                         </Row>
@@ -570,7 +810,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                 {/* product index col を２４書くか、一個だけ書いて可変にし、数はPagination　
                 で制御するか、は、要検討 おそらくダイナミック。list & item map の形。RowをListのところで使い、そこで配列をMap、子要素のItemに、Colを置き、という形。*/}
                 <Row>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -613,7 +858,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -656,7 +906,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -699,7 +954,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -742,7 +1002,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -785,7 +1050,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -828,7 +1098,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -871,7 +1146,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -914,7 +1194,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -957,7 +1242,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1000,7 +1290,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1043,7 +1338,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1086,7 +1386,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1129,7 +1434,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1172,7 +1482,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1215,7 +1530,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1258,7 +1578,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1301,7 +1626,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1344,7 +1674,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1387,7 +1722,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1430,7 +1770,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1473,7 +1818,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1516,7 +1866,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
@@ -1559,7 +1914,12 @@ const GrandGrandChildCategoryIndex = (props) => {
                       <Col xs={7}>count</Col>
                     </Row>
                   </Col>
-                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                  <Col
+                    xs={6}
+                    md={4}
+                    lg={3}
+                    style={{ height: "100%", padding: "15px 30px 15px 30px" }}
+                  >
                     <Row>
                       <Col>best seller tag</Col>
                     </Row>
