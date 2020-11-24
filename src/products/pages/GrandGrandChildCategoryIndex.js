@@ -85,7 +85,7 @@ const GrandGrandChildCategoryIndex = (props) => {
       </section> */}
       <Container fluid>
         <Row>
-          <MainSectionOfGrandGrandChildCategoryIndex />
+          <MainSectionOfGrandGrandChildCategoryIndex GrandGrandChildCategoryMatchedProducts={GrandGrandChildCategoryMatchedProducts.data}/>
           <CartSectionOfSpecificProduct />
         </Row>
       </Container>

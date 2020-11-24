@@ -24,7 +24,11 @@ const ProductIndexSection = (props) => {
       <NavigationAndBreadcrumbs />
       {/* product index col を２４書くか、一個だけ書いて可変にし、数はPagination　
                 で制御するか、は、要検討 おそらくダイナミック。list & item map の形。RowをListのところで使い、そこで配列をMap、子要素のItemに、Colを置き、という形。*/}
-      <ProductIndex />
+      <ProductIndex
+        GrandGrandChildCategoryMatchedProducts={
+          props.GrandGrandChildCategoryMatchedProducts
+        }
+      />
       <PaginationSection />
     </Col>
   );
