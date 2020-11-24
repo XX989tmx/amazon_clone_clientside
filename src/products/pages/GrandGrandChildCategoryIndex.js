@@ -313,6 +313,15 @@ const GrandGrandChildCategoryIndex = (props) => {
                     item
                   </Col>
                 </Row>
+                <Row>
+                  <Col
+                    xs={{ offset: 2, span: 8 }}
+                    md={{ offset: 2, span: 8 }}
+                    lg={{ offset: 3, span: 6 }}
+                  >
+                    pagination
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
