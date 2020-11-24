@@ -472,23 +472,89 @@ const GrandGrandChildCategoryIndex = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
-                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
-                        item
+                      <Col xs={6} md={4} lg={2} style={{ height: "100%" }}>
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
                       </Col>
                     </Row>
                   </Col>
