@@ -22,7 +22,7 @@ const ProductItem = (props) => {
         <ProductNameAndBrand name={props.name} brand={props.brand} />
         <ProductPriceRelatedSection price={props.price} />
       </Link>
-      <AddToCartButton />
+      <AddToCartButton changeCartHandler={props.changeCartHandler} id={props.id} />
       <ProductReviewsRelatedSection />
     </Col>
 

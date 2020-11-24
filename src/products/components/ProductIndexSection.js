@@ -28,8 +28,12 @@ const ProductIndexSection = (props) => {
         GrandGrandChildCategoryMatchedProducts={
           props.GrandGrandChildCategoryMatchedProducts
         }
+        changeCartHandler={props.changeCartHandler}
       />
-      <PaginationSection PaginationData={props.PaginationData} GrandGrandChildCategory={props.GrandGrandChildCategory}/>
+      <PaginationSection
+        PaginationData={props.PaginationData}
+        GrandGrandChildCategory={props.GrandGrandChildCategory}
+      />
     </Col>
   );
 };

@@ -12,7 +12,10 @@ const MainSectionOfGrandGrandChildCategoryIndex = (props) => {
         <ProductIndexSection
           GrandGrandChildCategoryMatchedProducts={
             props.GrandGrandChildCategoryMatchedProducts
-          } PaginationData={props.PaginationData} GrandGrandChildCategory={props.GrandGrandChildCategory}
+          }
+          PaginationData={props.PaginationData}
+          GrandGrandChildCategory={props.GrandGrandChildCategory}
+          changeCartHandler={props.changeCartHandler}
         />
       </Row>
     </Col>

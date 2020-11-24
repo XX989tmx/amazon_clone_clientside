@@ -4,7 +4,7 @@ const SumOfPriceOfCartItems = (props) => {
     return (
       <Row>
         <Col>小計</Col>
-        <Col>sum</Col>
+        <Col>{props.TotalPriceOfCart}</Col>
       </Row>
     );
 }
