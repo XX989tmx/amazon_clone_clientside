@@ -99,424 +99,14 @@ const GrandGrandChildCategoryIndex = (props) => {
                 </Row>
                 <Row>
                   <Col xs={12}>
-                    <Row>欲しいものリストの人気商品</Row>
                     <Row>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
+                      <Col lg={5}>
+                        <h2>欲しいものリストの人気商品</h2>
                       </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
+                      <Col lg={7}>
+                        <Link>もっと見る</Link>
+                      </Col>{" "}
                     </Row>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    <Row>レビュー高評価商品</Row>
-                    <Row>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    <Row>あなたのお買い物傾向から</Row>
-                    <Row>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={6}
-                        md={4}
-                        lg={2}
-                        style={{
-                          height: "100%",
-                          padding: "10px 25px 10px 25px",
-                        }}
-                      >
-                        <Row style={{ height: "250px" }}>
-                          <Col>image</Col>
-                        </Row>
-                        <Row>
-                          <Col>price</Col>
-                        </Row>
-                        <Row>
-                          <Col>name</Col>
-                        </Row>
-                        <Row>
-                          <Col>review</Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>
-                    <Row>0-500円</Row>
                     <Row>
                       <Col
                         xs={6}
@@ -656,10 +246,448 @@ const GrandGrandChildCategoryIndex = (props) => {
                 <Row>
                   <Col xs={12}>
                     <Row>
-                      <Col xs={6} md={3} lg={2}>
-                        売れ筋ランキング
+                      <Col lg={5}>
+                        <h2>レビュー高評価商品</h2>{" "}
                       </Col>
-                      <Col xs={6} md={9} lg={10}>
+                      <Col lg={7}>
+                        <Link>もっと見る</Link>
+                      </Col>{" "}
+                    </Row>
+                    <Row>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>
+                      <Col lg={5}>
+                        <h2>あなたのお買い物傾向から</h2>
+                      </Col>
+                      <Col lg={7}>
+                        <Link>もっと見る</Link>
+                      </Col>{" "}
+                    </Row>
+                    <Row>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>
+                      <Col lg={5}>
+                        <h2>0-500円</h2>
+                      </Col>
+                      <Col lg={7}>
+                        <Link>もっと見る</Link>
+                      </Col>{" "}
+                    </Row>
+                    <Row>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                      <Col
+                        xs={6}
+                        md={4}
+                        lg={2}
+                        style={{
+                          height: "100%",
+                          padding: "10px 25px 10px 25px",
+                        }}
+                      >
+                        <Row style={{ height: "250px" }}>
+                          <Col>image</Col>
+                        </Row>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>review</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>
+                      <Col lg={5}>
+                        <h2> 売れ筋ランキング</h2>
+                      </Col>
+                      <Col lg={7}>
                         <Link> もっと見る</Link>
                       </Col>
                     </Row>
