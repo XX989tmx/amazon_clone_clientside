@@ -6,10 +6,10 @@ import ProductNameOfCartItem from "./ProductNameOfCartItem";
 import ProductPriceOfCart from "./ProductPriceOfCart";
 const ItemOfCart = (props) => {
   return (
-    <Col style={{ height: "100%", padding: "10px 25px 10px 25px" }}>
+    <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{ height: "100%", padding: "10px 25px 10px 25px" }}>
       <ProductImageOfCartItem />
-      <ProductNameOfCartItem />
-      <ProductPriceOfCart />
+      <ProductNameOfCartItem name={props.name}/>
+      <ProductPriceOfCart price={props.price}/>
       <ActionSectionOfCartItem />
       {/* {props.CartItems.map((v, i) => (
           <Row>

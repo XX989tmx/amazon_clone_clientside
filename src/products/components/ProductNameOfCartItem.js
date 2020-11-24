@@ -3,7 +3,7 @@ import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 const ProductNameOfCartItem = (props) => {
   return (
     <Row>
-      <Col>name</Col>
+      <Col>{props.name}</Col>
     </Row>
   );
 };

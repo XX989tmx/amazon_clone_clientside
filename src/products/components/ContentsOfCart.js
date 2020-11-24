@@ -4,7 +4,14 @@ import ItemOfCart from "./ItemOfCart";
 const ContentsOfCart = (props) => {
   return (
     <Row>
-      <ItemOfCart />
+      {props.CartItems.map((v, i) => (
+        <ItemOfCart
+          key={i}
+          id={v.productId.id}
+          name={v.productId.name}
+          price={v.productId.price}
+        />
+      ))}
     </Row>
   );
 };
