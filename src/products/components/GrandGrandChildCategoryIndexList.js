@@ -5,7 +5,7 @@ const GrandGrandChildCategoryIndexList = (props) => {
   //一部のみ
   return (
     <div>
-      {props.GrandGrandChildCategoryMatchedProducts.data.map((v, i) => (
+      {/* {props.GrandGrandChildCategoryMatchedProducts.data.map((v, i) => (
         <GrandGrandChildCategoryIndexItem
           key={i}
           ancestorCategories={v.ancestorCategories}
@@ -19,7 +19,7 @@ const GrandGrandChildCategoryIndexList = (props) => {
           reviews={v.reviews}
           seller={v.seller}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

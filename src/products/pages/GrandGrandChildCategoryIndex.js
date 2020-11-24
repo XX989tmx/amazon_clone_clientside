@@ -2,8 +2,10 @@ import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import reactBootstrap, { Row, Col, Container } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import GrandGrandChildCategoryIndexList from "../components/GrandGrandChildCategoryIndexList";
+import CartSectionOfSpecificProduct from "../components/CartSectionOfSpecificProduct";
 
 const GrandGrandChildCategoryIndex = (props) => {
   const [
@@ -53,12 +55,12 @@ const GrandGrandChildCategoryIndex = (props) => {
   return (
     <div>
       grand grand child category index
-      <GrandGrandChildCategoryIndexList
+      {/* <GrandGrandChildCategoryIndexList
         GrandGrandChildCategoryMatchedProducts={
           GrandGrandChildCategoryMatchedProducts
         }
-      />
-      <section>
+      /> */}
+      {/* <section>
         <Link
           to={`/product/index/grandGrandChildCategory/${grandGrandChildCategory}?page=1`}
         >
@@ -79,7 +81,244 @@ const GrandGrandChildCategoryIndex = (props) => {
         >
           4
         </Link>
-      </section>
+      </section> */}
+      <Container fluid>
+        <Row>
+          <Col md={10} lg={10} xl={10}>
+            <Row>
+              <Col xs={12} md={2} lg={2} style={{ height: "100%" }}>
+                category section
+              </Col>
+              <Col xs={12} md={10} lg={10} style={{ height: "100%" }}>
+                main section
+                <Row>
+                  <Col xs={12}>
+                    <Row>category name mineral water</Row>
+                    <Row>category paragraph </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>欲しいものリストの人気商品</Row>
+                    <Row>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item 1
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>レビュー高評価商品</Row>
+                    <Row>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item2
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item3
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item4
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item5
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item6
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>あなたのお買い物傾向から</Row>
+                    <Row>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>0-500円</Row>
+                    <Row>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item1
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12}>
+                    <Row>
+                      <Col xs={6} md={3} lg={2}>
+                        売れ筋ランキング
+                      </Col>
+                      <Col xs={6} md={9} lg={10}>
+                        <Link> もっと見る</Link>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                      <Col xs={6} md={4} lg={2} style={{ height: "300px" }}>
+                        item
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={12} md={8} lg={7}>
+                    検索結果 total item countのうち、1-last page件。bread crums
+                  </Col>
+                  <Col xs={12} md={4} lg={5}>
+                    narabekae
+                  </Col>
+                </Row>
+                {/* product index col を２４書くか、一個だけ書いて可変にし、数はPagination　
+                で制御するか、は、要検討 おそらくダイナミック。list & item map の形。RowをListのところで使い、そこで配列をMap、子要素のItemに、Colを置き、という形。*/}
+                <Row>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
+                    item
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+          <CartSectionOfSpecificProduct />
+        </Row>
+      </Container>
     </div>
   );
 };
