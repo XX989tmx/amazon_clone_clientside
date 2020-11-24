@@ -1,12 +1,11 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
-import ItemOfCart from "./ItemOfCart";
-const ContentsOfCart = (props) => {
+const ProductPriceOfCart = (props) => {
   return (
     <Row>
-      <ItemOfCart />
+      <Col>price</Col>
     </Row>
   );
 };
 
-export default ContentsOfCart;
+export default ProductPriceOfCart;
