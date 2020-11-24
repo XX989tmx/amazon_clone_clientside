@@ -1,11 +1,13 @@
 import React from "react";
 import reactBootstrap, { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import AddToCartButton from "./AddToCartButton";
 import BestSellerTag from "./BestSellerTag";
 import ProductImage from "./ProductImage";
 import ProductNameAndBrand from "./ProductNameAndBrand";
 import ProductPriceRelatedSection from "./ProductPriceRelatedSection";
 import ProductReviewsRelatedSection from "./ProductReviewsRelatedSection";
+
 const ProductItem = (props) => {
   return (
     <Col
@@ -14,10 +16,12 @@ const ProductItem = (props) => {
       lg={3}
       style={{ height: "100%", padding: "15px 30px 15px 30px" }}
     >
-      <BestSellerTag />
-      <ProductImage />
-      <ProductNameAndBrand name={props.name} brand={props.brand} />
-      <ProductPriceRelatedSection price={props.price} />
+      <Link to={`/product/${props.id}`}>
+        <BestSellerTag />
+        <ProductImage />
+        <ProductNameAndBrand name={props.name} brand={props.brand} />
+        <ProductPriceRelatedSection price={props.price} />
+      </Link>
       <AddToCartButton />
       <ProductReviewsRelatedSection />
     </Col>
