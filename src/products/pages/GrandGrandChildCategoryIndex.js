@@ -22,6 +22,7 @@ const GrandGrandChildCategoryIndex = (props) => {
   const [QueryValue, setQueryValue] = useState();
   const [TotalNumberOdPage, setTotalNumberOdPage] = useState();
   const [PaginationData, setPaginationData] = useState({});
+  const [GrandGrandChildCategory, setGrandGrandChildCategory] = useState();
   // grandGrandChildCategory("categories":grandGrandChildCategory)に一致するproduct documentを配列の形で受け取る。pagination16 grandGrandChildCategoryIdをクエリにして、ドキュメントを検索。
 
   //pagination16。list,itemコンポーネントにし、個々のProductをspecificProductpageへのLinkで囲む。
@@ -50,6 +51,7 @@ const GrandGrandChildCategoryIndex = (props) => {
         const products = data.products;
         const perPage = data.perPage;
         const totalNumberOfItems = data.totalItems; // paginationしない場合の、response array documentの総数。paginationで、total number of itemsとして使う。
+        setGrandGrandChildCategory(grandGrandChildCategory);
         setGrandGrandChildCategoryMatchedProducts({
           data: products,
           isFetching: false,
@@ -109,7 +111,7 @@ const GrandGrandChildCategoryIndex = (props) => {
             GrandGrandChildCategoryMatchedProducts={
               GrandGrandChildCategoryMatchedProducts.data
             }
-            PaginationData={PaginationData}
+            PaginationData={PaginationData} GrandGrandChildCategory={GrandGrandChildCategory}
           />
           <CartSectionOfSpecificProduct />
         </Row>

@@ -18,13 +18,15 @@ const PaginationSection = (props) => {
       >
         <Pagination>
           <Link
-            to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=1`}
+            to={`/product/index/grandGrandChildCategory/${props.GrandGrandChildCategory}?page=1`}
           >
             {" "}
             <Pagination.First />
           </Link>
           <Link
-            to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
+            to={`/product/index/grandGrandChildCategory/${
+              props.GrandGrandChildCategory
+            }?page=${
               props.PaginationData.currentPage - 1 < 1
                 ? 1
                 : props.PaginationData.currentPage - 1
@@ -35,7 +37,7 @@ const PaginationSection = (props) => {
           </Link>
           <Pagination.Item>
             <Link
-              to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=1`}
+              to={`/product/index/grandGrandChildCategory/${props.GrandGrandChildCategory}?page=1`}
             >
               {1}
             </Link>
@@ -44,9 +46,9 @@ const PaginationSection = (props) => {
           {!(props.PaginationData.currentPage - 2 < 1) && (
             <Pagination.Item>
               <Link
-                to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
-                  props.PaginationData.currentPage - 2
-                }`}
+                to={`/product/index/grandGrandChildCategory/${
+                  props.GrandGrandChildCategory
+                }?page=${props.PaginationData.currentPage - 2}`}
               >
                 {props.PaginationData.currentPage - 2}
               </Link>
@@ -55,9 +57,9 @@ const PaginationSection = (props) => {
           {!(props.PaginationData.currentPage - 1 < 1) && (
             <Pagination.Item>
               <Link
-                to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
-                  props.PaginationData.currentPage - 1
-                }`}
+                to={`/product/index/grandGrandChildCategory/${
+                  props.GrandGrandChildCategory
+                }?page=${props.PaginationData.currentPage - 1}`}
               >
                 {" "}
                 {props.PaginationData.currentPage - 1}
@@ -73,9 +75,9 @@ const PaginationSection = (props) => {
           ) && (
             <Pagination.Item>
               <Link
-                to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
-                  props.PaginationData.currentPage + 1
-                }`}
+                to={`/product/index/grandGrandChildCategory/${
+                  props.GrandGrandChildCategory
+                }?page=${props.PaginationData.currentPage + 1}`}
               >
                 {" "}
                 {props.PaginationData.currentPage + 1}
@@ -88,9 +90,9 @@ const PaginationSection = (props) => {
           ) && (
             <Pagination.Item>
               <Link
-                to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
-                  props.PaginationData.currentPage + 2
-                }`}
+                to={`/product/index/grandGrandChildCategory/${
+                  props.GrandGrandChildCategory
+                }?page=${props.PaginationData.currentPage + 2}`}
               >
                 {" "}
                 {props.PaginationData.currentPage + 2}
@@ -100,15 +102,15 @@ const PaginationSection = (props) => {
           <Pagination.Ellipsis />
           <Pagination.Item>
             <Link
-              to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${props.PaginationData.lastPage}`}
+              to={`/product/index/grandGrandChildCategory/${props.GrandGrandChildCategory}?page=${props.PaginationData.lastPage}`}
             >
               {props.PaginationData.lastPage}
             </Link>
           </Pagination.Item>{" "}
           <Link
-            to={`/product/index/grandGrandChildCategory/ミネラルウォーター?page=${
-              props.PaginationData.currentPage + 1
-            }`}
+            to={`/product/index/grandGrandChildCategory/${
+              props.GrandGrandChildCategory
+            }?page=${props.PaginationData.currentPage + 1}`}
           >
             <Pagination.Next />
           </Link>
