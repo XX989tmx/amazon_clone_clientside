@@ -2,7 +2,7 @@ import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-import reactBootstrap, { Row, Col, Container } from "react-bootstrap";
+import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import GrandGrandChildCategoryIndexList from "../components/GrandGrandChildCategoryIndexList";
 import CartSectionOfSpecificProduct from "../components/CartSectionOfSpecificProduct";
@@ -570,8 +570,48 @@ const GrandGrandChildCategoryIndex = (props) => {
                 {/* product index col を２４書くか、一個だけ書いて可変にし、数はPagination　
                 で制御するか、は、要検討 おそらくダイナミック。list & item map の形。RowをListのところで使い、そこで配列をMap、子要素のItemに、Colを置き、という形。*/}
                 <Row>
-                  <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
-                    item
+                  <Col xs={6} md={4} lg={3} style={{ height: "100%" }}>
+                    <Row>
+                      <Col>best seller tag</Col>
+                    </Row>
+                    <Row>
+                      <Col style={{ height: "230px" }}>image</Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Row>
+                          <Col>name</Col>
+                        </Row>
+                        <Row>
+                          <Col>brand</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Row>
+                          <Col>price</Col>
+                        </Row>
+                        <Row>
+                          <Col>acquirable points</Col>
+                        </Row>
+                        <Row>
+                          <Col>stock status</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>delivery date</Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Button>カートに入れる</Button>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={5}>reviews</Col>
+                      <Col xs={7}>count</Col>
+                    </Row>
                   </Col>
                   <Col xs={6} md={4} lg={3} style={{ height: "480px" }}>
                     item
