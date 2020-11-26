@@ -1,6 +1,15 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AcquirablePointsInPurchaseAction from "./AcquirablePointsInPurchaseAction";
+import AddToCartButtonInPurchaseAction from "./AddToCartButtonInPurchaseAction";
+import AddToWishlistButton from "./AddToWishlistButton";
+import DeliveryDateInPurchaseAction from "./DeliveryDateInPurchaseAction";
+import ProductPriceInPurchaseAction from "./ProductPriceInPurchaseAction";
+import QuantitySelector from "./QuantitySelector";
+import RegisteredAddress from "./RegisteredAddress";
+import Seller from "./Seller";
+import StockStatusInPurchaseAction from "./StockStatusInPurchaseAction";
 
 const PurchaseActionSection = (props) => {
   return (
@@ -13,50 +22,15 @@ const PurchaseActionSection = (props) => {
         paddingLeft: "20px",
       }}
     >
-      <Row>
-        <Col
-          xs={{ span: 8, offset: 2 }}
-          style={{ paddingTop: "10px", paddingBottom: "10px" }}
-        >
-          price
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>gettable point</Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>delivery date</Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>stock status</Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <select>
-            <option>quantity</option>
-          </select>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <Button> add to cart</Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <Link> seller</Link>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <Link> your registered address</Link>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={{ span: 8, offset: 2 }}>
-          <Button> add to wishlist</Button>
-        </Col>
-      </Row>
+      <ProductPriceInPurchaseAction />
+      <AcquirablePointsInPurchaseAction />
+      <DeliveryDateInPurchaseAction />
+      <StockStatusInPurchaseAction />
+      <QuantitySelector />
+      <AddToCartButtonInPurchaseAction />
+      <Seller />
+      <RegisteredAddress />
+      <AddToWishlistButton />
     </Col>
   );
 };
