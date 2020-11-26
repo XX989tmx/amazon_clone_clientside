@@ -1,24 +1,19 @@
 import React from "react";
 import reactBootstrap, { Col, Container, Row, Button } from "react-bootstrap";
+import AddressInfo1 from "./AddressInfo1";
+import AddressInfo2 from "./AddressInfo2";
+import NameOfAddress from "./NameOfAddress";
+import PhoneNumber from "./PhoneNumber";
+import Zipcode from "./Zipcode";
 const ShipmentAddress = (props) => {
   return (
     <Row>
       <Col>
-        <Row>
-          <Col>name</Col>
-        </Row>
-        <Row>
-          <Col>zipcode</Col>
-        </Row>
-        <Row>
-          <Col>addressinfo1</Col>
-        </Row>
-        <Row>
-          <Col>addressinfo2</Col>
-        </Row>
-        <Row>
-          <Col>phonenumber</Col>
-        </Row>
+        <NameOfAddress />
+        <Zipcode />
+        <AddressInfo1 />
+        <AddressInfo2 />
+        <PhoneNumber />
       </Col>
     </Row>
   );
