@@ -4,7 +4,7 @@ const AddToCartButtonInPurchaseAction = (props) => {
   return (
     <Row>
       <Col xs={{ span: 8, offset: 2 }}>
-        <Button> add to cart</Button>
+        <Button onClick={props.addProductToCart}>カートに追加する</Button>
       </Col>
     </Row>
   );

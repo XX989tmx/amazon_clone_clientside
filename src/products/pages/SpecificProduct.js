@@ -20,6 +20,7 @@ const SpecificProduct = () => {
   const location = useLocation();
   const [SpecificProduct, setSpecificProduct] = useState([]);
   const [StockQuantityOptions, setStockQuantityOptions] = useState([]);
+  const [isCartChanged, setIsCartChanged] = useState(false);
   useEffect(() => {
     async function fetch(params) {
       let response;
@@ -154,6 +155,10 @@ const SpecificProduct = () => {
     }
   };
 
+  const changeCartHandler = (event) => {
+    setIsCartChanged((prev) => !prev);
+  };
+
   return (
     <div>
       {/* <h3>{Message}</h3>
@@ -229,8 +234,12 @@ const SpecificProduct = () => {
         }}
       >
         <Row>
-          <MainSectionOfSpecificProduct SpecificProduct={SpecificProduct}/>
-          <CartSectionOfSpecificProduct />
+          <MainSectionOfSpecificProduct
+            SpecificProduct={SpecificProduct}
+            StockQuantityOptions={StockQuantityOptions}
+            changeCartHandler={changeCartHandler}
+          />
+          <CartSectionOfSpecificProduct isCartChanged={isCartChanged} />
         </Row>
       </Container>
     </div>
