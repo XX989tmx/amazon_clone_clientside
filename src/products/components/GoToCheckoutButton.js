@@ -6,7 +6,7 @@ const GoToCheckoutButton = (props) => {
   return (
     <Row>
       <Col xs={12}>
-        <Link>
+        <Link to={`/order/checkout`}>
           {" "}
           <Button>レジに進む</Button>
         </Link>
