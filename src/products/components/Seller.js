@@ -6,7 +6,7 @@ const Seller = (props) => {
   return (
     <Row>
       <Col xs={{ span: 8, offset: 2 }}>
-        <Link> seller</Link>
+        <Link> {props.seller.name}</Link>
       </Col>
     </Row>
   );

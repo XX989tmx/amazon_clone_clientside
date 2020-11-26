@@ -9,8 +9,8 @@ const ProductInformationSection = (props) => {
   return (
     <Row>
       <ProductImagesSection />
-      <ProductDescriptionSection />
-      <PurchaseActionSection />
+      <ProductDescriptionSection name={props.name} brand={props.brand} price={props.price} />
+      <PurchaseActionSection price={props.price} deliveryDate={props.deliveryDate} isStock={props.isStock} seller={props.seller} />
     </Row>
   );
 };

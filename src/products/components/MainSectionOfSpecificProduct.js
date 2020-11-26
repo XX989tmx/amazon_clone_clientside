@@ -28,7 +28,9 @@ const MainSectionOfSpecificProduct = (props) => {
       }}
     >
       <Breadcrumbs />
-      <ProductInformationSection />
+      {props.SpecificProduct.map((v, i) => (
+        <ProductInformationSection key={i} id={v.id} name={v.name} brand={v.brand} price={v.price} images={v.images} isStock={v.isStock} seller={v.seller} stockQuantity={v.stockQuantity} deliveryDate={v.deliveryDate}/>
+      ))}
       <SameCategoriesOtherProducts />
       <PeopleBoughtTheseProductsTooSection />
       <RelatedProducts />

@@ -7,7 +7,7 @@ const ProductPriceInPurchaseAction = (props) => {
         xs={{ span: 8, offset: 2 }}
         style={{ paddingTop: "10px", paddingBottom: "10px" }}
       >
-        price
+        {props.price} 円
       </Col>
     </Row>
   );

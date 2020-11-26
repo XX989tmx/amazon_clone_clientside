@@ -4,7 +4,7 @@ const ProductTitle = (props) => {
   return (
     <Row>
       <Col xs={12} style={{ height: "40px" }}>
-        title
+        {props.name}
       </Col>
     </Row>
   );

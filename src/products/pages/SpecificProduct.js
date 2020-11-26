@@ -229,7 +229,7 @@ const SpecificProduct = () => {
         }}
       >
         <Row>
-          <MainSectionOfSpecificProduct />
+          <MainSectionOfSpecificProduct SpecificProduct={SpecificProduct}/>
           <CartSectionOfSpecificProduct />
         </Row>
       </Container>

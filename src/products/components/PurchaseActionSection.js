@@ -22,13 +22,13 @@ const PurchaseActionSection = (props) => {
         paddingLeft: "20px",
       }}
     >
-      <ProductPriceInPurchaseAction />
-      <AcquirablePointsInPurchaseAction />
-      <DeliveryDateInPurchaseAction />
-      <StockStatusInPurchaseAction />
+      <ProductPriceInPurchaseAction price={props.price}/>
+      <AcquirablePointsInPurchaseAction price={props.price}/>
+      <DeliveryDateInPurchaseAction deliveryDate={props.deliveryDate}/>
+      <StockStatusInPurchaseAction isStock={props.isStock}/>
       <QuantitySelector />
       <AddToCartButtonInPurchaseAction />
-      <Seller />
+      <Seller seller={props.seller}/>
       <RegisteredAddress />
       <AddToWishlistButton />
     </Col>

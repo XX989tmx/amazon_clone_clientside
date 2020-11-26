@@ -16,10 +16,10 @@ const ProductDescriptionSection = (props) => {
         height: "500px",
       }}
     >
-      <ProductTitle />
-      <ProductBrand />
+      <ProductTitle name={props.name}/>
+      <ProductBrand brand={props.brand}/>
       <ProductReview />
-      <ProductPrice />
+      <ProductPrice price={props.price}/>
       <ProductDescription />
     </Col>
   );

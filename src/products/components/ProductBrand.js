@@ -3,7 +3,7 @@ import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 const ProductBrand = (props) => {
   return (
     <Row>
-      <Col>brand</Col>
+      <Col>{props.brand}</Col>
     </Row>
   );
 };
