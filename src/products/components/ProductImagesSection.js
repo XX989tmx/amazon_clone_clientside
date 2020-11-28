@@ -8,7 +8,7 @@ const ProductImagesSection = (props) => {
   return (
     <Col xs={5} lg={5} style={{ height: "100%" }}>
       <MainPicture />
-      <SubPictures />
+      <SubPictures images={props.images}/>
     </Col>
   );
 };

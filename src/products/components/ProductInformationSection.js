@@ -8,7 +8,7 @@ import PurchaseActionSection from "./PurchaseActionSection";
 const ProductInformationSection = (props) => {
   return (
     <Row>
-      <ProductImagesSection />
+      <ProductImagesSection images={props.images}/>
       <ProductDescriptionSection
         name={props.name}
         brand={props.brand}

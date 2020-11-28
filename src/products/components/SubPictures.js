@@ -4,11 +4,11 @@ import SubPicture from "./SubPicture";
 const SubPictures = (props) => {
   return (
     <Row>
-      <SubPicture />
-      <SubPicture />
-      <SubPicture />
-      <SubPicture />
-      <SubPicture />
+      <SubPicture image={props.images[0]}/>
+      <SubPicture image={props.images[1]}/>
+      <SubPicture image={props.images[2]}/>
+      <SubPicture image={props.images[4]}/>
+      <SubPicture image={props.images[5]}/>
       {/* <Col xs={6} sm={6} md={6} lg={2} style={{ height: "100px" }}>
         pic2
       </Col>
