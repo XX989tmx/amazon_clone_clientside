@@ -4,7 +4,7 @@ import ProductImage from "./ProductImage";
 const ProductImageSection = (props) => {
   return (
     <Col xs={4}>
-      <ProductImage />
+      <ProductImage imageUrl={props.imageUrl}/>
     </Col>
   );
 };

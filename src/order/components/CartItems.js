@@ -2,13 +2,23 @@ import React from "react";
 import reactBootstrap, { Col, Container, Row, Button } from "react-bootstrap";
 import CartItem from "./CartItem";
 const CartItems = (props) => {
-    // li of ul>li
-    // item of list > item
-    // col of Row>Col
+  // li of ul>li
+  // item of list > item
+  // col of Row>Col
   return (
     <Col lg={6}>
       <Row>
-        <CartItem />
+        {props.cartItems.map((v, i) => (
+          <CartItem
+            id={v.id}
+            key={i}
+            name={v.productId.name}
+            price={v.productId.price}
+            images={v.productId.images}
+            quantity={v.quantity}
+          />
+        ))}
+
         {/* <Col xs={12} style={{ height: "200px" }}>
           <Row>
             <Col xs={4}>

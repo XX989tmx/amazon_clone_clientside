@@ -8,10 +8,10 @@ import Seller from "./Seller";
 const ProductInformationSection = (props) => {
   return (
     <Col xs={8} style={{ height: "200px" }}>
-      <ProductName />
-      <PriceOfProduct />
-      <AcquirablePoint />
-      <Quantity />
+      <ProductName name={props.name} />
+      <PriceOfProduct price={props.price} />
+      <AcquirablePoint price={props.price}/>
+      <Quantity quantity={props.quantity} />
       <Seller />
     </Col>
   );

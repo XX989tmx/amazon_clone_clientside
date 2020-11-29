@@ -6,7 +6,7 @@ const CartItemsAndDeliveryOptions = (props) => {
     // ここでCartItemArrayをMapする
   return (
     <Row>
-      <CartItems />
+      <CartItems cartItems={props.cartItems} />
       <DeliveryOptions />
     </Row>
   );

@@ -6,8 +6,13 @@ const CartItem = (props) => {
   return (
     <Col xs={12} style={{ height: "200px" }}>
       <Row>
-        <ProductImageSection />
-        <ProductInformationSection />
+        <ProductImageSection imageUrl={!!props.images[0] && props.images[0].imageUrl}/>
+        <ProductInformationSection
+          id={props.id}
+          name={props.name}
+          price={props.price}
+          quantity={props.quantity}
+        />
       </Row>
     </Col>
   );

@@ -10,6 +10,7 @@ import CheckoutRiyouKiyakuSection from "../components/CheckoutRiyouKiyakuSection
 const Checkout = () => {
   const auth = useContext(AuthContext);
   const [PaymentMethod, setPaymentMethod] = useState();
+  const [cartItems, setCartItems] = useState([]);
   const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
   useEffect(() => {
@@ -24,6 +25,8 @@ const Checkout = () => {
       } catch (error) {
         console.log(error);
       }
+      const data = response.data;
+      setCartItems(data.user.cart.items)
     }
     fetch();
   }, []);
@@ -67,7 +70,7 @@ const Checkout = () => {
         <Row>
           <Col xs={12}>
             <CheckoutHeaderSection />
-            <CheckoutMainSection />
+            <CheckoutMainSection cartItems={cartItems}/>
             <CheckoutRiyouKiyakuSection />
           </Col>
         </Row>

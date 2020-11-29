@@ -10,7 +10,7 @@ const CartItemAndDeliveryOptionSection = (props) => {
         <Row>
           <Col>
             <DeliveryDateHeadingSection />
-            <CartItemsAndDeliveryOptions />
+            <CartItemsAndDeliveryOptions cartItems={props.cartItems} />
           </Col>
         </Row>
       </Col>

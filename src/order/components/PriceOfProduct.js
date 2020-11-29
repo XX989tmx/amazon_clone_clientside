@@ -3,7 +3,7 @@ import reactBootstrap, { Col, Container, Row, Button } from "react-bootstrap";
 const PriceOfProduct = (props) => {
   return (
     <Row>
-      <Col>price</Col>
+      <Col>{props.price}</Col>
     </Row>
   );
 };
