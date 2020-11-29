@@ -1,14 +1,12 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import TotalPrice from "./TotalPrice";
+import TotalPriceParagraph from "./TotalPriceParagraph";
 const TotalPriceSection = (props) => {
   return (
     <Col xs={6} lg={2}>
-      <Row>
-        <Col>合計</Col>
-      </Row>
-      <Row>
-        <Col>total price</Col>
-      </Row>
+      <TotalPriceParagraph />
+      <TotalPrice />
     </Col>
   );
 };
