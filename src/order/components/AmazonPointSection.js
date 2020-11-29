@@ -1,19 +1,16 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import AmazonPointBalance from "./AmazonPointBalance";
+import AmazonPointHeader from "./AmazonPointHeader";
+import AmazonPointUseInput from "./AmazonPointUseInput";
 const AmazonPointSection = (props) => {
   return (
     <Col>
       <Row>
         <Col>
-          <Row>
-            <Col>Amazon points</Col>
-          </Row>
-          <Row>
-            <Col>point balance</Col>
-          </Row>
-          <Row>
-            <Col>point use inout</Col>
-          </Row>
+          <AmazonPointHeader />
+          <AmazonPointBalance />
+          <AmazonPointUseInput />
         </Col>
       </Row>
     </Col>
