@@ -1,20 +1,15 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import AddToCartButtonOfBuyAgainItem from "./AddToCartButtonOfBuyAgainItem";
+import ProductNameOfBuyAgainItem from "./ProductNameOfBuyAgainItem";
+import ProductPriceAndIcon from "./ProductPriceAndIcon";
+
 const ProductDescriptionOfBuyAgainItem = (props) => {
   return (
     <Col xs={12} md={12}>
-      <Row>
-        <Col>name</Col>
-      </Row>
-      <Row>
-        <Col>price</Col>
-        <Col>icon</Col>
-      </Row>
-      <Row>
-        <Col>
-          <Button>カートに入れる</Button>
-        </Col>
-      </Row>
+      <ProductNameOfBuyAgainItem />
+      <ProductPriceAndIcon />
+      <AddToCartButtonOfBuyAgainItem />
     </Col>
   );
 };
