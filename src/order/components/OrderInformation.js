@@ -1,33 +1,19 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import AcquirablePointSection from "./AcquirablePointSection";
+import OrderInformationHeader from "./OrderInformationHeader";
+import ShipmentCostOfOrderSection from "./ShipmentCostOfOrderSection";
+import TotalPriceOfItemsSection from "./TotalPriceOfItemsSection";
+import TotalPriceSection from "./TotalPriceSection";
 const OrderInformation = (props) => {
   return (
     <Row>
       <Col>
-        <Row>
-          <Col>注文内容</Col>
-        </Row>
-        <Row>
-          <Col>商品の小計</Col>
-          <Col>total price</Col>
-        </Row>
-        <Row>
-          <Col>配送料手数料</Col>
-          <Col>cost</Col>
-        </Row>
-        <Row>
-          <Col>御請求額</Col>
-          <Col>total price</Col>
-        </Row>
-        <Row>
-          <Col>獲得ポイント</Col>
-          <Col>
-            <Row>
-              <Col xs={12}>acquirable points</Col>
-              <Col xs={12}>円相当</Col>
-            </Row>
-          </Col>
-        </Row>
+        <OrderInformationHeader />
+        <TotalPriceOfItemsSection />
+        <ShipmentCostOfOrderSection />
+        <TotalPriceSection />
+        <AcquirablePointSection />
       </Col>
     </Row>
   );
