@@ -1,29 +1,16 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import CheckDeliveryStatus from "./CheckDeliveryStatus";
+import HideOrder from "./HideOrder";
+import ReturnOrderedItem from "./ReturnOrderedItem";
+import WriteProductReview from "./WriteProductReview";
 const OrderHistoryItemAction = (props) => {
   return (
     <Col xs={4} md={3}>
-      <Row>
-        <Col>
-          <Button>配送状況を確認</Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Button>商品の返品</Button>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col>
-          <Button>商品レビューを書く</Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Button>注文を非表示にする</Button>
-        </Col>
-      </Row>
+      <CheckDeliveryStatus />
+      <ReturnOrderedItem />
+      <WriteProductReview />
+      <HideOrder />
     </Col>
   );
 };
