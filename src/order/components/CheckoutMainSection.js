@@ -8,7 +8,7 @@ const CheckoutMainSection = (props) => {
   return (
     <Row>
       <CheckoutBodySection cartItems={props.cartItems} />
-      <CheckoutSidebarSection />
+      <CheckoutSidebarSection TotalPrice={props.TotalPrice}/>
     </Row>
   );
 };

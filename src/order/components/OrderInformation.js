@@ -10,10 +10,10 @@ const OrderInformation = (props) => {
     <Row>
       <Col>
         <OrderInformationHeader />
-        <TotalPriceOfItemsSection />
+        <TotalPriceOfItemsSection TotalPrice={props.TotalPrice} />
         <ShipmentCostOfOrderSection />
-        <TotalPriceSection />
-        <AcquirablePointSection />
+        <TotalPriceSection TotalPrice={props.TotalPrice} />
+        <AcquirablePointSection TotalPrice={props.TotalPrice} />
       </Col>
     </Row>
   );

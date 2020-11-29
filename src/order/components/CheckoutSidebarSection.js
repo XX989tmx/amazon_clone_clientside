@@ -8,7 +8,7 @@ import ShipmentCostSection from "./ShipmentCostSection";
 const CheckoutSidebarSection = (props) => {
   return (
     <Col lg={3}>
-      <CheckoutCompleteInformationSection />
+      <CheckoutCompleteInformationSection TotalPrice={props.TotalPrice}/>
       <ShipmentCostSection />
       <CheckoutCompleteSectionSub />
     </Col>

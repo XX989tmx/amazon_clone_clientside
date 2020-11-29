@@ -9,7 +9,7 @@ const CheckoutCompleteInformationSection = (props) => {
     <Row>
       <Col>
         <OrderCompleteButton />
-        <OrderInformation />
+        <OrderInformation TotalPrice={props.TotalPrice} />
       </Col>
     </Row>
   );

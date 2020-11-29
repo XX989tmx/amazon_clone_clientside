@@ -6,7 +6,7 @@ const TotalPriceOfItemsSection = (props) => {
   return (
     <Row>
       <TotalPriceOfOrderHeader />
-      <TotalPriceOfOrder />
+      <TotalPriceOfOrder TotalPrice={props.TotalPrice} />
     </Row>
   );
 };

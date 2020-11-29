@@ -5,7 +5,7 @@ const AcquirablePointSection = (props) => {
   return (
     <Row>
       <Col>獲得ポイント</Col>
-      <AcquirablePointsOfOrder />
+      <AcquirablePointsOfOrder TotalPrice={props.TotalPrice} />
     </Row>
   );
 };

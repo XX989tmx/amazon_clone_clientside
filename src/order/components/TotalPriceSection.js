@@ -4,7 +4,7 @@ const TotalPriceSection = (props) => {
   return (
     <Row>
       <Col>御請求額</Col>
-      <Col>total price</Col>
+      <Col>{props.TotalPrice} 円</Col>
     </Row>
   );
 };

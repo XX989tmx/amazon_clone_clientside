@@ -11,6 +11,7 @@ const Checkout = () => {
   const auth = useContext(AuthContext);
   const [PaymentMethod, setPaymentMethod] = useState();
   const [cartItems, setCartItems] = useState([]);
+  const [TotalPrice, setTotalPrice] = useState();
   const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
   useEffect(() => {
@@ -27,6 +28,7 @@ const Checkout = () => {
       }
       const data = response.data;
       setCartItems(data.user.cart.items)
+      setTotalPrice(data.user.cart.totalPrice)
     }
     fetch();
   }, []);
@@ -70,7 +72,7 @@ const Checkout = () => {
         <Row>
           <Col xs={12}>
             <CheckoutHeaderSection />
-            <CheckoutMainSection cartItems={cartItems}/>
+            <CheckoutMainSection cartItems={cartItems} TotalPrice={TotalPrice}/>
             <CheckoutRiyouKiyakuSection />
           </Col>
         </Row>
