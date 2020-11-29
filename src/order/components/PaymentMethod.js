@@ -1,5 +1,6 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import PaymentMethodSelector from "./PaymentMethodSelector";
 const PaymentMethod = (props) => {
   return (
     <Row>
@@ -7,6 +8,7 @@ const PaymentMethod = (props) => {
         <Row>
           <Col>支払い方法</Col>
         </Row>
+        <PaymentMethodSelector />
         <Row>
           <Col>shimo4keta</Col>
         </Row>
