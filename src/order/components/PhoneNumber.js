@@ -3,7 +3,7 @@ import reactBootstrap, { Col, Container, Row, Button } from "react-bootstrap";
 const PhoneNumber = (props) => {
   return (
     <Row>
-      <Col>phonenumber</Col>
+      <Col>{props.phoneNumber}</Col>
     </Row>
   );
 };

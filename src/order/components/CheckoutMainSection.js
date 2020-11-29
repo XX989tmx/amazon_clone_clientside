@@ -7,8 +7,11 @@ import CheckoutSidebarSection from "./CheckoutSidebarSection";
 const CheckoutMainSection = (props) => {
   return (
     <Row>
-      <CheckoutBodySection cartItems={props.cartItems} />
-      <CheckoutSidebarSection TotalPrice={props.TotalPrice}/>
+      <CheckoutBodySection
+        cartItems={props.cartItems}
+        Address={props.Address}
+      />
+      <CheckoutSidebarSection TotalPrice={props.TotalPrice} />
     </Row>
   );
 };

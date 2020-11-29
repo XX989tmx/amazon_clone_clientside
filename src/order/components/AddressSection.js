@@ -6,7 +6,7 @@ const AddressSection = (props) => {
   return (
     <Col xs={12} lg={4}>
       <AddressSectionHeading />
-      <ShipmentAddress />
+      <ShipmentAddress Address={props.Address} />
     </Col>
   );
 };

@@ -3,7 +3,7 @@ import reactBootstrap, { Col, Container, Row, Button } from "react-bootstrap";
 const AddressInfo1 = (props) => {
   return (
     <Row>
-      <Col>addressinfo1</Col>
+      <Col>{props.addressInfo1}</Col>
     </Row>
   );
 };

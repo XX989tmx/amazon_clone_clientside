@@ -12,6 +12,7 @@ const Checkout = () => {
   const [PaymentMethod, setPaymentMethod] = useState();
   const [cartItems, setCartItems] = useState([]);
   const [TotalPrice, setTotalPrice] = useState();
+  const [Address, setAddress] = useState({});
   const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
   useEffect(() => {
@@ -29,6 +30,11 @@ const Checkout = () => {
       const data = response.data;
       setCartItems(data.user.cart.items)
       setTotalPrice(data.user.cart.totalPrice)
+      if (data.user.addresses.length !== 0) {
+        //default address
+        setAddress(data.user.addresses[0])
+      }
+      // else push to create address page
     }
     fetch();
   }, []);
@@ -72,7 +78,7 @@ const Checkout = () => {
         <Row>
           <Col xs={12}>
             <CheckoutHeaderSection />
-            <CheckoutMainSection cartItems={cartItems} TotalPrice={TotalPrice}/>
+            <CheckoutMainSection cartItems={cartItems} TotalPrice={TotalPrice} Address={Address}/>
             <CheckoutRiyouKiyakuSection />
           </Col>
         </Row>

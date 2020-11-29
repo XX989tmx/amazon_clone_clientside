@@ -9,11 +9,11 @@ const ShipmentAddress = (props) => {
   return (
     <Row>
       <Col>
-        <NameOfAddress />
-        <Zipcode />
-        <AddressInfo1 />
-        <AddressInfo2 />
-        <PhoneNumber />
+        <NameOfAddress name={props.Address.name} />
+        <Zipcode zipCode={props.Address.zipCode} />
+        <AddressInfo1 addressInfo1={props.Address.addressInfo1} />
+        <AddressInfo2 addressInfo2={props.Address.addressInfo2} />
+        <PhoneNumber phoneNumber={props.Address.phoneNumber} />
       </Col>
     </Row>
   );

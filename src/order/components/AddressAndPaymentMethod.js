@@ -5,7 +5,7 @@ import PaymentMethodSection from "./PaymentMethodSection";
 const AddressAndPaymentMethod = (props) => {
   return (
     <Row>
-      <AddressSection />
+      <AddressSection Address={props.Address} />
       <PaymentMethodSection />
     </Row>
   );

@@ -10,7 +10,7 @@ const CheckoutBodySection = (props) => {
     <Col lg={9}>
       main section
       <NotificationSection />
-      <AddressAndPaymentMethod />
+      <AddressAndPaymentMethod Address={props.Address} />
       <CartItemAndDeliveryOptionSection cartItems={props.cartItems} />
     </Col>
   );
