@@ -1,14 +1,12 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import DateOfOrder from "./DateOfOrder";
+import DateOfOrderParagraph from "./DateOfOrderParagraph";
 const DateOfOrderSection = (props) => {
   return (
     <Col xs={6} lg={2}>
-      <Row>
-        <Col>注文日</Col>
-      </Row>
-      <Row>
-        <Col>date of order</Col>
-      </Row>
+      <DateOfOrderParagraph />
+      <DateOfOrder />
     </Col>
   );
 };
