@@ -10,6 +10,7 @@ const CheckoutMainSection = (props) => {
       <CheckoutBodySection
         cartItems={props.cartItems}
         Address={props.Address}
+        AmazonPointBalance={props.AmazonPointBalance}
       />
       <CheckoutSidebarSection TotalPrice={props.TotalPrice} />
     </Row>

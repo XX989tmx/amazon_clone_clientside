@@ -9,7 +9,7 @@ const AmazonPointSection = (props) => {
       <Row>
         <Col>
           <AmazonPointHeader />
-          <AmazonPointBalance />
+          <AmazonPointBalance AmazonPointBalance={props.AmazonPointBalance} />
           <AmazonPointUseInput />
         </Col>
       </Row>

@@ -7,7 +7,7 @@ const PaymentMethodSection = (props) => {
     <Col xs={12} lg={8}>
       <Row>
         <PaymentMethodAndAddress />
-        <AmazonPointSection />
+        <AmazonPointSection AmazonPointBalance={props.AmazonPointBalance} />
       </Row>
     </Col>
   );

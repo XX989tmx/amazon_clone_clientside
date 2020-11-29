@@ -6,7 +6,7 @@ const AddressAndPaymentMethod = (props) => {
   return (
     <Row>
       <AddressSection Address={props.Address} />
-      <PaymentMethodSection />
+      <PaymentMethodSection AmazonPointBalance={props.AmazonPointBalance} />
     </Row>
   );
 };

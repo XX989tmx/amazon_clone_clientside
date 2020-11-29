@@ -13,6 +13,7 @@ const Checkout = () => {
   const [cartItems, setCartItems] = useState([]);
   const [TotalPrice, setTotalPrice] = useState();
   const [Address, setAddress] = useState({});
+  const [AmazonPointBalance, setAmazonPointBalance] = useState();
   const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
   useEffect(() => {
@@ -35,6 +36,7 @@ const Checkout = () => {
         setAddress(data.user.addresses[0])
       }
       // else push to create address page
+      setAmazonPointBalance(data.user.wallet.amazonPoint)
     }
     fetch();
   }, []);
@@ -78,7 +80,12 @@ const Checkout = () => {
         <Row>
           <Col xs={12}>
             <CheckoutHeaderSection />
-            <CheckoutMainSection cartItems={cartItems} TotalPrice={TotalPrice} Address={Address}/>
+            <CheckoutMainSection
+              cartItems={cartItems}
+              TotalPrice={TotalPrice}
+              Address={Address}
+              AmazonPointBalance={AmazonPointBalance}
+            />
             <CheckoutRiyouKiyakuSection />
           </Col>
         </Row>
