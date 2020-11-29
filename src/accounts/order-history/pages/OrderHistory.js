@@ -183,6 +183,9 @@ const OrderHistory = () => {
                 </Row>
               </Col>
             </Row>
+            <Row>
+              <Col>pagination</Col>
+            </Row>
           </Col>
           <Col xs={12} md={12} lg={2}>
             <Row>
