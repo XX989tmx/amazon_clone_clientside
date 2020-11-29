@@ -1,20 +1,16 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import BuyAgainSectionOfNavigation from "./BuyAgainSectionOfNavigation";
+import CanceledOrderSectionOfNavigation from "./CanceledOrderSectionOfNavigation";
+import OrderSectionOfNavigation from "./OrderSectionOfNavigation";
+import PreShipmentSectionOfNavigation from "./PreShipmentSectionOfNavigation";
 const NavigationOfOrderHistory = (props) => {
   return (
     <Row>
-      <Col xs={3} md={3}>
-        注文
-      </Col>
-      <Col xs={3} md={3}>
-        再び購入
-      </Col>
-      <Col xs={3} md={3}>
-        未発送の注文
-      </Col>
-      <Col xs={3} md={3}>
-        キャンセルされた注文
-      </Col>
+      <OrderSectionOfNavigation />
+      <BuyAgainSectionOfNavigation />
+      <PreShipmentSectionOfNavigation />
+      <CanceledOrderSectionOfNavigation />
     </Row>
   );
 };
