@@ -1,10 +1,12 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import ProductIconOfBuyAgainItem from "./ProductIconOfBuyAgainItem";
+import ProductPriceOfBuyAgainItem from "./ProductPriceOfBuyAgainItem";
 const ProductPriceAndIcon = (props) => {
   return (
     <Row>
-      <Col>price</Col>
-      <Col>icon</Col>
+      <ProductPriceOfBuyAgainItem />
+      <ProductIconOfBuyAgainItem />
     </Row>
   );
 };
