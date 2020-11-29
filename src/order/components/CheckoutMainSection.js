@@ -11,8 +11,13 @@ const CheckoutMainSection = (props) => {
         cartItems={props.cartItems}
         Address={props.Address}
         AmazonPointBalance={props.AmazonPointBalance}
+        paymentMethodHandler={props.paymentMethodHandler}
+        amazonPointChangeHandler={props.amazonPointChangeHandler}
       />
-      <CheckoutSidebarSection TotalPrice={props.TotalPrice} />
+      <CheckoutSidebarSection
+        TotalPrice={props.TotalPrice}
+        completePurchaseHandler={props.completePurchaseHandler}
+      />
     </Row>
   );
 };

@@ -8,7 +8,9 @@ const CheckoutCompleteInformationSection = (props) => {
   return (
     <Row>
       <Col>
-        <OrderCompleteButton />
+        <OrderCompleteButton
+          completePurchaseHandler={props.completePurchaseHandler}
+        />
         <OrderInformation TotalPrice={props.TotalPrice} />
       </Col>
     </Row>

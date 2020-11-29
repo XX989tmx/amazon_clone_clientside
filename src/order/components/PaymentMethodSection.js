@@ -6,8 +6,13 @@ const PaymentMethodSection = (props) => {
   return (
     <Col xs={12} lg={8}>
       <Row>
-        <PaymentMethodAndAddress />
-        <AmazonPointSection AmazonPointBalance={props.AmazonPointBalance} />
+        <PaymentMethodAndAddress
+          paymentMethodHandler={props.paymentMethodHandler}
+        />
+        <AmazonPointSection
+          AmazonPointBalance={props.AmazonPointBalance}
+          amazonPointChangeHandler={props.amazonPointChangeHandler}
+        />
       </Row>
     </Col>
   );

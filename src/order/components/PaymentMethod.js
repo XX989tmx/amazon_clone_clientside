@@ -8,7 +8,9 @@ const PaymentMethod = (props) => {
         <Row>
           <Col>支払い方法</Col>
         </Row>
-        <PaymentMethodSelector />
+        <PaymentMethodSelector
+          paymentMethodHandler={props.paymentMethodHandler}
+        />
         <Row>
           <Col>shimo4keta</Col>
         </Row>

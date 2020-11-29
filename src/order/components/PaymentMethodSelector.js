@@ -4,6 +4,7 @@ const PaymentMethodSelector = (props) => {
   const [paymentMethod, setPaymentMethod] = useState("creditCard");
   const paymentMethodSelectorHandler = (event) => {
     setPaymentMethod(event.target.value);
+    props.paymentMethodHandler(event.target.value);
     console.log(event.target.value);
   };
   return (

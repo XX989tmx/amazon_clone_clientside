@@ -13,6 +13,8 @@ const CheckoutBodySection = (props) => {
       <AddressAndPaymentMethod
         Address={props.Address}
         AmazonPointBalance={props.AmazonPointBalance}
+        paymentMethodHandler={props.paymentMethodHandler}
+        amazonPointChangeHandler={props.amazonPointChangeHandler}
       />
       <CartItemAndDeliveryOptionSection cartItems={props.cartItems} />
     </Col>

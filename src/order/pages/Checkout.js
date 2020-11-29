@@ -9,11 +9,13 @@ import CheckoutRiyouKiyakuSection from "../components/CheckoutRiyouKiyakuSection
 
 const Checkout = () => {
   const auth = useContext(AuthContext);
-  const [PaymentMethod, setPaymentMethod] = useState();
+  const [PaymentMethod, setPaymentMethod] = useState("creditCard");
   const [cartItems, setCartItems] = useState([]);
   const [TotalPrice, setTotalPrice] = useState();
   const [Address, setAddress] = useState({});
   const [AmazonPointBalance, setAmazonPointBalance] = useState();
+  const [UsedAmazonPoint, setUsedAmazonPoint] = useState(0);
+  const [AddressId, setAddressId] = useState();
   const history = useHistory();
   //useeffect でCartの中身をFetch *backendにロジック追加
   useEffect(() => {
@@ -29,32 +31,39 @@ const Checkout = () => {
         console.log(error);
       }
       const data = response.data;
-      setCartItems(data.user.cart.items)
-      setTotalPrice(data.user.cart.totalPrice)
+      setCartItems(data.user.cart.items);
+      setTotalPrice(data.user.cart.totalPrice);
       if (data.user.addresses.length !== 0) {
         //default address
-        setAddress(data.user.addresses[0])
+        setAddress(data.user.addresses[0]);
+        setAddressId(data.user.addresses[0].id)
       }
       // else push to create address page
-      setAmazonPointBalance(data.user.wallet.amazonPoint)
+      setAmazonPointBalance(data.user.wallet.amazonPoint);
     }
     fetch();
   }, []);
 
-  const paymentMethodHandler = (event) => {
-    setPaymentMethod(event.target.value);
+  const paymentMethodHandler = (params) => {
+    setPaymentMethod(params);
   };
 
+  const amazonPointChangeHandler = (params) => {
+    setUsedAmazonPoint(params);
+    console.log(UsedAmazonPoint);
+  }
+
   const completePurchaseHandler = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     let response;
     let body = {
       nameOfPaymentMethod: PaymentMethod,
+      amazonPointAmount: UsedAmazonPoint ? UsedAmazonPoint : 0,
     };
     try {
       response = await Axios.post(
         process.env.REACT_APP_BACKEND_URL +
-          `/orders/createOrder/${auth.userId}/5fb2be90be17035930da9466?token=${auth.token}`,
+          `/orders/createOrder/${auth.userId}/${AddressId}?token=${auth.token}`,
         body
       );
       console.log(response);
@@ -85,6 +94,9 @@ const Checkout = () => {
               TotalPrice={TotalPrice}
               Address={Address}
               AmazonPointBalance={AmazonPointBalance}
+              paymentMethodHandler={paymentMethodHandler}
+              amazonPointChangeHandler={amazonPointChangeHandler}
+              completePurchaseHandler={completePurchaseHandler}
             />
             <CheckoutRiyouKiyakuSection />
           </Col>

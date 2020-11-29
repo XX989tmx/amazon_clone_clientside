@@ -6,7 +6,11 @@ const AddressAndPaymentMethod = (props) => {
   return (
     <Row>
       <AddressSection Address={props.Address} />
-      <PaymentMethodSection AmazonPointBalance={props.AmazonPointBalance} />
+      <PaymentMethodSection
+        AmazonPointBalance={props.AmazonPointBalance}
+        paymentMethodHandler={props.paymentMethodHandler}
+        amazonPointChangeHandler={props.amazonPointChangeHandler}
+      />
     </Row>
   );
 };

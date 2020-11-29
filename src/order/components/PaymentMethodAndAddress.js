@@ -5,7 +5,7 @@ import PaymentMethod from "./PaymentMethod";
 const PaymentMethodAndAddress = (props) => {
   return (
     <Col>
-      <PaymentMethod />
+      <PaymentMethod paymentMethodHandler={props.paymentMethodHandler} />
       <AddressConnectedToPaymentMethod />
     </Col>
   );
