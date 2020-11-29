@@ -1,10 +1,12 @@
 import React from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import HeaderSection from "./HeaderSection";
+import SearchBarSection from "./SearchBarSection";
 const HeaderSectionOfOrderHistory = (props) => {
   return (
     <Row>
-      <Col md={6}>注文履歴 header</Col>
-      <Col md={6}>search bar</Col>
+      <HeaderSection />
+      <SearchBarSection />
     </Row>
   );
 };
