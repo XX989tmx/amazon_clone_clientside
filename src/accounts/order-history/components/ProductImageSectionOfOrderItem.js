@@ -4,7 +4,7 @@ import ProductImageOfOrderItem from "./ProductImageOfOrderItem";
 const ProductImageSectionOfOrderItem = (props) => {
   return (
     <Col md={2}>
-      <ProductImageOfOrderItem />
+      <ProductImageOfOrderItem image={props.image}/>
     </Col>
   );
 };

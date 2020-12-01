@@ -5,7 +5,9 @@ import ProductImageSectionOfOrderItem from "./ProductImageSectionOfOrderItem";
 const OrderedItem = (props) => {
   return (
     <Row>
-      <ProductImageSectionOfOrderItem />
+      <ProductImageSectionOfOrderItem
+        image={props.images[0] ? props.images[0] : ""}
+      />
       <ProductDescriptionSectionOfOrderItem
         id={props.id}
         quantity={props.quantity}
