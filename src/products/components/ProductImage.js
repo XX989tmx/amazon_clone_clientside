@@ -4,7 +4,11 @@ const ProductImage = (props) => {
   return (
     <Row>
       <Col style={{ height: "230px" }}>
-        {/* <img src={props.images[0]} /> */}
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src={process.env.REACT_APP_ASSET_URL + `/${props.image.imageUrl}`}
+          alt=""
+        />
       </Col>
     </Row>
   );

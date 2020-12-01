@@ -18,7 +18,7 @@ const ProductItem = (props) => {
     >
       <Link to={`/product/${props.id}`}>
         <BestSellerTag />
-        <ProductImage />
+        <ProductImage image={props.images[0] ? props.images[0] : ''}/>
         <ProductNameAndBrand name={props.name} brand={props.brand} />
         <ProductPriceRelatedSection price={props.price} />
       </Link>
