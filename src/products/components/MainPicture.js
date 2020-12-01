@@ -4,7 +4,11 @@ const MainPicture = (props) => {
   return (
     <Row>
       <Col xs={{ offset: 1, span: 10 }} style={{ height: "220px" }}>
-        pic1
+        <img
+          style={{ height: "100%", width: "100%" }}
+          src={process.env.REACT_APP_ASSET_URL + `/${props.image.imageUrl}`}
+          alt=""
+        />
       </Col>
     </Row>
   );

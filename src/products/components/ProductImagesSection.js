@@ -7,8 +7,8 @@ import SubPictures from "./SubPictures";
 const ProductImagesSection = (props) => {
   return (
     <Col xs={5} lg={5} style={{ height: "100%" }}>
-      <MainPicture />
-      <SubPictures images={props.images}/>
+      <MainPicture image={props.images[0] ? props.images[0] : ""} />
+      <SubPictures images={props.images} />
     </Col>
   );
 };
