@@ -20,3 +20,7 @@ export function getJapanDateAndTime(date) {
     })
     .join("");
 }
+
+export function japanTimeDefaultFormat(date) {
+  return new Date(date).toLocaleDateString("ja-JP");
+}
