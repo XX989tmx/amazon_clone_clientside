@@ -10,6 +10,7 @@ const ContentsOfCart = (props) => {
           id={v.productId.id}
           name={v.productId.name}
           price={v.productId.price}
+          images={v.productId.images}
         />
       ))}
     </Row>

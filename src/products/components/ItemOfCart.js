@@ -18,7 +18,9 @@ const ItemOfCart = (props) => {
     >
       <Link to={`/product/${props.id}`}>
         {" "}
-        <ProductImageOfCartItem />
+        <ProductImageOfCartItem
+          image={props.images[0] ? props.images[0] : ""}
+        />
         <ProductNameOfCartItem name={props.name} />
         <ProductPriceOfCart price={props.price} />
       </Link>
