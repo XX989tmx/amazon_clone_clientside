@@ -24,3 +24,7 @@ export function getJapanDateAndTime(date) {
 export function japanTimeDefaultFormat(date) {
   return new Date(date).toLocaleDateString("ja-JP");
 }
+
+export function calculateAcquirableAmazonPoint(price) {
+  return Math.round(price * 0.01);
+}
