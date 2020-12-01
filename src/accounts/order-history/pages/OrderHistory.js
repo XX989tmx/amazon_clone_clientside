@@ -8,6 +8,7 @@ import SideSectionOfOrderHistory from "../components/SideSectionOfOrderHistory";
 const OrderHistory = () => {
   const auth = useContext(AuthContext);
   const [Message, setMessage] = useState();
+  const [Orders, setOrders] = useState([]);
   useEffect(() => {
     const fetch = async (params) => {
       let response;
@@ -17,6 +18,8 @@ const OrderHistory = () => {
             `/orders/getAllOrderHistory/${auth.userId}?token=${auth.token}`
         );
         console.log(response);
+        const data = response.data;
+        setOrders(data.orders)
       } catch (error) {
         console.log(error);
       }
@@ -26,7 +29,7 @@ const OrderHistory = () => {
   return (
     <Container fluid="md">
       <Row>
-        <MainSectionOfOrderHistory />
+        <MainSectionOfOrderHistory Orders={Orders}/>
         <SideSectionOfOrderHistory />
       </Row>
     </Container>

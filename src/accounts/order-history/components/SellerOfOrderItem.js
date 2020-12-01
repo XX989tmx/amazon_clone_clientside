@@ -3,7 +3,7 @@ import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 const SellerOfOrderItem = (props) => {
   return (
     <Row>
-      <Col>seller</Col>
+      <Col>{props.sellerName ? props.sellerName : ""}</Col>
     </Row>
   );
 };

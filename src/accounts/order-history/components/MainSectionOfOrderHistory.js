@@ -13,7 +13,26 @@ const MainSectionOfOrderHistory = (props) => {
       <HeaderSectionOfOrderHistory />
       <NavigationOfOrderHistory />
       <SortSelectorSection />
-      <OrderHistoryItemSection />
+      {props.Orders.map((v, i) => (
+        <OrderHistoryItemSection
+          id={v.id}
+          key={i}
+          items={v.items}
+          addedAmazonPoint={v.addedAmazonPoint}
+          dateOrdered={v.dateOrdered}
+          isAmazonCreditUsed={v.isAmazonCreditUsed}
+          isAmazonPointUsed={v.isAmazonPointUsed}
+          nameOfPaymentMethod={v.nameOfPaymentMethod}
+          shipmentAddress={v.shipmentAddress}
+          totalCount={v.totalCount}
+          totalPrice={v.totalPrice}
+          totalDiscountAmount={v.totalDiscountAmount}
+          totalPriceBeforeDiscount={v.totalPriceBeforeDiscount}
+          usedAmazonCredit={v.usedAmazonCredit}
+          usedAmazonPoint={v.usedAmazonCredit}
+        />
+      ))}
+
       <PaginationSectionOfOrderHistory />
     </Col>
   );

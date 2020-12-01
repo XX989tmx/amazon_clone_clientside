@@ -6,7 +6,14 @@ const OrderedItem = (props) => {
   return (
     <Row>
       <ProductImageSectionOfOrderItem />
-      <ProductDescriptionSectionOfOrderItem />
+      <ProductDescriptionSectionOfOrderItem
+        id={props.id}
+        quantity={props.quantity}
+        name={props.name}
+        price={props.price}
+        brand={props.brand}
+        sellerName={props.seller.name}
+      />
     </Row>
   );
 };

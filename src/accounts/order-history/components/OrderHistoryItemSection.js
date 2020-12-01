@@ -6,8 +6,12 @@ const OrderHistoryItemSection = (props) => {
   return (
     <Row>
       <Col>
-        <OrderHistoryItemHeader />
-        <OrderHistoryItemBody />
+        <OrderHistoryItemHeader
+          dateOrdered={props.dateOrdered}
+          totalPrice={props.totalPrice}
+          shipmentAddress={props.shipmentAddress}
+        />
+        <OrderHistoryItemBody items={props.items}/>
       </Col>
     </Row>
   );

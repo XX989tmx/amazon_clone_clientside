@@ -3,7 +3,9 @@ import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 const ShipmentAddress = (props) => {
   return (
     <Row>
-      <Col>address name</Col>
+      <Col>
+        {props.nameOfShipmentAddress ? props.nameOfShipmentAddress : ""}
+      </Col>
     </Row>
   );
 };

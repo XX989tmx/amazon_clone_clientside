@@ -6,7 +6,17 @@ const OrderHistoryItemMain = (props) => {
   return (
     <Col xs={8} md={9}>
       <DeliveryDateAndStatusSection />
-      <OrderedItems />
+      {props.items.map((v, i) => (
+        <OrderedItems
+          id={v.id}
+          quantity={v.quantity}
+          name={v.productId.name}
+          price={v.productId.price}
+          images={v.productId.images}
+          brand={v.productId.brand}
+          seller={v.productId.seller}
+        />
+      ))}
     </Col>
   );
 };

@@ -6,7 +6,7 @@ const ShipmentAddressSection = (props) => {
   return (
     <Col xs={6} lg={4}>
       <ShipmentAddressParagraph />
-      <ShipmentAddress />
+      <ShipmentAddress nameOfShipmentAddress={props.shipmentAddress.name}/>
     </Col>
   );
 };

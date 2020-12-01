@@ -6,7 +6,7 @@ const DateOfOrderSection = (props) => {
   return (
     <Col xs={6} lg={2}>
       <DateOfOrderParagraph />
-      <DateOfOrder />
+      <DateOfOrder dateOrdered={props.dateOrdered} />
     </Col>
   );
 };

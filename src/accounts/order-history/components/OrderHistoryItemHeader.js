@@ -9,9 +9,9 @@ const OrderHistoryItemHeader = (props) => {
     <Row>
       <Col>
         <Row>
-          <DateOfOrderSection />
-          <TotalPriceSection />
-          <ShipmentAddressSection />
+          <DateOfOrderSection dateOrdered={props.dateOrdered}/>
+          <TotalPriceSection totalPrice={props.totalPrice}/>
+          <ShipmentAddressSection shipmentAddress={props.shipmentAddress}/>
           <OrderNumberSection />
         </Row>
       </Col>

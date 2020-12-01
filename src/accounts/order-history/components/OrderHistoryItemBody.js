@@ -7,7 +7,7 @@ const OrderHistoryItemBody = (props) => {
     <Row>
       <Col>
         <Row>
-          <OrderHistoryItemMain />
+          <OrderHistoryItemMain items={props.items}/>
           <OrderHistoryItemAction />
         </Row>
       </Col>

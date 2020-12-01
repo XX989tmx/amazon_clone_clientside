@@ -7,9 +7,9 @@ import SellerOfOrderItem from "./SellerOfOrderItem";
 const ProductDescriptionSectionOfOrderItem = (props) => {
   return (
     <Col md={10}>
-      <NameOfOrderItem />
-      <SellerOfOrderItem />
-      <PriceOfOrderItem />
+      <NameOfOrderItem name={props.name}/>
+      <SellerOfOrderItem sellerName={props.sellerName}/>
+      <PriceOfOrderItem price={props.price}/>
       <BuyAgainButton />
     </Col>
   );

@@ -5,7 +5,15 @@ const OrderedItems = (props) => {
   return (
     <Row>
       <Col>
-        <OrderedItem />
+        <OrderedItem
+          id={props.id}
+          quantity={props.quantity}
+          name={props.name}
+          price={props.price}
+          images={props.images}
+          brand={props.brand}
+          seller={props.seller}
+        />
       </Col>
     </Row>
   );

@@ -6,7 +6,7 @@ const TotalPriceSection = (props) => {
   return (
     <Col xs={6} lg={2}>
       <TotalPriceParagraph />
-      <TotalPrice />
+      <TotalPrice totalPrice={props.totalPrice}/>
     </Col>
   );
 };
