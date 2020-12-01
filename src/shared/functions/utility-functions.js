@@ -4,3 +4,19 @@ export function modifyPriceToJPYLocale(price) {
     currency: "JPY",
   });
 }
+
+export function getJapanDateAndTime(date) {
+  const yearMonthDate = new Date(date).toLocaleDateString("ja-JP");
+  return yearMonthDate
+    .split("/")
+    .map((v, i) => {
+      if (i === 0) {
+        return v + "年";
+      } else if (i === 1) {
+        return v + "月";
+      } else {
+        return v + "日";
+      }
+    })
+    .join("");
+}
