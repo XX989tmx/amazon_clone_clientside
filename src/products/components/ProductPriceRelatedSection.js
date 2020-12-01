@@ -7,9 +7,9 @@ const ProductPriceRelatedSection = (props) => {
   return (
     <Row>
       <Col>
-        <PriceOfProduct price={props.price}/>
-        <AcquirablePoints price={props.price}/>
-        <StockStatus />
+        <PriceOfProduct price={props.price} />
+        <AcquirablePoints price={props.price} />
+        <StockStatus isStock={props.isStock} />
       </Col>
     </Row>
   );

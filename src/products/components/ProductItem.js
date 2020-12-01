@@ -18,11 +18,17 @@ const ProductItem = (props) => {
     >
       <Link to={`/product/${props.id}`}>
         <BestSellerTag />
-        <ProductImage image={props.images[0] ? props.images[0] : ''}/>
+        <ProductImage image={props.images[0] ? props.images[0] : ""} />
         <ProductNameAndBrand name={props.name} brand={props.brand} />
-        <ProductPriceRelatedSection price={props.price} />
+        <ProductPriceRelatedSection
+          price={props.price}
+          isStock={props.isStock}
+        />
       </Link>
-      <AddToCartButton changeCartHandler={props.changeCartHandler} id={props.id} />
+      <AddToCartButton
+        changeCartHandler={props.changeCartHandler}
+        id={props.id}
+      />
       <ProductReviewsRelatedSection />
     </Col>
 
