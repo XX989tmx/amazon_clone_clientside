@@ -40,6 +40,7 @@ import ChildCategoryIndex from "./products/pages/ChildCategoryIndex";
 import GrandChildCategoryIndex from "./products/pages/GrandChildCategoryIndex";
 import GrandGrandChildCategoryIndex from "./products/pages/GrandGrandChildCategoryIndex";
 import GetProductsByBrand from "./products/pages/GetProductsByBrand";
+import Header from "./shared/components/navigation/Header";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -244,6 +245,7 @@ function App() {
         }}
       >
         <Router>
+          <Header />
           {/* temporary header */}
           <HeaderNavigation />
           {/* main */}
