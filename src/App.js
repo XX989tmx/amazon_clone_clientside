@@ -41,6 +41,7 @@ import GrandChildCategoryIndex from "./products/pages/GrandChildCategoryIndex";
 import GrandGrandChildCategoryIndex from "./products/pages/GrandGrandChildCategoryIndex";
 import GetProductsByBrand from "./products/pages/GetProductsByBrand";
 import Header from "./shared/components/navigation/Header";
+import Search from "./search/pages/Search";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -169,6 +170,11 @@ function App() {
       </Route>
       <Route path="/product/brand/:brand" exact>
         <GetProductsByBrand />
+      </Route>
+
+      {/* search */}
+      <Route path="/search" exact>
+        <Search />
       </Route>
 
       {/* cart */}
