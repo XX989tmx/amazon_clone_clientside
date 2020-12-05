@@ -3,6 +3,7 @@ import ItemDeletedMessage from "./ItemDeletedMessage";
 import ItemUpdatedMessage from "./ItemUpdatedMessage";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import ItemAddedMessage from "./ItemAddedMessage";
+import ItemEmptiedMessage from "./ItemEmptiedMessage";
 const CartMessage = (props) => {
   return (
     <Row>
@@ -14,6 +15,9 @@ const CartMessage = (props) => {
           />
           <ItemUpdatedMessage
             IsUpdatedItemMessage={props.IsUpdatedItemMessage}
+          />
+          <ItemEmptiedMessage
+            IsCartEmptiedMessage={props.IsCartEmptiedMessage}
           />
         </Row>{" "}
       </Col>

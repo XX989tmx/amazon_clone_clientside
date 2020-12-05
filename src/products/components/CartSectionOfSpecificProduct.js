@@ -95,6 +95,7 @@ const CartSectionOfSpecificProduct = (props) => {
         IsUpdatedItemMessage={IsUpdatedItemMessage}
         IsDeletedItemMessage={IsDeletedItemMessage}
         isAddedItemMessage={props.isAddedItemMessage}
+        IsCartEmptiedMessage={IsCartEmptiedMessage}
       />
       <CartItemTotalCount TotalCountOfCart={TotalCountOfCart} />
       <SumOfPriceOfCartItems TotalPriceOfCart={TotalPriceOfCart} />
