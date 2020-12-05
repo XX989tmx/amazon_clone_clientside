@@ -33,6 +33,10 @@ const ItemOfCart = (props) => {
         cartItemId={props.cartItemId}
         changeCartHandler={props.changeCartHandler}
         stockQuantity={props.stockQuantity}
+        deleteItemFromCartMessageHandler={
+          props.deleteItemFromCartMessageHandler
+        }
+        updateCartItemMessageHandler={props.updateCartItemMessageHandler}
       />
       {/* {props.CartItems.map((v, i) => (
           <Row>

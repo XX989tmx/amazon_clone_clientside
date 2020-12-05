@@ -10,10 +10,14 @@ const ActionSectionOfCartItem = (props) => {
         stockQuantity={props.stockQuantity}
         cartItemId={props.cartItemId}
         changeCartHandler={props.changeCartHandler}
+        updateCartItemMessageHandler={props.updateCartItemMessageHandler}
       />
       <DeleteCartItemButton
         cartItemId={props.cartItemId}
         changeCartHandler={props.changeCartHandler}
+        deleteItemFromCartMessageHandler={
+          props.deleteItemFromCartMessageHandler
+        }
       />
     </Row>
   );

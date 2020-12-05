@@ -20,11 +20,13 @@ const DeleteCartItemButton = (props) => {
         process.env.REACT_APP_BACKEND_URL +
           `/users/removeItemFromCart/${auth.userId}/${props.cartItemId}?token=${auth.token}`
       );
+      
     } catch (error) {
       console.log(error);
     }
     if (response) {
       props.changeCartHandler();
+      props.deleteItemFromCartMessageHandler();
     }
   };
 

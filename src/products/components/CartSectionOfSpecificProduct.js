@@ -14,6 +14,9 @@ const CartSectionOfSpecificProduct = (props) => {
   const [TotalPriceOfCart, setTotalPriceOfCart] = useState();
   const [TotalCountOfCart, setTotalCountOfCart] = useState();
   const [CartItems, setCartItems] = useState([]);
+  const [IsAddedItemMessage, setIsAddedItemMessage] = useState(false);
+  const [IsUpdatedItemMessage, setIsUpdatedItemMessage] = useState(false);
+  const [IsDeletedItemMessage, setIsDeletedItemMessage] = useState(false);
   useEffect(() => {
     async function onLoad() {
       let response;
@@ -37,15 +40,42 @@ const CartSectionOfSpecificProduct = (props) => {
     }
     onLoad();
   }, [props.isCartChanged]);
+
+  const updateCartItemMessageHandler = () => {
+    setIsUpdatedItemMessage(true);
+    setTimeout(() => {
+      setIsUpdatedItemMessage(false);
+    }, 4000);
+  };
+
+  const deleteItemFromCartMessageHandler = () => {
+    setIsDeletedItemMessage(true);
+    setTimeout(() => {
+      setIsDeletedItemMessage(false);
+    }, 4000);
+  };
+
+  const itemAddedToCartMessageHandler = () => {
+    setIsAddedItemMessage(true);
+  };
+
   return (
     <Col md={2} lg={2} xl={2}>
       cart side bar
+      <Row>
+        <Col>
+          {IsDeletedItemMessage && "商品が削除されました"}{" "}
+          {IsUpdatedItemMessage && "商品点数が更新されました"}
+        </Col>
+      </Row>
       <CartItemTotalCount TotalCountOfCart={TotalCountOfCart} />
       <SumOfPriceOfCartItems TotalPriceOfCart={TotalPriceOfCart} />
       <GoToCheckoutButton />
       <ContentsOfCart
         CartItems={CartItems}
         changeCartHandler={props.changeCartHandler}
+        deleteItemFromCartMessageHandler={deleteItemFromCartMessageHandler}
+        updateCartItemMessageHandler={updateCartItemMessageHandler}
       />
     </Col>
   );

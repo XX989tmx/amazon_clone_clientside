@@ -43,6 +43,7 @@ const QuantityChangeSelector = (props) => {
     }
     if (response) {
       props.changeCartHandler();
+      props.updateCartItemMessageHandler();
     }
   };
 

@@ -15,6 +15,10 @@ const ContentsOfCart = (props) => {
           quantity={v.quantity}
           stockQuantity={v.productId.stockQuantity}
           changeCartHandler={props.changeCartHandler}
+          deleteItemFromCartMessageHandler={
+            props.deleteItemFromCartMessageHandler
+          }
+          updateCartItemMessageHandler={props.updateCartItemMessageHandler}
         />
       ))}
     </Row>
