@@ -47,9 +47,11 @@ function App() {
   const { Token, login, logout, UserId } = useAuth();
   const { sellerToken, sellerLogin, sellerLogout, SellerId } = useAuthSeller();
   let routes;
-  routes = (
-    <Switch>
-      {/* //routes // 
+
+  if (Token || sellerToken) {
+    routes = (
+      <Switch>
+        {/* //routes // 
       frontend 
         search boxはHeader部分におき、グローバルに使えるようにする。
 
@@ -108,130 +110,264 @@ function App() {
       // api/admin/auth/signup
 
        */}
-      {/* home */}
-      <Route path="/home" exact>
-        <Home />
-      </Route>
+        {/* home */}
+        <Route path="/home" exact>
+          <Home />
+        </Route>
 
-      {/* auth */}
-      <Route path="/user/auth/signup" exact>
-        <SignUp />
-      </Route>
-      <Route path="/user/auth/login" exact>
-        <Login />
-      </Route>
-      {/* seller */}
-      <Router path="/seller/auth/signup" exact>
-        <SellerSignup />
-      </Router>
-      <Router path="/seller/auth/login" exact>
-        <SellerLogin />
-      </Router>
+        {/* auth */}
+        <Route path="/user/auth/signup" exact>
+          <SignUp />
+        </Route>
+        <Route path="/user/auth/login" exact>
+          <Login />
+        </Route>
+        {/* seller */}
+        <Router path="/seller/auth/signup" exact>
+          <SellerSignup />
+        </Router>
+        <Router path="/seller/auth/login" exact>
+          <SellerLogin />
+        </Router>
 
-      {/* product */}
-      <Route path="/product/new" exact>
-        <NewProduct />
-      </Route>
-      {/* parent category index */}
-      <Route path="/product/index/parentCategory/:parentCategory" exact>
-        <ParentCategoryIndex />
-      </Route>
-      {/* child category index */}
-      <Route path="/product/index/childCategory/:childCategory" exact>
-        <ChildCategoryIndex />
-      </Route>
-      {/* grand child category index */}
-      <Route path="/product/index/grandChildCategory/:grandChildCategory" exact>
-        <GrandChildCategoryIndex />
-      </Route>
-      {/* grand grand child category index */}
-      <Route
-        path="/product/index/grandGrandChildCategory/:grandGrandChildCategory"
-        exact
-      >
-        <GrandGrandChildCategoryIndex />
-      </Route>
+        {/* product */}
+        <Route path="/product/new" exact>
+          <NewProduct />
+        </Route>
+        {/* parent category index */}
+        <Route path="/product/index/parentCategory/:parentCategory" exact>
+          <ParentCategoryIndex />
+        </Route>
+        {/* child category index */}
+        <Route path="/product/index/childCategory/:childCategory" exact>
+          <ChildCategoryIndex />
+        </Route>
+        {/* grand child category index */}
+        <Route
+          path="/product/index/grandChildCategory/:grandChildCategory"
+          exact
+        >
+          <GrandChildCategoryIndex />
+        </Route>
+        {/* grand grand child category index */}
+        <Route
+          path="/product/index/grandGrandChildCategory/:grandGrandChildCategory"
+          exact
+        >
+          <GrandGrandChildCategoryIndex />
+        </Route>
 
-      {/* 下のは不要なので消す */}
-      <Route path="/product/productIndex/:category" exact>
-        <ProductIndex />
-      </Route>
-      <Route path="/product/wishlistRanking/:category" exact>
-        <WishlistrankingTop50 />
-      </Route>
-      <Route path="/product/newlyAdded/:category" exact>
-        <NewlyAddedRankingTop50 />
-      </Route>
-      <Route path="/product/bestseller/:category" exact>
-        <BestSellerRankingTop50 />
-      </Route>
-      <Route path="/product/:productId" exact>
-        <SpecificProduct />
-      </Route>
-      <Route path="/product/brand/:brand" exact>
-        <GetProductsByBrand />
-      </Route>
+        {/* 下のは不要なので消す */}
+        <Route path="/product/productIndex/:category" exact>
+          <ProductIndex />
+        </Route>
+        <Route path="/product/wishlistRanking/:category" exact>
+          <WishlistrankingTop50 />
+        </Route>
+        <Route path="/product/newlyAdded/:category" exact>
+          <NewlyAddedRankingTop50 />
+        </Route>
+        <Route path="/product/bestseller/:category" exact>
+          <BestSellerRankingTop50 />
+        </Route>
+        <Route path="/product/:productId" exact>
+          <SpecificProduct />
+        </Route>
+        <Route path="/product/brand/:brand" exact>
+          <GetProductsByBrand />
+        </Route>
 
-      {/* search */}
-      <Route path="/search" exact>
-        <Search />
-      </Route>
+        {/* search */}
+        <Route path="/search" exact>
+          <Search />
+        </Route>
 
-      {/* cart */}
-      {/* show cart content page */}
-      <Route path="/cart" exact>
-        <Cart />
-      </Route>
+        {/* cart */}
+        {/* show cart content page */}
+        <Route path="/cart" exact>
+          <Cart />
+        </Route>
 
-      {/* order */}
-      {/* order confirmation page/ checkout */}
-      <Route path="/order/checkout" exact>
-        <Checkout />
-      </Route>
+        {/* order */}
+        {/* order confirmation page/ checkout */}
+        <Route path="/order/checkout" exact>
+          <Checkout />
+        </Route>
 
-      {/* order compete page */}
-      <Route path="/order/orderComplete/:orderId" exact>
-        <OrderComplete />
-      </Route>
+        {/* order compete page */}
+        <Route path="/order/orderComplete/:orderId" exact>
+          <OrderComplete />
+        </Route>
 
-      {/* account */}
-      <Route path="/account/overview" exact>
-        <Overview />
-      </Route>
-      <Route path="/account/order-history" exact>
-        <OrderHistory />
-      </Route>
-      {/* address all */}
-      <Route path="/account/addresses" exact>
-        <Addresses />
-      </Route>
-      <Route path="/account/addresses/new" exact>
-        <NewAddress />
-      </Route>
-      <Route path="/account/addresses/update/:addressId" exact>
-        <UpdateAddress />
-      </Route>
-      {/* account / wishlist */}
-      {/* /account/wishlist/all pagination15 */}
-      <Route path="/account/wishlists/all" exact>
-        <WishlistAll />
-      </Route>
+        {/* account */}
+        <Route path="/account/overview" exact>
+          <Overview />
+        </Route>
+        <Route path="/account/order-history" exact>
+          <OrderHistory />
+        </Route>
+        {/* address all */}
+        <Route path="/account/addresses" exact>
+          <Addresses />
+        </Route>
+        <Route path="/account/addresses/new" exact>
+          <NewAddress />
+        </Route>
+        <Route path="/account/addresses/update/:addressId" exact>
+          <UpdateAddress />
+        </Route>
+        {/* account / wishlist */}
+        {/* /account/wishlist/all pagination15 */}
+        <Route path="/account/wishlists/all" exact>
+          <WishlistAll />
+        </Route>
 
-      {/* your-payments */}
-      <Route path="/account/your-payments/payment-methods" exact>
-        <PaymentMethods />
-      </Route>
-      <Route path="/account/your-payments/payment-methods/new" exact>
-        <NewPaymentMethod />
-      </Route>
-      <Route path="/account/your-payments/payment-methods/update" exact>
-        <UpdatePaymentMethod />
-      </Route>
-      <Route path="/account/your-payments/transaction-history" exact>
-        <TransactionHistory />
-      </Route>
-    </Switch>
-  );
+        {/* your-payments */}
+        <Route path="/account/your-payments/payment-methods" exact>
+          <PaymentMethods />
+        </Route>
+        <Route path="/account/your-payments/payment-methods/new" exact>
+          <NewPaymentMethod />
+        </Route>
+        <Route path="/account/your-payments/payment-methods/update" exact>
+          <UpdatePaymentMethod />
+        </Route>
+        <Route path="/account/your-payments/transaction-history" exact>
+          <TransactionHistory />
+        </Route>
+      </Switch>
+    );
+  } else {
+    routes = (
+      <Switch>
+        {/* home */}
+        <Route path="/home" exact>
+          <Home />
+        </Route>
+
+        {/* auth */}
+        <Route path="/user/auth/signup" exact>
+          <SignUp />
+        </Route>
+        <Route path="/user/auth/login" exact>
+          <Login />
+        </Route>
+        {/* seller */}
+        <Router path="/seller/auth/signup" exact>
+          <SellerSignup />
+        </Router>
+        <Router path="/seller/auth/login" exact>
+          <SellerLogin />
+        </Router>
+
+        {/* product */}
+        {/* <Route path="/product/new" exact>
+          <NewProduct />
+        </Route> */}
+        {/* parent category index */}
+        <Route path="/product/index/parentCategory/:parentCategory" exact>
+          <ParentCategoryIndex />
+        </Route>
+        {/* child category index */}
+        <Route path="/product/index/childCategory/:childCategory" exact>
+          <ChildCategoryIndex />
+        </Route>
+        {/* grand child category index */}
+        <Route
+          path="/product/index/grandChildCategory/:grandChildCategory"
+          exact
+        >
+          <GrandChildCategoryIndex />
+        </Route>
+        {/* grand grand child category index */}
+        <Route
+          path="/product/index/grandGrandChildCategory/:grandGrandChildCategory"
+          exact
+        >
+          <GrandGrandChildCategoryIndex />
+        </Route>
+
+        {/* 下のは不要なので消す */}
+        <Route path="/product/productIndex/:category" exact>
+          <ProductIndex />
+        </Route>
+        <Route path="/product/wishlistRanking/:category" exact>
+          <WishlistrankingTop50 />
+        </Route>
+        <Route path="/product/newlyAdded/:category" exact>
+          <NewlyAddedRankingTop50 />
+        </Route>
+        <Route path="/product/bestseller/:category" exact>
+          <BestSellerRankingTop50 />
+        </Route>
+        <Route path="/product/:productId" exact>
+          <SpecificProduct />
+        </Route>
+        <Route path="/product/brand/:brand" exact>
+          <GetProductsByBrand />
+        </Route>
+
+        {/* search */}
+        <Route path="/search" exact>
+          <Search />
+        </Route>
+
+        {/* cart */}
+        {/* show cart content page */}
+        {/* <Route path="/cart" exact>
+          <Cart />
+        </Route> */}
+
+        {/* order */}
+        {/* order confirmation page/ checkout */}
+        {/* <Route path="/order/checkout" exact>
+          <Checkout />
+        </Route> */}
+
+        {/* order compete page */}
+        {/* <Route path="/order/orderComplete/:orderId" exact>
+          <OrderComplete />
+        </Route> */}
+
+        {/* account */}
+        {/* <Route path="/account/overview" exact>
+          <Overview />
+        </Route>
+        <Route path="/account/order-history" exact>
+          <OrderHistory />
+        </Route> */}
+        {/* address all */}
+        {/* <Route path="/account/addresses" exact>
+          <Addresses />
+        </Route>
+        <Route path="/account/addresses/new" exact>
+          <NewAddress />
+        </Route>
+        <Route path="/account/addresses/update/:addressId" exact>
+          <UpdateAddress />
+        </Route> */}
+        {/* account / wishlist */}
+        {/* /account/wishlist/all pagination15 */}
+        {/* <Route path="/account/wishlists/all" exact>
+          <WishlistAll />
+        </Route> */}
+
+        {/* your-payments */}
+        {/* <Route path="/account/your-payments/payment-methods" exact>
+          <PaymentMethods />
+        </Route>
+        <Route path="/account/your-payments/payment-methods/new" exact>
+          <NewPaymentMethod />
+        </Route>
+        <Route path="/account/your-payments/payment-methods/update" exact>
+          <UpdatePaymentMethod />
+        </Route>
+        <Route path="/account/your-payments/transaction-history" exact>
+          <TransactionHistory />
+        </Route> */}
+      </Switch>
+    );
+  }
 
   return (
     <div>
