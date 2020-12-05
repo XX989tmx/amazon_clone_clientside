@@ -5,7 +5,10 @@ import QuantityChangeSelector from "./QuantityChangeSelector";
 const ActionSectionOfCartItem = (props) => {
   return (
     <Row>
-      <QuantityChangeSelector quantity={props.quantity}/>
+      <QuantityChangeSelector
+        quantity={props.quantity}
+        StockQuantityOptions={props.StockQuantityOptions}
+      />
       <DeleteCartItemButton />
     </Row>
   );

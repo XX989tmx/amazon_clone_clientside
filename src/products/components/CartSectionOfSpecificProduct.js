@@ -40,10 +40,13 @@ const CartSectionOfSpecificProduct = (props) => {
   return (
     <Col md={2} lg={2} xl={2}>
       cart side bar
-      <CartItemTotalCount TotalCountOfCart={TotalCountOfCart}/>
+      <CartItemTotalCount TotalCountOfCart={TotalCountOfCart} />
       <SumOfPriceOfCartItems TotalPriceOfCart={TotalPriceOfCart} />
       <GoToCheckoutButton />
-      <ContentsOfCart CartItems={CartItems} />
+      <ContentsOfCart
+        CartItems={CartItems}
+        StockQuantityOptions={props.StockQuantityOptions}
+      />
     </Col>
   );
 };

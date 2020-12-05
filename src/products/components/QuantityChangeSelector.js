@@ -11,9 +11,7 @@ const QuantityChangeSelector = (props) => {
   return (
     <Col md={12} lg={6}>
       <select value={Quantity} onChange={quantityChangeHandler}>
-        <option>{props.quantity}</option>
-        <option>数量:n</option>
-        <option>数量:n</option>
+        {props.StockQuantityOptions}
       </select>
     </Col>
   );

@@ -12,6 +12,7 @@ const ContentsOfCart = (props) => {
           price={v.productId.price}
           images={v.productId.images}
           quantity={v.quantity}
+          StockQuantityOptions={props.StockQuantityOptions}
         />
       ))}
     </Row>
