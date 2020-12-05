@@ -6,6 +6,7 @@ import { AuthContext } from "../../shared/context/auth-context";
 import CartItemTotalCount from "./CartItemTotalCount";
 import CartMessage from "./CartMessage";
 import ContentsOfCart from "./ContentsOfCart";
+import EmptyCartButton from "./EmptyCartButton";
 import GoToCheckoutButton from "./GoToCheckoutButton";
 import SumOfPriceOfCartItems from "./SumOfPriceOfCartItems";
 
@@ -18,6 +19,7 @@ const CartSectionOfSpecificProduct = (props) => {
   const [IsAddedItemMessage, setIsAddedItemMessage] = useState(false);
   const [IsUpdatedItemMessage, setIsUpdatedItemMessage] = useState(false);
   const [IsDeletedItemMessage, setIsDeletedItemMessage] = useState(false);
+  const [IsCartEmptiedMessage, setIsCartEmptiedMessage] = useState(false);
   useEffect(() => {
     async function onLoad() {
       let response;
@@ -60,9 +62,35 @@ const CartSectionOfSpecificProduct = (props) => {
     setIsAddedItemMessage(true);
   };
 
+  const cartEmptiedMessageHandler = () => {
+    setIsCartEmptiedMessage(true);
+    setTimeout(() => {
+      setIsCartEmptiedMessage(false);
+    }, 4000);
+  };
+
+  const emptyCartHandler = async (event) => {
+    let response;
+    try {
+      response = await Axios.get(
+        process.env.REACT_APP_BACKEND_URL +
+          `/users/clearCart/${auth.userId}?token=${auth.token}`
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+
+    if (response) {
+      props.changeCartHandler();
+      cartEmptiedMessageHandler();
+    }
+  };
+
   return (
     <Col md={2} lg={2} xl={2}>
       cart side bar
+      <EmptyCartButton emptyCartHandler={emptyCartHandler} />
       <CartMessage
         IsUpdatedItemMessage={IsUpdatedItemMessage}
         IsDeletedItemMessage={IsDeletedItemMessage}
