@@ -16,6 +16,7 @@ const MainSectionOfGrandGrandChildCategoryIndex = (props) => {
           PaginationData={props.PaginationData}
           GrandGrandChildCategory={props.GrandGrandChildCategory}
           changeCartHandler={props.changeCartHandler}
+          itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
         />
       </Row>
     </Col>

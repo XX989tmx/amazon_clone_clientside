@@ -18,6 +18,7 @@ const ProductIndex = (props) => {
           id={v.id}
           changeCartHandler={props.changeCartHandler}
           isStock={v.isStock}
+          itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
         />
       ))}
     </Row>

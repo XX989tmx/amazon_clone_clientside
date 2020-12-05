@@ -29,6 +29,7 @@ const ProductIndexSection = (props) => {
           props.GrandGrandChildCategoryMatchedProducts
         }
         changeCartHandler={props.changeCartHandler}
+        itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
       />
       <PaginationSection
         PaginationData={props.PaginationData}

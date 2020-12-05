@@ -24,6 +24,7 @@ const GrandGrandChildCategoryIndex = (props) => {
   const [PaginationData, setPaginationData] = useState({});
   const [GrandGrandChildCategory, setGrandGrandChildCategory] = useState();
   const [isCartChanged, setIsCartChanged] = useState(false);
+  const [isAddedItemMessage, setIsAddedItemMessage] = useState(false);
   // grandGrandChildCategory("categories":grandGrandChildCategory)に一致するproduct documentを配列の形で受け取る。pagination16 grandGrandChildCategoryIdをクエリにして、ドキュメントを検索。
 
   //pagination16。list,itemコンポーネントにし、個々のProductをspecificProductpageへのLinkで囲む。
@@ -80,6 +81,13 @@ const GrandGrandChildCategoryIndex = (props) => {
   const changeCartHandler = (event) => {
     setIsCartChanged((prev) => !prev);
   };
+
+  const itemAddedToCartMessageHandler = () => {
+    setIsAddedItemMessage(true);
+    setTimeout(() => {
+      setIsAddedItemMessage(false);
+    }, 4000);
+  };
   return (
     <div>
       grand grand child category index
@@ -119,10 +127,12 @@ const GrandGrandChildCategoryIndex = (props) => {
             PaginationData={PaginationData}
             GrandGrandChildCategory={GrandGrandChildCategory}
             changeCartHandler={changeCartHandler}
+            itemAddedToCartMessageHandler={itemAddedToCartMessageHandler}
           />
           <CartSectionOfSpecificProduct
             isCartChanged={isCartChanged}
             changeCartHandler={changeCartHandler}
+            isAddedItemMessage={isAddedItemMessage}
           />
         </Row>
       </Container>

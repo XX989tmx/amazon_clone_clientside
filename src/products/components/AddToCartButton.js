@@ -19,6 +19,7 @@ const AddToCartButton = (props) => {
       );
       if (response) {
         props.changeCartHandler();
+        props.itemAddedToCartMessageHandler();
       }
     } catch (error) {
       console.log(error);

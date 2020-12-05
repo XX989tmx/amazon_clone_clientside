@@ -28,6 +28,7 @@ const ProductItem = (props) => {
       <AddToCartButton
         changeCartHandler={props.changeCartHandler}
         id={props.id}
+        itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
       />
       <ProductReviewsRelatedSection />
     </Col>
