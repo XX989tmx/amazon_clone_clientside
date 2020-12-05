@@ -12,7 +12,7 @@ import reactBootstrap, {
 const AccountListSection = (props) => {
   return (
     <Col xs={5}>
-      <span>sdadsdasadssan</span>
+      <span>usernameさん</span>
       <br /> アカウントリスト
     </Col>
   );
