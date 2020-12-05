@@ -24,7 +24,7 @@ const ItemOfCart = (props) => {
         <ProductNameOfCartItem name={props.name} />
         <ProductPriceOfCart price={props.price} />
       </Link>
-      <ActionSectionOfCartItem />
+      <ActionSectionOfCartItem quantity={props.quantity}/>
       {/* {props.CartItems.map((v, i) => (
           <Row>
             {" "}
