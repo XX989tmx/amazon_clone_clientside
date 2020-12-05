@@ -6,7 +6,12 @@ const SumOfPriceOfCartItems = (props) => {
   return (
     <Row>
       <Col>小計</Col>
-      <Col>{modifyPriceToJPYLocale(props.TotalPriceOfCart)} 円</Col>
+      <Col>
+        {props.TotalPriceOfCart
+          ? modifyPriceToJPYLocale(props.TotalPriceOfCart)
+          : 0}{" "}
+        円
+      </Col>
     </Row>
   );
 };

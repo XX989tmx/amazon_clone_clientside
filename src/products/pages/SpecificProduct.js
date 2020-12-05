@@ -7,7 +7,6 @@ import SpecificProductList from "../components/SpecificProductList";
 import MainSectionOfSpecificProduct from "../components/MainSectionOfSpecificProduct";
 import CartSectionOfSpecificProduct from "../components/CartSectionOfSpecificProduct";
 
-
 const SpecificProduct = () => {
   const productId = useParams().productId;
   const [Message, setMessage] = useState();
@@ -230,7 +229,6 @@ const SpecificProduct = () => {
           // paddingRight: "10%",
           // paddingLeft: "10%",
           minHeight: "100%",
-          backgroundColor: "grey",
         }}
       >
         <Row>
