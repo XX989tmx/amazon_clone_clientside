@@ -4,6 +4,7 @@ import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../shared/context/auth-context";
 import CartItemTotalCount from "./CartItemTotalCount";
+import CartMessage from "./CartMessage";
 import ContentsOfCart from "./ContentsOfCart";
 import GoToCheckoutButton from "./GoToCheckoutButton";
 import SumOfPriceOfCartItems from "./SumOfPriceOfCartItems";
@@ -62,12 +63,10 @@ const CartSectionOfSpecificProduct = (props) => {
   return (
     <Col md={2} lg={2} xl={2}>
       cart side bar
-      <Row>
-        <Col>
-          {IsDeletedItemMessage && "商品が削除されました"}{" "}
-          {IsUpdatedItemMessage && "商品点数が更新されました"}
-        </Col>
-      </Row>
+      <CartMessage
+        IsUpdatedItemMessage={IsUpdatedItemMessage}
+        IsDeletedItemMessage={IsDeletedItemMessage}
+      />
       <CartItemTotalCount TotalCountOfCart={TotalCountOfCart} />
       <SumOfPriceOfCartItems TotalPriceOfCart={TotalPriceOfCart} />
       <GoToCheckoutButton />
