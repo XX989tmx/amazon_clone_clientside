@@ -1,9 +1,18 @@
 import React from "react";
-import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
+import reactBootstrap, {
+  Row,
+  Col,
+  Container,
+  Button,
+  Alert,
+} from "react-bootstrap";
+
 const ItemUpdatedMessage = (props) => {
   return (
     <Col xs={12}>
-      {props.IsUpdatedItemMessage && "商品点数が更新されました"}
+      {props.IsUpdatedItemMessage && (
+        <Alert variant={"success"}>商品点数が更新されました</Alert>
+      )}
     </Col>
   );
 };
