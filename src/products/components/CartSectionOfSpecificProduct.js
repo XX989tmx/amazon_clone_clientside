@@ -45,7 +45,6 @@ const CartSectionOfSpecificProduct = (props) => {
       <GoToCheckoutButton />
       <ContentsOfCart
         CartItems={CartItems}
-        StockQuantityOptions={props.StockQuantityOptions}
         changeCartHandler={props.changeCartHandler}
       />
     </Col>

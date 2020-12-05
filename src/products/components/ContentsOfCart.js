@@ -13,7 +13,7 @@ const ContentsOfCart = (props) => {
           price={v.productId.price}
           images={v.productId.images}
           quantity={v.quantity}
-          StockQuantityOptions={props.StockQuantityOptions}
+          stockQuantity={v.productId.stockQuantity}
           changeCartHandler={props.changeCartHandler}
         />
       ))}

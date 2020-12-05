@@ -30,9 +30,9 @@ const ItemOfCart = (props) => {
       </Link>
       <ActionSectionOfCartItem
         quantity={props.quantity}
-        StockQuantityOptions={props.StockQuantityOptions}
         cartItemId={props.cartItemId}
         changeCartHandler={props.changeCartHandler}
+        stockQuantity={props.stockQuantity}
       />
       {/* {props.CartItems.map((v, i) => (
           <Row>

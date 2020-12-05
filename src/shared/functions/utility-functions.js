@@ -28,3 +28,13 @@ export function japanTimeDefaultFormat(date) {
 export function calculateAcquirableAmazonPoint(price) {
   return Math.round(price * 0.01);
 }
+
+export function createStockQuantityOptions(stockQuantity) {
+  const arr = new Array(stockQuantity).fill(1);
+  const stockQuantityOptions = arr.map((v, i) => (
+    <option key={i} value={i + 1}>
+      {i + 1}
+    </option>
+  ));
+  return stockQuantityOptions;
+}
