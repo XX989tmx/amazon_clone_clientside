@@ -1,12 +1,16 @@
-import React from "react";
+import Axios from "axios";
+import React, { useContext, useState } from "react";
 import reactBootstrap, { Row, Col, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../shared/context/auth-context";
 import ActionSectionOfCartItem from "./ActionSectionOfCartItem";
 import ProductImageOfCartItem from "./ProductImageOfCartItem";
 import ProductNameOfCartItem from "./ProductNameOfCartItem";
 import ProductPriceOfCart from "./ProductPriceOfCart";
 
 const ItemOfCart = (props) => {
+  const auth = useContext(AuthContext);
+
   return (
     <Col
       xs={12}
@@ -27,6 +31,8 @@ const ItemOfCart = (props) => {
       <ActionSectionOfCartItem
         quantity={props.quantity}
         StockQuantityOptions={props.StockQuantityOptions}
+        cartItemId={props.cartItemId}
+        changeCartHandler={props.changeCartHandler}
       />
       {/* {props.CartItems.map((v, i) => (
           <Row>

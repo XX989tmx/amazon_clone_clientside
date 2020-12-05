@@ -240,6 +240,7 @@ const SpecificProduct = () => {
           <CartSectionOfSpecificProduct
             isCartChanged={isCartChanged}
             StockQuantityOptions={StockQuantityOptions}
+            changeCartHandler={changeCartHandler}
           />
         </Row>
       </Container>

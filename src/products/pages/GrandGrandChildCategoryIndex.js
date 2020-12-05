@@ -120,7 +120,10 @@ const GrandGrandChildCategoryIndex = (props) => {
             GrandGrandChildCategory={GrandGrandChildCategory}
             changeCartHandler={changeCartHandler}
           />
-          <CartSectionOfSpecificProduct isCartChanged={isCartChanged} />
+          <CartSectionOfSpecificProduct
+            isCartChanged={isCartChanged}
+            changeCartHandler={changeCartHandler}
+          />
         </Row>
       </Container>
     </div>
