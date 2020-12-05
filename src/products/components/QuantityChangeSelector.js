@@ -41,6 +41,9 @@ const QuantityChangeSelector = (props) => {
     } catch (error) {
       console.log(error);
     }
+    if (response) {
+      props.changeCartHandler();
+    }
   };
 
   return (
