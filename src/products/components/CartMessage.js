@@ -4,8 +4,14 @@ const CartMessage = (props) => {
   return (
     <Row>
       <Col>
-        {props.IsDeletedItemMessage && "商品が削除されました"}{" "}
-        {props.IsUpdatedItemMessage && "商品点数が更新されました"}
+        <Row>
+          <Col xs={12}>
+            {props.IsDeletedItemMessage && "商品が削除されました"}
+          </Col>
+          <Col xs={12}>
+            {props.IsUpdatedItemMessage && "商品点数が更新されました"}
+          </Col>
+        </Row>{" "}
       </Col>
     </Row>
   );
