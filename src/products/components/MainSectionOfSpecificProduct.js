@@ -42,6 +42,7 @@ const MainSectionOfSpecificProduct = (props) => {
           deliveryDate={v.deliveryDate}
           StockQuantityOptions={props.StockQuantityOptions}
           changeCartHandler={props.changeCartHandler}
+          itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
         />
       ))}
       <SameCategoriesOtherProducts />

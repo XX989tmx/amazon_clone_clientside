@@ -20,6 +20,7 @@ const SpecificProduct = () => {
   const [SpecificProduct, setSpecificProduct] = useState([]);
   const [StockQuantityOptions, setStockQuantityOptions] = useState([]);
   const [isCartChanged, setIsCartChanged] = useState(false);
+  const [isAddedItemMessage, setIsAddedItemMessage] = useState(false);
   useEffect(() => {
     async function fetch(params) {
       let response;
@@ -158,6 +159,13 @@ const SpecificProduct = () => {
     setIsCartChanged((prev) => !prev);
   };
 
+  const itemAddedToCartMessageHandler = () => {
+    setIsAddedItemMessage(true);
+    setTimeout(() => {
+      setIsAddedItemMessage(false);
+    }, 4000);
+  };
+
   return (
     <div>
       {/* <h3>{Message}</h3>
@@ -236,11 +244,12 @@ const SpecificProduct = () => {
             SpecificProduct={SpecificProduct}
             StockQuantityOptions={StockQuantityOptions}
             changeCartHandler={changeCartHandler}
+            itemAddedToCartMessageHandler={itemAddedToCartMessageHandler}
           />
           <CartSectionOfSpecificProduct
             isCartChanged={isCartChanged}
-            
             changeCartHandler={changeCartHandler}
+            isAddedItemMessage={isAddedItemMessage}
           />
         </Row>
       </Container>

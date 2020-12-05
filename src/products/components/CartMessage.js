@@ -7,6 +7,9 @@ const CartMessage = (props) => {
     <Row>
       <Col>
         <Row>
+          <Col xs={12}>
+            {props.isAddedItemMessage && "商品が追加されました。"}
+          </Col>
           <ItemDeletedMessage
             IsDeletedItemMessage={props.IsDeletedItemMessage}
           />

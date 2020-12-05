@@ -8,7 +8,7 @@ import PurchaseActionSection from "./PurchaseActionSection";
 const ProductInformationSection = (props) => {
   return (
     <Row>
-      <ProductImagesSection images={props.images}/>
+      <ProductImagesSection images={props.images} />
       <ProductDescriptionSection
         name={props.name}
         brand={props.brand}
@@ -22,6 +22,7 @@ const ProductInformationSection = (props) => {
         seller={props.seller}
         StockQuantityOptions={props.StockQuantityOptions}
         changeCartHandler={props.changeCartHandler}
+        itemAddedToCartMessageHandler={props.itemAddedToCartMessageHandler}
       />
     </Row>
   );

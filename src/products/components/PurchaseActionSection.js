@@ -16,29 +16,30 @@ import StockStatusInPurchaseAction from "./StockStatusInPurchaseAction";
 const PurchaseActionSection = (props) => {
   const auth = useContext(AuthContext);
   const [Quantity, setQuantity] = useState(1);
-   const addProductToCart = async (event) => {
-     event.preventDefault();
-     let response;
-     let body = {
-       quantity: Quantity,
-     };
-     try {
-       response = await Axios.post(
-         process.env.REACT_APP_BACKEND_URL +
-           `/users/addToCart/${auth.userId}/${props.id}?token=${auth.token}`,
-         body
-       );
-       if (response) {
-         props.changeCartHandler();
-       }
-     } catch (error) {
-       console.log(error);
-     }
-   };
+  const addProductToCart = async (event) => {
+    event.preventDefault();
+    let response;
+    let body = {
+      quantity: Quantity,
+    };
+    try {
+      response = await Axios.post(
+        process.env.REACT_APP_BACKEND_URL +
+          `/users/addToCart/${auth.userId}/${props.id}?token=${auth.token}`,
+        body
+      );
+      if (response) {
+        props.changeCartHandler();
+        props.itemAddedToCartMessageHandler();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-   const quantityChangeHandler = (event) => {
-     setQuantity(event.target.value)
-   }
+  const quantityChangeHandler = (event) => {
+    setQuantity(event.target.value);
+  };
   return (
     <Col
       xs={12}
