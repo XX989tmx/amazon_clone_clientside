@@ -1,10 +1,16 @@
 import Axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import reactBootstrap, { Container } from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 import categoryData from "../data/category-selector-list";
-
+import reactBootstrap, {
+  Container,
+  Alert,
+  Button,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 const NewProduct = () => {
   const auth = useContext(AuthContext);
   const [Name, setName] = useState();
@@ -339,6 +345,110 @@ const NewProduct = () => {
 
   return (
     <Container fluid="md">
+      <Row>
+        <Col>
+          <Row>
+            <Col>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>message</Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>商品情報を入力</Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>explanation</Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>
+                      text
+                      <Row>
+                        <Col>input</Col>
+                      </Row>
+                      <Row>
+                        <Col>input</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>img1</Col>
+                        <Col></Col>
+                        <Col></Col>
+                        <Col></Col>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>
+                      <Button>商品を出品する</Button>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>注意点</Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
       <h1>NewProduct</h1>
       {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={productDataSubmitHandler}>
