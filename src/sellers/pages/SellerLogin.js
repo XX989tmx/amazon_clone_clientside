@@ -1,7 +1,14 @@
 import Axios from "axios";
 import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
-import reactBootstrap, { Alert, Button, Container, Form } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
+import reactBootstrap, {
+  Alert,
+  Button,
+  Container,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 import { AuthContext } from "../../shared/context/auth-context";
 
 const SellerLogin = () => {
@@ -55,19 +62,86 @@ const SellerLogin = () => {
   };
   return (
     <Container fluid="md">
-      <Alert variant={Message.variant}>{Message.message}</Alert>
-      <Form action="" onSubmit={loginSubmitHandler}>
-        <Form.Group controlId="email" value={Email} onChange={emailChangeHandler}>
-          <Form.Label>メールアドレス</Form.Label>
-          <Form.Control type="email" placeholder="eg login@example.com" />
-        </Form.Group>
-        <Form.Group controlId="password" value={Password} onChange={passwordChangeHandler}>
-          <Form.Label>パスワード</Form.Label>
-          <Form.Control type="password" placeholder="半角英数字８文字以上" />
-        </Form.Group>
+      <Row>
+        <Col xs={{ offset: 2, span: 8 }} lg={{ offset: 4, span: 4 }}>
+          logo
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Row>
+            <Col xs={{ offset: 2, span: 8 }} lg={{ offset: 4, span: 4 }}>
+              <Row>
+                <Col>
+                  <Alert variant={Message.variant}>{Message.message}</Alert>
+                </Col>
+              </Row>
+              <Row>
+                <Col>出品者アカウントにログイン</Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Form action="" onSubmit={loginSubmitHandler}>
+                    <Form.Group
+                      controlId="email"
+                      value={Email}
+                      onChange={emailChangeHandler}
+                    >
+                      <Form.Label>メールアドレス</Form.Label>
+                      <Form.Control
+                        type="email"
+                        placeholder="eg login@example.com"
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      controlId="password"
+                      value={Password}
+                      onChange={passwordChangeHandler}
+                    >
+                      <Form.Label>パスワード</Form.Label>
+                      <Form.Control
+                        type="password"
+                        placeholder="半角英数字８文字以上"
+                      />
+                    </Form.Group>
 
-        <Button type="submit">出品者アカウントにログイン</Button>
-      </Form>
+                    <Button type="submit">出品者アカウントにログイン</Button>
+                  </Form>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  続行する事により、利用規約に同意したものとみなされます。
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>amazonは初めてご利用ですか？</Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Link>
+                        <Button>出品者アカウントを作成する</Button>
+                      </Link>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={{ offset: 2, span: 8 }} lg={{ offset: 4, span: 4 }}>
+          <Row>
+            <Col>利用規約</Col>
+          </Row>
+          <Row>
+            <Col>company logo</Col>
+          </Row>
+        </Col>
+      </Row>
     </Container>
   );
 };
