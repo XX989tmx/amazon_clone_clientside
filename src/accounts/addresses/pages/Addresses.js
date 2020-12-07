@@ -47,7 +47,7 @@ const Addresses = () => {
                 <Col>
                   <Row>
                     <Col xs={6} lg={4} style={{ height: "300px" }}>
-                      <Link> 新しい住所を追加</Link>
+                      <Link to="/account/addresses/new"> 新しい住所を追加</Link>
                     </Col>
                     <Col xs={6} lg={4} style={{ height: "300px" }}>
                       <Row>
@@ -84,7 +84,9 @@ const Addresses = () => {
                             <Col>
                               <Row>
                                 <Col>
-                                  <Link>変更</Link>
+                                  <Link to="/account/addresses/update/:addressId">
+                                    変更
+                                  </Link>
                                   <Link>削除</Link>
                                   <Link>既定の住所に設定</Link>
                                 </Col>
