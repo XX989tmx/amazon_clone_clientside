@@ -4,7 +4,14 @@ import { useHistory, useParams } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import CountrySelector from "../components/CountrySelector";
 import TodoufukenSelector from "../components/TodoufukenSelector";
-
+import reactBootstrap, {
+  Container,
+  Alert,
+  Button,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 const UpdateAddress = () => {
   const auth = useContext(AuthContext);
   const addressId = useParams().addressId;
@@ -90,7 +97,117 @@ const UpdateAddress = () => {
   };
 
   return (
-    <div>
+    <Container fluid="md">
+      <Row>
+        <Col>
+          <Row>
+            <Col xs={{ offset: 2, span: 8 }} lg={{ offset: 3, span: 6 }}>
+              <Row>
+                <Col>bread clums</Col>
+              </Row>
+              <Row>
+                <Col>message</Col>
+              </Row>
+              <Row>
+                <Col>
+                  <h3> 住所情報を変更する</h3>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  form area form tag here
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>国・地域</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>氏名</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>郵便番号</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>住所1</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>住所2</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>会社名</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>Eメール</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>{" "}
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>電話番号</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Button>変更を確定する</Button>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
       <h3>{Message}</h3>
       <h1>UpdateAddress</h1>
 
@@ -130,7 +247,7 @@ const UpdateAddress = () => {
         />
         <button type="submit">住所を変更する</button>
       </form>
-    </div>
+    </Container>
   );
 };
 
