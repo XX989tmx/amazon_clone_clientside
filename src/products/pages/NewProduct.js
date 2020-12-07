@@ -376,54 +376,197 @@ const NewProduct = () => {
                     <Col>
                       text
                       <Row>
-                        <Col>input</Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col>input</Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                       <Row>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                          <Row>
+                            <Col>label</Col>
+                          </Row>
+                          <Row>
+                            <Col>input</Col>
+                          </Row>
+                        </Col>
                       </Row>
                     </Col>
                   </Row>
                   <Row>
                     <Col>
                       <Row>
-                        <Col>img1</Col>
-                        <Col></Col>
-                        <Col></Col>
-                        <Col></Col>
-                        <Col></Col>
+                        <Col>
+                          <Row>
+                            <Col>title</Col>
+                          </Row>
+                          <Row>
+                            <Col>image</Col>
+                          </Row>
+                          <Row>
+                            <Col>action</Col>
+                          </Row>
+                        </Col>
+                        <Col><Row>
+                            <Col>title</Col>
+                          </Row>
+                          <Row>
+                            <Col>image</Col>
+                          </Row>
+                          <Row>
+                            <Col>action</Col>
+                          </Row></Col>
+                        <Col><Row>
+                            <Col>title</Col>
+                          </Row>
+                          <Row>
+                            <Col>image</Col>
+                          </Row>
+                          <Row>
+                            <Col>action</Col>
+                          </Row></Col>
+                        <Col><Row>
+                            <Col>title</Col>
+                          </Row>
+                          <Row>
+                            <Col>image</Col>
+                          </Row>
+                          <Row>
+                            <Col>action</Col>
+                          </Row></Col>
+                        <Col><Row>
+                            <Col>title</Col>
+                          </Row>
+                          <Row>
+                            <Col>image</Col>
+                          </Row>
+                          <Row>
+                            <Col>action</Col>
+                          </Row></Col>
                       </Row>
                     </Col>
                   </Row>
