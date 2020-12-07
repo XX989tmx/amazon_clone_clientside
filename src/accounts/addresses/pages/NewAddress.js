@@ -4,10 +4,17 @@ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import CountrySelector from "../components/CountrySelector";
 import todoufuken from "../data/todoufuken";
-
+import reactBootstrap, {
+  Container,
+  Alert,
+  Button,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 const NewAddress = () => {
   const auth = useContext(AuthContext);
-  const history = useHistory()
+  const history = useHistory();
   const [Todoufuken, setTodoufuken] = useState([]);
   const [Country, setCountry] = useState();
   const [Name, setName] = useState();
@@ -53,12 +60,13 @@ const NewAddress = () => {
     let response;
     try {
       response = await Axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/addresses/createAddress/${auth.userId}?token=${auth.token}`,
+        process.env.REACT_APP_BACKEND_URL +
+          `/addresses/createAddress/${auth.userId}?token=${auth.token}`,
         body
       );
       console.log(response);
       const responseMessage = response.data.message;
-      const redirectMessage = "５秒以内に自動的にリダイレクトされます。"
+      const redirectMessage = "５秒以内に自動的にリダイレクトされます。";
       const resultMessage = responseMessage + redirectMessage;
       setMessage(resultMessage);
       if (response) {
@@ -103,7 +111,118 @@ const NewAddress = () => {
     setPhoneNumber(event.target.value);
   };
   return (
-    <div>
+    <Container fluid="md">
+      <Row>
+        <Col>
+          <Row>
+            <Col xs={{ offset: 2, span: 8 }} lg={{ offset: 3, span: 6 }}>
+              <Row>
+                <Col>bread clums</Col>
+              </Row>
+              <Row>
+                <Col>message</Col>
+              </Row>
+              <Row>
+                <Col>
+                  <h3> 新しい住所を追加する</h3>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  form area form tag here
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>国・地域</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>氏名</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>郵便番号</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>住所1</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>住所2</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>会社名</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>Eメール</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>{" "}
+                  <Row>
+                    <Col>
+                      <Row>
+                        <Col>電話番号</Col>
+                      </Row>
+                      <Row>
+                        <Col></Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Button>住所を追加</Button>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+
       <h3>{Message}</h3>
       <h1>NewAddress</h1>
 
@@ -160,7 +279,7 @@ const NewAddress = () => {
         />
         <button type="submit">新しい住所を登録</button>
       </form>
-    </div>
+    </Container>
   );
 };
 
