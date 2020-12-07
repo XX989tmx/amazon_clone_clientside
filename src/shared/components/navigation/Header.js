@@ -14,7 +14,7 @@ import BrandLogoSection from "./components/BrandLogoSection";
 import HumbuggerIconSection from "./components/HumbuggerIconSection";
 import SearchFormSection from "./components/SearchFormSection";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <Row
@@ -26,7 +26,9 @@ const Header = () => {
           paddingLeft: "20px",
         }}
       >
-        <HumbuggerIconSection />
+        <HumbuggerIconSection
+          sidebarToggleClickHandler={props.sidebarToggleClickHandler}
+        />
         <BrandLogoSection />
         <SearchFormSection />
         <AccountInformationSection />

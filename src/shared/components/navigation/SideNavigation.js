@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SideNavigation.css';
 const SideNavigation = () => {
     // const category1 = [
     //     {category1:"家電、カメラ、AV機器"}
@@ -16,8 +16,8 @@ const SideNavigation = () => {
     // ];
     
     return (
-        <div>
-            
+        <div className="sidebar">
+            sidebar
         </div>
     );
 }

@@ -42,6 +42,7 @@ import GrandGrandChildCategoryIndex from "./products/pages/GrandGrandChildCatego
 import GetProductsByBrand from "./products/pages/GetProductsByBrand";
 import Header from "./shared/components/navigation/Header";
 import Search from "./search/pages/Search";
+import MainNavigation from "./shared/components/navigation/MainNavigation";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
@@ -370,7 +371,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div >
       <AuthContext.Provider
         value={{
           isLoggedIn: !!Token,
@@ -387,7 +388,8 @@ function App() {
         }}
       >
         <Router>
-          <Header />
+          {/* <Header /> */}
+          <MainNavigation />
           {/* temporary header */}
           <HeaderNavigation />
           {/* main */}
