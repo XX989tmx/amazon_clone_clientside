@@ -3,7 +3,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../shared/context/auth-context";
 import AddressList from "../components/AddressList";
-
+import reactBootstrap, {
+  Container,
+  Alert,
+  Button,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 const Addresses = () => {
   const auth = useContext(AuthContext);
   const [Addresses, setAddresses] = useState([]);
@@ -25,7 +32,76 @@ const Addresses = () => {
     getAllAddress();
   }, []);
   return (
-    <div>
+    <Container>
+      <Row>
+        <Col>
+          <Row>
+            <Col>
+              <Row>
+                <Col>breadclums</Col>
+              </Row>
+              <Row>
+                <Col>住所</Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col xs={6} lg={4} style={{ height: "300px" }}>
+                      <Link> 新しい住所を追加</Link>
+                    </Col>
+                    <Col xs={6} lg={4} style={{ height: "300px" }}>
+                      <Row>
+                        <Col>
+                          <Row>
+                            <Col>既定の住所</Col>
+                          </Row>
+                          <Row>
+                            <Col>
+                              <Row>
+                                <Col>name</Col>
+                              </Row>
+                              <Row>
+                                <Col>zipcode</Col>
+                              </Row>
+                              <Row>
+                                <Col>address1</Col>
+                              </Row>
+                              <Row>
+                                <Col>address2</Col>
+                              </Row>
+                              <Row>
+                                <Col>country</Col>
+                              </Row>
+                              <Row>
+                                <Col>phone number</Col>
+                              </Row>
+                              <Row>
+                                <Col>email</Col>
+                              </Row>
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col>
+                              <Row>
+                                <Col>
+                                  <Link>変更</Link>
+                                  <Link>削除</Link>
+                                  <Link>既定の住所に設定</Link>
+                                </Col>
+                              </Row>
+                            </Col>
+                          </Row>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+
       <h1>Addresses</h1>
       <Link to={"/account/addresses/new"}>
         {" "}
@@ -34,7 +110,7 @@ const Addresses = () => {
       <div>
         <AddressList />
       </div>
-    </div>
+    </Container>
   );
 };
 
