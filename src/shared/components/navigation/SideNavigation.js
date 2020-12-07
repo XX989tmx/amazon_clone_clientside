@@ -1,6 +1,6 @@
 import React from 'react';
 import './SideNavigation.css';
-const SideNavigation = () => {
+const SideNavigation = (props) => {
     // const category1 = [
     //     {category1:"家電、カメラ、AV機器"}
     // ];
@@ -14,12 +14,12 @@ const SideNavigation = () => {
     //     link: `/product/productIndex/${生活家電}`,
     //   },
     // ];
+    let sidebarClass = "sidebar";
+    if (props.isSidebarOpen) {
+        sidebarClass = "sidebar open";
+    }
     
-    return (
-        <div className="sidebar">
-            sidebar
-        </div>
-    );
+    return <div className={sidebarClass}>sidebar</div>;
 }
 
 export default SideNavigation;

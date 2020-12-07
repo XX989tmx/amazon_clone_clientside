@@ -19,7 +19,7 @@ const MainNavigation = () => {
       {isSidebarOpen && (
         <Backdrop backdropClickHandler={backdropClickHandler} />
       )}
-      {isSidebarOpen && <SideNavigation />}
+      {isSidebarOpen && <SideNavigation isSidebarOpen={isSidebarOpen} />}
     </div>
   );
 };
