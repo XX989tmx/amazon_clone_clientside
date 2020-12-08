@@ -7,41 +7,17 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import ItemOfDvdBluelay from "./ItemOfDvdBluelay";
+import ItemOfDvdMusicGame from "./ItemOfDvdMusicGame";
+import ItemOfGame from "./ItemOfGame";
 const DvdMusicGameCategoryItems = (props) => {
   return (
     <Row>
       <Col>
         show close
-        <Row>
-          <Col>
-            <Row>
-              <Col>DVD、Blue-Ray</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>ゲーム</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>DVD、ミュージック、ゲーム</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
+        <ItemOfDvdBluelay />
+        <ItemOfGame />
+        <ItemOfDvdMusicGame />
       </Col>
     </Row>
   );
