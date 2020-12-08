@@ -312,7 +312,36 @@ const SideNavigation = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col>ドラッグストア、ビューティー</Col>
+                      <Col>
+                        <Row>
+                          <Col>ドラッグストア、ビューティー click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>ドラッグストア</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>ビューティーストア</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                     <Row>
                       <Col>ベビー、おもちゃ、ホビー</Col>
