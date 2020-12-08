@@ -366,13 +366,70 @@ const SideNavigation = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col>服、シューズ、バッグ、腕時計</Col>
+                      <Col>
+                        <Row>
+                          <Col>服、シューズ、バッグ、腕時計 click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>Amazon Fashion</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                     <Row>
-                      <Col>スポーツ＆アウトドア</Col>
+                      <Col>
+                        <Row>
+                          <Col>スポーツ＆アウトドア click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>スポーツ＆アウトドア</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                     <Row>
-                      <Col>車、バイク、産業、研究開発</Col>
+                      <Col>
+                        <Row>
+                          <Col>車、バイク、産業、研究開発 click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>車、バイク、産業、研究開発</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                   </Col>
                 </Row>
