@@ -7,7 +7,13 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfAudible = (props) => {
+  let itemOfAudible = [
+    "Audible オーディオブック",
+    "Audible　会員プラン無料体験",
+    "買い取りサービス",
+  ];
   return (
     <Row>
       <Col>
@@ -15,7 +21,11 @@ const ItemOfAudible = (props) => {
           <Col>Audibleオーディオブック</Col>
         </Row>
         <Row>
-          <Col>each child category map</Col>
+          {itemOfAudible.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
