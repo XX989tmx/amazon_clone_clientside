@@ -7,6 +7,7 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import SportsOutdoorCategoryItems from "./SportsOutdoorCategoryItems";
 const SportsOutdoor = (props) => {
   return (
     <Row>
@@ -14,22 +15,7 @@ const SportsOutdoor = (props) => {
         <Row>
           <Col>スポーツ＆アウトドア click</Col>
         </Row>
-        <Row>
-          <Col>
-            show close
-            <Row>
-              <Col>
-                <Row>
-                  <Col>スポーツ＆アウトドア</Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>すべてのスポーツ＆アウトドア</Col>
-                  <Col xs={12}>each child category map</Col>
-                </Row>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+        <SportsOutdoorCategoryItems />
       </Col>
     </Row>
   );
