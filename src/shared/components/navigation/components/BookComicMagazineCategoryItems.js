@@ -7,51 +7,19 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import ItemOfAudible from "./ItemOfAudible";
+import ItemOfBookComicAudible from "./ItemOfBookComicAudible";
+import ItemOfBookComicMagazine from "./ItemOfBookComicMagazine";
+import ItemOfKindleStore from "./ItemOfKindleStore";
 const BookComicMagazineCategoryItems = (props) => {
   return (
     <Row>
       <Col>
         show close
-        <Row>
-          <Col>
-            <Row>
-              <Col>本、コミック、雑誌</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>Kindleストア</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>Audibleオーディオブック</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>本、コミック、雑誌＆Audible</Col>
-            </Row>
-            <Row>
-              <Col>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
+        <ItemOfBookComicMagazine />
+        <ItemOfKindleStore />
+        <ItemOfAudible />
+        <ItemOfBookComicAudible />
       </Col>
     </Row>
   );
