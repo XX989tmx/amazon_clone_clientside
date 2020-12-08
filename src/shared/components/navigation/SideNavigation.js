@@ -59,7 +59,56 @@ const SideNavigation = (props) => {
                 <Row>
                   <Col>
                     <Row>
-                      <Col>本、コミック、雑誌</Col>
+                      <Col>
+                        <Row>
+                          <Col>本、コミック、雑誌 click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>本、コミック、雑誌</Col>
+                                </Row>
+                                <Row>
+                                  <Col>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>Kindleストア</Col>
+                                </Row>
+                                <Row>
+                                  <Col>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>Audibleオーディオブック</Col>
+                                </Row>
+                                <Row>
+                                  <Col>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>本、コミック、雑誌＆Audible</Col>
+                                </Row>
+                                <Row>
+                                  <Col>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                     <Row>
                       <Col>DVD、ミュージック、ゲーム</Col>
