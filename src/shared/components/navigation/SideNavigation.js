@@ -401,6 +401,9 @@ const SideNavigation = (props) => {
                                   <Col>スポーツ＆アウトドア</Col>
                                 </Row>
                                 <Row>
+                                  <Col xs={12}>
+                                    すべてのスポーツ＆アウトドア
+                                  </Col>
                                   <Col xs={12}>each child category map</Col>
                                 </Row>
                               </Col>
@@ -423,6 +426,7 @@ const SideNavigation = (props) => {
                                   <Col>車、バイク、産業、研究開発</Col>
                                 </Row>
                                 <Row>
+                                  <Col xs={12}>すべての産業、研究開発用品</Col>
                                   <Col xs={12}>each child category map</Col>
                                 </Row>
                               </Col>
