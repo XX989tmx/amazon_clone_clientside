@@ -7,6 +7,7 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import BabyToyCategoryItems from "./BabyToyCategoryItems";
 const BabyToy = (props) => {
   return (
     <Row>
@@ -14,21 +15,7 @@ const BabyToy = (props) => {
         <Row>
           <Col>ベビー、おもちゃ、ホビー click</Col>
         </Row>
-        <Row>
-          <Col>
-            show close
-            <Row>
-              <Col>
-                <Row>
-                  <Col>ベビー、おもちゃ、ホビー</Col>
-                </Row>
-                <Row>
-                  <Col xs={12}>each child category map</Col>
-                </Row>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+        <BabyToyCategoryItems />
       </Col>
     </Row>
   );
