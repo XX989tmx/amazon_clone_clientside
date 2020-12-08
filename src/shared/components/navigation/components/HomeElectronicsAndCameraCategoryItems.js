@@ -7,33 +7,15 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import ItemOfHomeElectronicsAndCamera from "./ItemOfHomeElectronicsAndCamera";
+import ItemOfUsedItemStore from "./ItemOfUsedItemStore";
 const HomeElectronicsAndCameraCategoryItems = (props) => {
   return (
     <Row>
       <Col>
         show close
-        <Row>
-          <Col>
-            <Row>
-              <Col>家電、カメラ、AV機器</Col>
-            </Row>
-            <Row>
-              <Col xs={12}>すべての家電</Col>
-              <Col xs={12}>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row>
-              <Col>中古ストア</Col>
-            </Row>
-            <Row>
-              <Col xs={12}>すべての中古</Col>
-              <Col xs={12}>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
+        <ItemOfHomeElectronicsAndCamera />
+        <ItemOfUsedItemStore />
       </Col>
     </Row>
   );
