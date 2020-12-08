@@ -278,7 +278,38 @@ const SideNavigation = (props) => {
                       </Col>
                     </Row>
                     <Row>
-                      <Col>食品、飲料、お酒</Col>
+                      <Col>
+                        <Row>
+                          <Col>食品、飲料、お酒 click</Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            show close
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>食品＆飲料</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>すべての食品＆飲料</Col>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                            <Row>
+                              <Col>
+                                <Row>
+                                  <Col>お酒</Col>
+                                </Row>
+                                <Row>
+                                  <Col xs={12}>すべてのお酒</Col>
+                                  <Col xs={12}>each child category map</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </Col>
                     </Row>
                     <Row>
                       <Col>ドラッグストア、ビューティー</Col>
