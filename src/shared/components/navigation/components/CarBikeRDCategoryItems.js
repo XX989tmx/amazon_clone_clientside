@@ -7,22 +7,13 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import ItemOfCarBikeRD from "./ItemOfCarBikeRD";
 const CarBikeRDCategoryItems = (props) => {
   return (
     <Row>
       <Col>
         show close
-        <Row>
-          <Col>
-            <Row>
-              <Col>車、バイク、産業、研究開発</Col>
-            </Row>
-            <Row>
-              <Col xs={12}>すべての産業、研究開発用品</Col>
-              <Col xs={12}>each child category map</Col>
-            </Row>
-          </Col>
-        </Row>
+        <ItemOfCarBikeRD />
       </Col>
     </Row>
   );
