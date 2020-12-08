@@ -7,7 +7,9 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfDvdMusicGame = (props) => {
+  let itemOfDvdMusicGame = ["買い取りサービス"];
   return (
     <Row>
       <Col>
@@ -15,7 +17,11 @@ const ItemOfDvdMusicGame = (props) => {
           <Col>DVD、ミュージック、ゲーム</Col>
         </Row>
         <Row>
-          <Col>each child category map</Col>
+          {itemOfDvdMusicGame.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
