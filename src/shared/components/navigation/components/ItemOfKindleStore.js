@@ -7,7 +7,15 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfKindleStore = (props) => {
+  let itemOfKindleStore = [
+    "Kindle本",
+    "Kindleコミック",
+    "Kindle洋書",
+    "Kindle Unlimited",
+    "Prime Reading",
+  ];
   return (
     <Row>
       <Col>
@@ -15,7 +23,11 @@ const ItemOfKindleStore = (props) => {
           <Col>Kindleストア</Col>
         </Row>
         <Row>
-          <Col>each child category map</Col>
+          {itemOfKindleStore.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
