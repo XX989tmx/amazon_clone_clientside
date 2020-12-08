@@ -7,7 +7,16 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfUsedItemStore = (props) => {
+  let itemOfUsedItemStore = [
+    "中古カメラ、ビデオカメラ",
+    "中古AV機器、携帯電話",
+    "Amazon Launchpad",
+    "買い取りサービス",
+    "Alexaスマートホーム",
+    "Amazon Dash Replenishment",
+  ];
   return (
     <Row>
       <Col>
@@ -15,8 +24,16 @@ const ItemOfUsedItemStore = (props) => {
           <Col>中古ストア</Col>
         </Row>
         <Row>
-          <Col xs={12}>すべての中古</Col>
-          <Col xs={12}>each child category map</Col>
+          <Col xs={12}>
+            <Link to={`/product/index/parentCategory/すべての中古`}>
+              すべての中古
+            </Link>
+          </Col>
+          {itemOfUsedItemStore.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
