@@ -7,7 +7,16 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfDvdBluelay = (props) => {
+  let ItemOfDvdBluelay = [
+    "DVD",
+    "ブルーレイ",
+    "Amazonビデオ",
+    "ミュージック",
+    "デジタルミュージック",
+    "楽器",
+  ];
   return (
     <Row>
       <Col>
@@ -15,7 +24,11 @@ const ItemOfDvdBluelay = (props) => {
           <Col>DVD、Blue-Ray</Col>
         </Row>
         <Row>
-          <Col>each child category map</Col>
+          {ItemOfDvdBluelay.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
