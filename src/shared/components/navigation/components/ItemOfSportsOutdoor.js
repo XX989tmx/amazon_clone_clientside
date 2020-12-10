@@ -26,14 +26,14 @@ const ItemOfSportsOutdoor = (props) => {
         <Row>
           <Col xs={12}>
             <Link
-              to={`/product/index/parentCategory/すべてのスポーツ＆アウトドア`}
+              to={`/product/index/parentCategory/すべてのスポーツ＆アウトドア?page=1`}
             >
               すべてのスポーツ＆アウトドア
             </Link>
           </Col>
           {itemOfSportsOutdoor.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

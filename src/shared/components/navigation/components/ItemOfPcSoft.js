@@ -26,14 +26,14 @@ const ItemOfPcSoft = (props) => {
         <Row>
           <Col xs={12}>
             <Link
-              to={`/product/index/parentCategory/すべてのパソコン、周辺機器`}
+              to={`/product/index/parentCategory/すべてのパソコン、周辺機器?page=1`}
             >
               すべてのパソコン、周辺機器
             </Link>
           </Col>
           {ItemOfPcSoft.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

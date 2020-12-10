@@ -29,14 +29,14 @@ const ItemOfCarBikeRD = (props) => {
         <Row>
           <Col xs={12}>
             <Link
-              to={`/product/index/parentCategory/すべての産業、研究開発用品`}
+              to={`/product/index/parentCategory/すべての産業、研究開発用品?page=1`}
             >
               すべての産業、研究開発用品
             </Link>
           </Col>
           {itemOfCarBikeRD.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

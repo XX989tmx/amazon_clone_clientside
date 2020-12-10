@@ -26,7 +26,7 @@ const ItemOfDvdBluelay = (props) => {
         <Row>
           {ItemOfDvdBluelay.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

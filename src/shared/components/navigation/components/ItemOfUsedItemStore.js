@@ -25,13 +25,13 @@ const ItemOfUsedItemStore = (props) => {
         </Row>
         <Row>
           <Col xs={12}>
-            <Link to={`/product/index/parentCategory/すべての中古`}>
+            <Link to={`/product/index/parentCategory/すべての中古?page=1`}>
               すべての中古
             </Link>
           </Col>
           {itemOfUsedItemStore.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

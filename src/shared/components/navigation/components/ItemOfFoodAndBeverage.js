@@ -29,13 +29,15 @@ const ItemOfFoodAndBeverage = (props) => {
         </Row>
         <Row>
           <Col xs={12}>
-            <Link to={`/product/index/parentCategory/すべての食品＆飲料`}>
+            <Link
+              to={`/product/index/parentCategory/すべての食品＆飲料?page=1`}
+            >
               すべての食品＆飲料
             </Link>
           </Col>
           {itemOfFoodAndBeverage.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

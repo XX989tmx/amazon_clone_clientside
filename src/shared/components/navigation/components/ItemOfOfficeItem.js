@@ -27,14 +27,14 @@ const ItemOfOfficeItem = (props) => {
         <Row>
           <Col xs={12}>
             <Link
-              to={`/product/index/parentCategory/すべての文房具、オフィス機器`}
+              to={`/product/index/parentCategory/すべての文房具、オフィス機器?page=1`}
             >
               すべての文房具、オフィス機器
             </Link>
           </Col>
           {itemOfOfficeItem.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

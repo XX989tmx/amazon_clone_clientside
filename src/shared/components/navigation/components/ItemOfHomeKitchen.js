@@ -30,13 +30,15 @@ const ItemOfHomeKitchen = (props) => {
         </Row>
         <Row>
           <Col xs={12}>
-            <Link to={`/product/index/parentCategory/すべてのホーム＆キッチン`}>
+            <Link
+              to={`/product/index/parentCategory/すべてのホーム＆キッチン?page=1`}
+            >
               すべてのホーム＆キッチン
             </Link>
           </Col>
           {itemOfHomeKitchen.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>

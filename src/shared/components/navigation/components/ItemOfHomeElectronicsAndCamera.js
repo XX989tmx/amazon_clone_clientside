@@ -34,18 +34,20 @@ const ItemOfHomeElectronicsAndCamera = (props) => {
         </Row>
         <Row>
           <Col xs={12}>
-            <Link to={`/product/index/parentCategory/すべての家電`}>
+            <Link to={`/product/index/parentCategory/すべての家電?page=1`}>
               すべての家電
             </Link>
           </Col>
           <Col xs={12}>
-            <Link to={`/product/index/parentCategory/すべてのカメラ、AV機器`}>
+            <Link
+              to={`/product/index/parentCategory/すべてのカメラ、AV機器?page=1`}
+            >
               すべてのカメラ、AV機器
             </Link>
           </Col>
           {itemOfHomeElectronicsAndCamera.map((v, i) => (
             <Col xs={12} key={i}>
-              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+              <Link to={`/product/index/childCategory/${v}?page=1`}>{v}</Link>
             </Col>
           ))}
         </Row>
