@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -9,13 +9,22 @@ import reactBootstrap, {
 } from "react-bootstrap";
 import HomeKitchenPetCategoryItems from "./HomeKitchenPetCategoryItems";
 const HomeKitchenPet = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>ホーム＆キッチン、ペット、DIY click</Col>
+          <Col onClick={categoryCardOpener}>
+            ホーム＆キッチン、ペット、DIY{" "}
+            {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <HomeKitchenPetCategoryItems />
+        {isCategoryCardOpen && <HomeKitchenPetCategoryItems />}
       </Col>
     </Row>
   );
