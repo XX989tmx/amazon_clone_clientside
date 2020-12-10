@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import DrugStoreBeautyCategoryItems from "./DrugStoreBeautyCategoryItems";
+
 const DrugStoreBeauty = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>ドラッグストア、ビューティー click</Col>
+          <Col onClick={categoryCardOpener}>
+            ドラッグストア、ビューティー {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <DrugStoreBeautyCategoryItems />
+        {isCategoryCardOpen && <DrugStoreBeautyCategoryItems />}
       </Col>
     </Row>
   );
