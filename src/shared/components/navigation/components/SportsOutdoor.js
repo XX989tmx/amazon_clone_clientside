@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import SportsOutdoorCategoryItems from "./SportsOutdoorCategoryItems";
+
 const SportsOutdoor = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>スポーツ＆アウトドア click</Col>
+          <Col onClick={categoryCardOpener}>
+            スポーツ＆アウトドア {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <SportsOutdoorCategoryItems />
+        {isCategoryCardOpen && <SportsOutdoorCategoryItems />}
       </Col>
     </Row>
   );
