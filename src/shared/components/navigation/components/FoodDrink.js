@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import FoodDrinkCategoryItems from "./FoodDrinkCategoryItems";
+
 const FoodDrink = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>食品、飲料、お酒 click</Col>
+          <Col onClick={categoryCardOpener}>
+            食品、飲料、お酒 {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <FoodDrinkCategoryItems />
+        {isCategoryCardOpen && <FoodDrinkCategoryItems />}
       </Col>
     </Row>
   );
