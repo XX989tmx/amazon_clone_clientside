@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import PcAndOfficeCategoryItems from "./PcAndOfficeCategoryItems";
+
 const PcAndOffice = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>パソコン、オフィス用品 click</Col>
+          <Col onClick={categoryCardOpener}>
+            パソコン、オフィス用品 {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <PcAndOfficeCategoryItems />
+        {isCategoryCardOpen && <PcAndOfficeCategoryItems />}
       </Col>
     </Row>
   );
