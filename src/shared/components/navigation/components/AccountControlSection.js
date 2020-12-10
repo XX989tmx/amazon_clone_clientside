@@ -7,21 +7,30 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const AccountControlSection = (props) => {
   return (
     <Row>
       <Col>
         <Row>
-          <Col>トップ</Col>
+          <Col>
+            <Link to="/home">トップ</Link>
+          </Col>
         </Row>
         <Row>
-          <Col>注文履歴</Col>
+          <Col>
+            <Link to={`/account/order-history`}>注文履歴</Link>
+          </Col>
         </Row>
         <Row>
-          <Col>欲しいものリスト</Col>
+          <Col>
+            <Link to="/account/wishlists/all">欲しいものリスト</Link>
+          </Col>
         </Row>
         <Row>
-          <Col>アカウントリスト</Col>
+          <Col>
+            <Link to="/account/overview">アカウントリスト</Link>
+          </Col>
         </Row>
       </Col>
     </Row>
