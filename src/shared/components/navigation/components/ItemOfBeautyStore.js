@@ -7,7 +7,20 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfBeautyStore = (props) => {
+  let itemOfBeautyStore = [
+    "ヘルスケア、スタイリング",
+    "スキンケア",
+    "メイクアップ、ネイル",
+    "バス、ボディケア",
+    "オーラルケア",
+    "ラグジュアリービューティー",
+    "ドクターズコスメ",
+    "トライアルキット",
+    "ブランド一覧",
+    "ビューティーストアへ",
+  ];
   return (
     <Row>
       <Col>
@@ -15,7 +28,11 @@ const ItemOfBeautyStore = (props) => {
           <Col>ビューティーストア</Col>
         </Row>
         <Row>
-          <Col xs={12}>each child category map</Col>
+          {itemOfBeautyStore.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
