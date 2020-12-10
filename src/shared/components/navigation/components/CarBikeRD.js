@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import CarBikeRDCategoryItems from "./CarBikeRDCategoryItems";
+
 const CarBikeRD = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>車、バイク、産業、研究開発 click</Col>
+          <Col onClick={categoryCardOpener}>
+            車、バイク、産業、研究開発 {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <CarBikeRDCategoryItems />
+        {isCategoryCardOpen && <CarBikeRDCategoryItems />}
       </Col>
     </Row>
   );
