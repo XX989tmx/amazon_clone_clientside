@@ -19,7 +19,7 @@ const AccountListSection = (props) => {
       {auth.isLoggedIn ? (
         <div>
           <span>usernameさん</span>
-          <br /> アカウントリスト
+          <br /> <Link to={`/account/overview`}> アカウントリスト</Link>
         </div>
       ) : (
         <div>
