@@ -105,12 +105,12 @@ const HeaderNavigation = () => {
             <Link to={`/account/wishlists/all`}>wishlist all</Link>
           </li>
           <li>
-            <Link to={`/product/index/parentCategory/食品＆飲料`}>
+            <Link to={`/product/index/parentCategory/食品＆飲料?page=1`}>
               parent category index
             </Link>
           </li>
           <li>
-            <Link to={`/product/index/childCategory/すべての食品＆飲料`}>
+            <Link to={`/product/index/childCategory/すべての食品＆飲料?page=1`}>
               child category index
             </Link>
           </li>
@@ -127,7 +127,9 @@ const HeaderNavigation = () => {
             </Link>
           </li>
           <li>
-            <Link to={`/product/brand/サントリー?page=1`}>brand product index</Link>
+            <Link to={`/product/brand/サントリー?page=1`}>
+              brand product index
+            </Link>
           </li>
         </ul>
       </nav>
