@@ -7,7 +7,9 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const ItemOfPet = (props) => {
+  let itemOfPet = ["ペット用品、ペットフード"];
   return (
     <Row>
       <Col>
@@ -15,7 +17,11 @@ const ItemOfPet = (props) => {
           <Col>ペット</Col>
         </Row>
         <Row>
-          <Col xs={12}>each child category map</Col>
+          {itemOfPet.map((v, i) => (
+            <Col xs={12} key={i}>
+              <Link to={`/product/index/childCategory/${v}`}>{v}</Link>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>
