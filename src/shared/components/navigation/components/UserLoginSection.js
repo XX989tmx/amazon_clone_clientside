@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -7,10 +7,18 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context/auth-context";
+
 const UserLoginSection = (props) => {
+  const auth = useContext(AuthContext);
   return (
     <Row>
-      <Col>こんにちはUser　サインイン</Col>
+      <Col>
+        こんにちは{" "}
+        {auth.isLoggedIn ? "" : <Link to={`/user/auth/login`}>サインイン</Link>}
+        　
+      </Col>
     </Row>
   );
 };
