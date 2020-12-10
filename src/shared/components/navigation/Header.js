@@ -30,7 +30,7 @@ const Header = (props) => {
           sidebarToggleClickHandler={props.sidebarToggleClickHandler}
         />
         <BrandLogoSection />
-        <SearchFormSection />
+        <SearchFormSection searchFormChangeHandler={props.searchFormChangeHandler} />
         <AccountInformationSection />
       </Row>
     </header>

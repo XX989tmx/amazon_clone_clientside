@@ -5,7 +5,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SellerSignup from "./sellers/pages/SellerSignup";
 import { useAuthSeller } from "./shared/hooks/seller-auth-hook";
 import "./App.css";
@@ -43,11 +43,36 @@ import GetProductsByBrand from "./products/pages/GetProductsByBrand";
 import Header from "./shared/components/navigation/Header";
 import Search from "./search/pages/Search";
 import MainNavigation from "./shared/components/navigation/MainNavigation";
+import Axios from "axios";
 
 function App() {
   const { Token, login, logout, UserId } = useAuth();
   const { sellerToken, sellerLogin, sellerLogout, SellerId } = useAuthSeller();
+  const [SearchQuery, setSearchQuery] = useState();
+  const [SearchResults, setSearchResults] = useState([]);
   let routes;
+
+  useEffect(() => {
+    const searchSubmitHandler = async () => {
+      let response;
+      try {
+        response = await Axios.get(
+          process.env.REACT_APP_BACKEND_URL +
+            `/products/searchProduct?search=${SearchQuery}`
+        );
+        console.log(response);
+        setSearchResults(response.data.products);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    searchSubmitHandler();
+  }, [SearchQuery]);
+
+  const searchFormChangeHandler = (event) => {
+    setSearchQuery(event.target.value);
+    console.log(SearchQuery);
+  };
 
   if (Token || sellerToken) {
     routes = (
@@ -180,7 +205,7 @@ function App() {
 
         {/* search */}
         <Route path="/search" exact>
-          <Search />
+          <Search SearchResults={SearchResults} />
         </Route>
 
         {/* cart */}
@@ -310,7 +335,7 @@ function App() {
 
         {/* search */}
         <Route path="/search" exact>
-          <Search />
+          <Search SearchResults={SearchResults} />
         </Route>
 
         {/* cart */}
@@ -371,7 +396,7 @@ function App() {
   }
 
   return (
-    <div >
+    <div>
       <AuthContext.Provider
         value={{
           isLoggedIn: !!Token,
@@ -389,7 +414,7 @@ function App() {
       >
         <Router>
           {/* <Header /> */}
-          <MainNavigation />
+          <MainNavigation searchFormChangeHandler={searchFormChangeHandler} />
           {/* temporary header */}
           <HeaderNavigation />
           {/* main */}

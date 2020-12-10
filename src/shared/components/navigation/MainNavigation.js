@@ -3,7 +3,7 @@ import Backdrop from "./Backdrop";
 import Header from "./Header";
 import SideNavigation from "./SideNavigation";
 
-const MainNavigation = () => {
+const MainNavigation = (props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const sidebarToggleClickHandler = () => {
@@ -15,7 +15,10 @@ const MainNavigation = () => {
   }
   return (
     <div>
-      <Header sidebarToggleClickHandler={sidebarToggleClickHandler} />
+      <Header
+        sidebarToggleClickHandler={sidebarToggleClickHandler}
+        searchFormChangeHandler={props.searchFormChangeHandler}
+      />
       {isSidebarOpen && (
         <Backdrop backdropClickHandler={backdropClickHandler} />
       )}
