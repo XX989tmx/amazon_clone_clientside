@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import BabyToyCategoryItems from "./BabyToyCategoryItems";
+
 const BabyToy = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>ベビー、おもちゃ、ホビー click</Col>
+          <Col onClick={categoryCardOpener}>
+            ベビー、おもちゃ、ホビー {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <BabyToyCategoryItems />
+        {isCategoryCardOpen && <BabyToyCategoryItems />}
       </Col>
     </Row>
   );
