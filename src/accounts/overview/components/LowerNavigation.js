@@ -7,6 +7,7 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const LowerNavigation = (props) => {
   return (
     <Row>
@@ -47,7 +48,13 @@ const LowerNavigation = (props) => {
                   <Col>出品サービスアカウント</Col>
                 </Row>
                 <Row>
-                  <Col>出品用アカウントにログイン</Col>
+                  <Col>
+                    {" "}
+                    <Link to={`/seller/auth/login`}>
+                      {" "}
+                      出品用アカウントにログイン
+                    </Link>
+                  </Col>
                 </Row>
                 <Row>
                   <Col>Amazonログインの設定</Col>
