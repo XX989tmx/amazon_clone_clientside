@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,22 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import HomeElectronicsAndCameraCategoryItems from "./HomeElectronicsAndCameraCategoryItems";
+
 const HomeElectronicsAndCamera = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
   return (
     <Row>
       <Col>
         <Row>
-          <Col>家電、カメラ、AV機器 click</Col>
+          <Col onClick={categoryCardOpener}>
+            家電、カメラ、AV機器 {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <HomeElectronicsAndCameraCategoryItems />
+        {isCategoryCardOpen && <HomeElectronicsAndCameraCategoryItems />}
       </Col>
     </Row>
   );
