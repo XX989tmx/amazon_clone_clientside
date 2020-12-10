@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,23 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 import ClothShoesBagCategoryItems from "./ClothShoesBagCategoryItems";
+
 const ClothShoesBag = (props) => {
+  const [isCategoryCardOpen, setIsCategoryCardOpen] = useState(false);
+
+  const categoryCardOpener = () => {
+    setIsCategoryCardOpen((prev) => !prev);
+  };
+
   return (
     <Row>
       <Col>
         <Row>
-          <Col>服、シューズ、バッグ、腕時計 click</Col>
+          <Col onClick={categoryCardOpener}>
+            服、シューズ、バッグ、腕時計 {isCategoryCardOpen ? "close" : "open"}
+          </Col>
         </Row>
-        <ClothShoesBagCategoryItems />
+        {isCategoryCardOpen && <ClothShoesBagCategoryItems />}
       </Col>
     </Row>
   );
