@@ -13,7 +13,11 @@ const ProductInformationInputSection = (props) => {
   return (
     <Row>
       <Col>
-        <TextInputSection />
+        <TextInputSection
+          nameChangeHandler={props.nameChangeHandler}
+          priceChangeHandler={props.priceChangeHandler}
+          deliveryDateChangeHandler={props.deliveryDateChangeHandler}
+        />
         <ImageInputSection />
       </Col>
     </Row>

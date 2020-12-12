@@ -157,14 +157,14 @@ const NewProduct = () => {
   };
 
   const nameChangeHandler = (event) => {
-    setName(event.target.value);
+    setName(event);
   };
   const priceChangeHandler = (event) => {
-    setPrice(event.target.value);
+    setPrice(event);
   };
 
   const deliveryDateChangeHandler = (event) => {
-    setDeliveryDate(event.target.value);
+    setDeliveryDate(event);
   };
   const brandChangeHandler = (event) => {
     setBrand(event.target.value);
@@ -360,7 +360,11 @@ const NewProduct = () => {
               <ExplanationSection />
               <form action="">
                 {" "}
-                <ProductInformationInputSection />
+                <ProductInformationInputSection
+                  nameChangeHandler={nameChangeHandler}
+                  priceChangeHandler={priceChangeHandler}
+                  deliveryDateChangeHandler={deliveryDateChangeHandler}
+                />
                 <SubmitButton />
               </form>
               <AdditionalInformation />
@@ -371,13 +375,6 @@ const NewProduct = () => {
       <h1>NewProduct</h1>
       {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={productDataSubmitHandler}>
-        <input type="text" value={Name} onChange={nameChangeHandler} />
-        <input type="number" value={Price} onChange={priceChangeHandler} />
-        <input
-          type="date"
-          value={DeliveryDate}
-          onChange={deliveryDateChangeHandler}
-        />
         <input type="text" value={Brand} onChange={brandChangeHandler} />
         <input
           type="number"

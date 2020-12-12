@@ -24,9 +24,11 @@ const TextInputSection = (props) => {
     <Row>
       <Col>
         text
-        <NameInput />
-        <PriceInput />
-        <DeliveryDateInput />
+        <NameInput nameChangeHandler={props.nameChangeHandler} />
+        <PriceInput priceChangeHandler={props.priceChangeHandler} />
+        <DeliveryDateInput
+          deliveryDateChangeHandler={props.deliveryDateChangeHandler}
+        />
         <BrandInput />
         <StockQuantityInput />
         <IsStockInput />
