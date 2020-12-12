@@ -11,6 +11,12 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+import MessageSection from "../components/MessageSection";
+import HeadingSectionOfNewProduct from "../components/HeadingSectionOfNewProduct";
+import ExplanationSection from "../components/ExplanationSection";
+import ProductInformationInputSection from "../components/ProductInformationInputSection";
+import SubmitButton from "../components/SubmitButton";
+import AdditionalInformation from "../components/AdditionalInformation";
 const NewProduct = () => {
   const auth = useContext(AuthContext);
   const [Name, setName] = useState();
@@ -349,245 +355,15 @@ const NewProduct = () => {
         <Col>
           <Row>
             <Col>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>message</Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>商品情報を入力</Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>explanation</Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>
-                      text
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>label</Col>
-                          </Row>
-                          <Row>
-                            <Col>input</Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <Row>
-                        <Col>
-                          <Row>
-                            <Col>title</Col>
-                          </Row>
-                          <Row>
-                            <Col>image</Col>
-                          </Row>
-                          <Row>
-                            <Col>action</Col>
-                          </Row>
-                        </Col>
-                        <Col><Row>
-                            <Col>title</Col>
-                          </Row>
-                          <Row>
-                            <Col>image</Col>
-                          </Row>
-                          <Row>
-                            <Col>action</Col>
-                          </Row></Col>
-                        <Col><Row>
-                            <Col>title</Col>
-                          </Row>
-                          <Row>
-                            <Col>image</Col>
-                          </Row>
-                          <Row>
-                            <Col>action</Col>
-                          </Row></Col>
-                        <Col><Row>
-                            <Col>title</Col>
-                          </Row>
-                          <Row>
-                            <Col>image</Col>
-                          </Row>
-                          <Row>
-                            <Col>action</Col>
-                          </Row></Col>
-                        <Col><Row>
-                            <Col>title</Col>
-                          </Row>
-                          <Row>
-                            <Col>image</Col>
-                          </Row>
-                          <Row>
-                            <Col>action</Col>
-                          </Row></Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>
-                      <Button>商品を出品する</Button>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Row>
-                    <Col>注意点</Col>
-                  </Row>
-                </Col>
-              </Row>
+              <MessageSection />
+              <HeadingSectionOfNewProduct />
+              <ExplanationSection />
+              <form action="">
+                {" "}
+                <ProductInformationInputSection />
+                <SubmitButton />
+              </form>
+              <AdditionalInformation />
             </Col>
           </Row>
         </Col>
