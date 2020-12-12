@@ -44,6 +44,9 @@ const Login = () => {
         isError: false,
         variant: "success",
       });
+      setTimeout(() => {
+        history.goBack();
+      }, 2000);
     } catch (error) {
       console.log(error);
       setMessage({
