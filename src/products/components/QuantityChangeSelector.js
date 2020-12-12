@@ -9,6 +9,7 @@ const QuantityChangeSelector = (props) => {
   const [Quantity, setQuantity] = useState(props.quantity);
   const [StockQuantityOptions, setStockQuantityOptions] = useState();
   const [changedQuantity, setChangedQuantity] = useState(0);
+  const [isSelected, setIsSelected] = useState(false);
   const auth = useContext(AuthContext);
 
   useEffect(() => {
@@ -21,35 +22,43 @@ const QuantityChangeSelector = (props) => {
     iffy();
   }, []);
 
-  const updateQuantitySubmitHandler = async (event) => {
-    setQuantity(event.target.value);
+  useEffect(() => {
+    const updateQuantitySubmitHandler = async (event) => {
+      const updatedQuantity = +Quantity;
 
-    const updatedQuantity = +event.target.value;
+      let response;
+      let body = {
+        changedQuantity: updatedQuantity,
+      };
 
-    let response;
-    let body = {
-      changedQuantity: updatedQuantity,
+      try {
+        response = await Axios.patch(
+          process.env.REACT_APP_BACKEND_URL +
+            `/users/changeQuantityOfItemInCart/${auth.userId}/${props.cartItemId}?token=${auth.token}`,
+          body
+        );
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+      if (response) {
+        props.changeCartHandler();
+        if (isSelected) {
+          props.updateCartItemMessageHandler();
+        }
+      }
     };
+    updateQuantitySubmitHandler();
+  }, [Quantity]);
 
-    try {
-      response = await Axios.patch(
-        process.env.REACT_APP_BACKEND_URL +
-          `/users/changeQuantityOfItemInCart/${auth.userId}/${props.cartItemId}?token=${auth.token}`,
-        body
-      );
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-    if (response) {
-      props.changeCartHandler();
-      props.updateCartItemMessageHandler();
-    }
+  const changeHandler = (event) => {
+    setQuantity(event.target.value);
+    setIsSelected(true);
   };
 
   return (
     <Col md={12} lg={6}>
-      <select value={Quantity} onChange={updateQuantitySubmitHandler}>
+      <select value={Quantity} onChange={changeHandler}>
         {StockQuantityOptions}
       </select>
     </Col>
