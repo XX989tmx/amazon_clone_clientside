@@ -315,13 +315,13 @@ const NewProduct = () => {
   };
 
   const chosenChildCategoryOptionsChangeHandler = (event) => {
-    const selectedChosenChildCategoryOption = event.target.value;
+    const selectedChosenChildCategoryOption = event;
     console.log(selectedChosenChildCategoryOption);
     setSelectedChosenChildCategoryOption(selectedChosenChildCategoryOption);
   };
 
   const chosenGrandChildCategoryOptionsChangeHandler = (event) => {
-    const selectedChosenGrandChildCategoryOption = event.target.value;
+    const selectedChosenGrandChildCategoryOption = event;
     console.log(selectedChosenGrandChildCategoryOption);
     setSelectedChosenGrandChildCategoryOption(
       selectedChosenGrandChildCategoryOption
@@ -329,7 +329,7 @@ const NewProduct = () => {
   };
 
   const chosenGrandGrandChildCategoryOptionsChangeHandler = (event) => {
-    const selectedChosenGrandGrandChildCategoryOption = event.target.value;
+    const selectedChosenGrandGrandChildCategoryOption = event;
     console.log(selectedChosenGrandGrandChildCategoryOption);
     setSelectedChosenGrandGrandChildCategoryOption(
       selectedChosenGrandGrandChildCategoryOption
@@ -381,6 +381,10 @@ const NewProduct = () => {
                     chosenParentCategoryOptionsChangeHandler
                   }
                   ChosenParentCategoryOptions={ChosenParentCategoryOptions}
+                  ChosenChildCategoryOptions={ChosenChildCategoryOptions}
+                  chosenChildCategoryOptionsChangeHandler={
+                    chosenChildCategoryOptionsChangeHandler
+                  }
                 />
                 <SubmitButton />
               </form>
@@ -399,15 +403,6 @@ const NewProduct = () => {
         {IsGrandParentCategoriesSelected && (
           <div>
             {" "}
-            {/* child category */}
-            <select
-              name=""
-              id=""
-              onChange={chosenChildCategoryOptionsChangeHandler}
-            >
-              <option value="">child category</option>
-              {ChosenChildCategoryOptions}
-            </select>
             {/* grand child category */}
             <select
               name=""

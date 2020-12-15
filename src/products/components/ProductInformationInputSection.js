@@ -34,6 +34,10 @@ const ProductInformationInputSection = (props) => {
             props.chosenParentCategoryOptionsChangeHandler
           }
           ChosenParentCategoryOptions={props.ChosenParentCategoryOptions}
+          ChosenChildCategoryOptions={props.ChosenChildCategoryOptions}
+          chosenChildCategoryOptionsChangeHandler={
+            props.chosenChildCategoryOptionsChangeHandler
+          }
         />
         <ImageInputSection />
       </Col>
