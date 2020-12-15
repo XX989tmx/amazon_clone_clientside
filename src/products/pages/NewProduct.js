@@ -358,7 +358,7 @@ const NewProduct = () => {
               <MessageSection />
               <HeadingSectionOfNewProduct />
               <ExplanationSection />
-              <form action="">
+              <form action="" onSubmit={productDataSubmitHandler}>
                 {" "}
                 <ProductInformationInputSection
                   nameChangeHandler={nameChangeHandler}
@@ -403,7 +403,7 @@ const NewProduct = () => {
       </Row>
       <h1>NewProduct</h1>
       {Message && <h3>{Message}</h3>}
-      <form action="" onSubmit={productDataSubmitHandler}>
+      <form action="">
         <button onClick={resetCategorySelector}>
           カテゴリーをリセットする
         </button>
