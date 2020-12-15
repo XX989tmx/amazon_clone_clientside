@@ -394,7 +394,14 @@ const NewProduct = () => {
                   }
                   ChosenGrandGrandChildOptions={ChosenGrandGrandChildOptions}
                   previewUrl1={previewUrl1}
-                  image1ChangeHandler={image1ChangeHandler} PreviewUrl2={PreviewUrl2} image2ChangeHandler={image2ChangeHandler}
+                  image1ChangeHandler={image1ChangeHandler}
+                  PreviewUrl2={PreviewUrl2}
+                  image2ChangeHandler={image2ChangeHandler}
+                  PreviewUrl3={PreviewUrl3}
+                  image3ChangeHandler={image3ChangeHandler}
+                  PreviewUrl4={PreviewUrl4}
+                  image4ChangeHandler={image4ChangeHandler}
+                  PreviewUrl5={PreviewUrl5} image5ChangeHandler={image5ChangeHandler}
                 />
                 <SubmitButton />
               </form>
@@ -432,50 +439,11 @@ const NewProduct = () => {
         {/* 最も末端のgrand grand childカテゴリー */}
         {/* <input type="text" value={Category} onChange={categoryChangeHandler} /> */}
         <div></div>
-        <div>
-          
-          
-        </div>
-        <div>
-          <img
-            src={PreviewUrl3}
-            alt=""
-            style={{ width: "150px", height: "150px" }}
-          />
-          <input
-            type="file"
-            accept=".jpg, .jpeg,.png"
-            id="image3"
-            onChange={image3ChangeHandler}
-          />
-        </div>
+        <div></div>
+        <div></div>
 
-        <div>
-          <img
-            src={PreviewUrl4}
-            alt=""
-            style={{ width: "150px", height: "150px" }}
-          />
-          <input
-            type="file"
-            accept=".jpg, .jpeg,.png"
-            id="image4"
-            onChange={image4ChangeHandler}
-          />
-        </div>
-        <div>
-          <img
-            src={PreviewUrl5}
-            alt=""
-            style={{ width: "150px", height: "150px" }}
-          />{" "}
-          <input
-            type="file"
-            accept=".jpg, .jpeg,.png"
-            id="image5"
-            onChange={image5ChangeHandler}
-          />
-        </div>
+        <div></div>
+        <div> </div>
 
         <button type="submit">add product</button>
       </form>

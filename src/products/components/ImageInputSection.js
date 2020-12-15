@@ -62,35 +62,75 @@ const ImageInputSection = (props) => {
           </Col>
           <Col>
             <Row>
-              <Col>title</Col>
+              <Col>商品画像3</Col>
             </Row>
             <Row>
-              <Col>image</Col>
+              <Col>
+                {" "}
+                <img
+                  src={props.PreviewUrl3}
+                  alt=""
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </Col>
             </Row>
             <Row>
-              <Col>action</Col>
+              <Col>
+                <input
+                  type="file"
+                  accept=".jpg, .jpeg,.png"
+                  id="image3"
+                  onChange={props.image3ChangeHandler}
+                />
+              </Col>
             </Row>
           </Col>
           <Col>
             <Row>
-              <Col>title</Col>
+              <Col>商品画像4</Col>
             </Row>
             <Row>
-              <Col>image</Col>
+              <Col>
+                <img
+                  src={props.PreviewUrl4}
+                  alt=""
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </Col>
             </Row>
             <Row>
-              <Col>action</Col>
+              <Col>
+                <input
+                  type="file"
+                  accept=".jpg, .jpeg,.png"
+                  id="image4"
+                  onChange={props.image4ChangeHandler}
+                />
+              </Col>
             </Row>
           </Col>
           <Col>
             <Row>
-              <Col>title</Col>
+              <Col>商品画像5</Col>
             </Row>
             <Row>
-              <Col>image</Col>
+              <Col>
+                <img
+                  src={props.PreviewUrl5}
+                  alt=""
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </Col>
             </Row>
             <Row>
-              <Col>action</Col>
+              <Col>
+                <input
+                  type="file"
+                  accept=".jpg, .jpeg,.png"
+                  id="image5"
+                  onChange={props.image5ChangeHandler}
+                />
+              </Col>
             </Row>
           </Col>
         </Row>

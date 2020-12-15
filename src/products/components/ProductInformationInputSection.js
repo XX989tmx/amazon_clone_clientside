@@ -52,6 +52,12 @@ const ProductInformationInputSection = (props) => {
           image1ChangeHandler={props.image1ChangeHandler}
           PreviewUrl2={props.PreviewUrl2}
           image2ChangeHandler={props.image2ChangeHandler}
+          PreviewUrl3={props.PreviewUrl3}
+          image3ChangeHandler={props.image3ChangeHandler}
+          PreviewUrl4={props.PreviewUrl4}
+          image4ChangeHandler={props.image4ChangeHandler}
+          PreviewUrl5={props.PreviewUrl5}
+          image5ChangeHandler={props.image5ChangeHandler}
         />
       </Col>
     </Row>
