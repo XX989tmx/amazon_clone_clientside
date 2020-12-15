@@ -14,24 +14,50 @@ const ImageInputSection = (props) => {
         <Row>
           <Col>
             <Row>
-              <Col>title</Col>
+              <Col>商品画像1</Col>
             </Row>
             <Row>
-              <Col>image</Col>
+              <Col>
+                <img
+                  src={props.previewUrl1}
+                  alt=""
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </Col>
             </Row>
             <Row>
-              <Col>action</Col>
+              <Col>
+                <input
+                  type="file"
+                  id="image1"
+                  accept=".jpg, .jpeg,.png"
+                  onChange={props.image1ChangeHandler}
+                />
+              </Col>
             </Row>
           </Col>
           <Col>
             <Row>
-              <Col>title</Col>
+              <Col>商品画像2</Col>
             </Row>
             <Row>
-              <Col>image</Col>
+              <Col>
+                <img
+                  src={props.PreviewUrl2}
+                  alt=""
+                  style={{ width: "150px", height: "150px" }}
+                />
+              </Col>
             </Row>
             <Row>
-              <Col>action</Col>
+              <Col>
+                <input
+                  type="file"
+                  id="image2"
+                  accept=".jpg, .jpeg,.png"
+                  onChange={props.image2ChangeHandler}
+                />
+              </Col>
             </Row>
           </Col>
           <Col>

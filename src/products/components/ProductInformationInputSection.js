@@ -47,7 +47,12 @@ const ProductInformationInputSection = (props) => {
           }
           ChosenGrandGrandChildOptions={props.ChosenGrandGrandChildOptions}
         />
-        <ImageInputSection />
+        <ImageInputSection
+          previewUrl1={props.previewUrl1}
+          image1ChangeHandler={props.image1ChangeHandler}
+          PreviewUrl2={props.PreviewUrl2}
+          image2ChangeHandler={props.image2ChangeHandler}
+        />
       </Col>
     </Row>
   );

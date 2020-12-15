@@ -393,6 +393,8 @@ const NewProduct = () => {
                     chosenGrandGrandChildCategoryOptionsChangeHandler
                   }
                   ChosenGrandGrandChildOptions={ChosenGrandGrandChildOptions}
+                  previewUrl1={previewUrl1}
+                  image1ChangeHandler={image1ChangeHandler} PreviewUrl2={PreviewUrl2} image2ChangeHandler={image2ChangeHandler}
                 />
                 <SubmitButton />
               </form>
@@ -429,31 +431,10 @@ const NewProduct = () => {
         {/* 後でコンポーネント化 */}
         {/* 最も末端のgrand grand childカテゴリー */}
         {/* <input type="text" value={Category} onChange={categoryChangeHandler} /> */}
+        <div></div>
         <div>
-          <img
-            src={previewUrl1}
-            alt=""
-            style={{ width: "150px", height: "150px" }}
-          />
-          <input
-            type="file"
-            id="image1"
-            accept=".jpg, .jpeg,.png"
-            onChange={image1ChangeHandler}
-          />
-        </div>
-        <div>
-          <img
-            src={PreviewUrl2}
-            alt=""
-            style={{ width: "150px", height: "150px" }}
-          />
-          <input
-            type="file"
-            id="image2"
-            accept=".jpg, .jpeg,.png"
-            onChange={image2ChangeHandler}
-          />
+          
+          
         </div>
         <div>
           <img
