@@ -20,6 +20,10 @@ const ProductInformationInputSection = (props) => {
           brandChangeHandler={props.brandChangeHandler}
           stockQuantityChangeHandler={props.stockQuantityChangeHandler}
           isStockChangeHandler={props.isStockChangeHandler}
+          grandParentCategoryInitializerChangeHandler={
+            props.grandParentCategoryInitializerChangeHandler
+          }
+          GrandParentCategories={props.GrandParentCategories}
         />
         <ImageInputSection />
       </Col>

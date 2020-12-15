@@ -234,8 +234,8 @@ const NewProduct = () => {
   };
 
   const grandParentCategoryInitializerChangeHandler = (event) => {
-    setCategoryQuery(event.target.value);
-    const categoryQuery = event.target.value;
+    setCategoryQuery(event);
+    const categoryQuery = event;
     const targetIndex = categoryData.findIndex(
       (v) => v.grandParentCategory === categoryQuery
     );
@@ -367,6 +367,10 @@ const NewProduct = () => {
                   brandChangeHandler={brandChangeHandler}
                   stockQuantityChangeHandler={stockQuantityChangeHandler}
                   isStockChangeHandler={isStockChangeHandler}
+                  grandParentCategoryInitializerChangeHandler={
+                    grandParentCategoryInitializerChangeHandler
+                  }
+                  GrandParentCategories={GrandParentCategories}
                 />
                 <SubmitButton />
               </form>
@@ -381,14 +385,7 @@ const NewProduct = () => {
         <button onClick={resetCategorySelector}>
           カテゴリーをリセットする
         </button>
-        <select
-          name=""
-          id=""
-          onChange={grandParentCategoryInitializerChangeHandler}
-        >
-          <option value="">カテゴリーを選択してください</option>
-          {GrandParentCategories}
-        </select>
+
         {IsGrandParentCategoriesSelected && (
           <div>
             {" "}

@@ -17,7 +17,9 @@ const IsStockInput = (props) => {
     <Row>
       <Col>
         <Row>
-          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>在庫状況</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            在庫状況
+          </Col>
         </Row>
         <Row>
           <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>

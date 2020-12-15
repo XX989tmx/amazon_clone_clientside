@@ -34,7 +34,12 @@ const TextInputSection = (props) => {
           stockQuantityChangeHandler={props.stockQuantityChangeHandler}
         />
         <IsStockInput isStockChangeHandler={props.isStockChangeHandler} />
-        <GrandParentCategoryInitializerInput />
+        <GrandParentCategoryInitializerInput
+          grandParentCategoryInitializerChangeHandler={
+            props.grandParentCategoryInitializerChangeHandler
+          }
+          GrandParentCategories={props.GrandParentCategories}
+        />
         <GrandParentCategoryInput />
         <ParentCategoryInput />
         <ChildCategoryInput />
