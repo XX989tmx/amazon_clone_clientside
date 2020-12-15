@@ -42,6 +42,10 @@ const ProductInformationInputSection = (props) => {
             props.chosenGrandChildCategoryOptionsChangeHandler
           }
           ChosenGrandChildOptions={props.ChosenGrandChildOptions}
+          chosenGrandGrandChildCategoryOptionsChangeHandler={
+            props.chosenGrandGrandChildCategoryOptionsChangeHandler
+          }
+          ChosenGrandGrandChildOptions={props.ChosenGrandGrandChildOptions}
         />
         <ImageInputSection />
       </Col>

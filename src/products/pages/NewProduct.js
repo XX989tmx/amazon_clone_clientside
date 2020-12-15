@@ -389,6 +389,10 @@ const NewProduct = () => {
                     chosenGrandChildCategoryOptionsChangeHandler
                   }
                   ChosenGrandChildOptions={ChosenGrandChildOptions}
+                  chosenGrandGrandChildCategoryOptionsChangeHandler={
+                    chosenGrandGrandChildCategoryOptionsChangeHandler
+                  }
+                  ChosenGrandGrandChildOptions={ChosenGrandGrandChildOptions}
                 />
                 <SubmitButton />
               </form>
@@ -404,20 +408,7 @@ const NewProduct = () => {
           カテゴリーをリセットする
         </button>
 
-        {IsGrandParentCategoriesSelected && (
-          <div>
-            {" "}
-            {/* grand grand child category */}
-            <select
-              name=""
-              id=""
-              onChange={chosenGrandGrandChildCategoryOptionsChangeHandler}
-            >
-              <option value="">grand grand child category</option>
-              {ChosenGrandGrandChildOptions}
-            </select>
-          </div>
-        )}
+        {IsGrandParentCategoriesSelected && <div> </div>}
         {/* //大カテゴリー */}
         {/* 後でコンポーネント化 */}
         {/* grand child からgrand parent までの全カテゴリー */}
