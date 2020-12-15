@@ -48,7 +48,12 @@ const TextInputSection = (props) => {
             props.ChosenGrandParentCategoryOptions
           }
         />
-        <ParentCategoryInput />
+        <ParentCategoryInput
+          chosenParentCategoryOptionsChangeHandler={
+            props.chosenParentCategoryOptionsChangeHandler
+          }
+          ChosenParentCategoryOptions={props.ChosenParentCategoryOptions}
+        />
         <ChildCategoryInput />
         <GrandChildCategoryInput />
         <GrandGrandChildCategoryInput />
