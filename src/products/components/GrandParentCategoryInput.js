@@ -8,14 +8,25 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 const GrandParentCategoryInput = (props) => {
+  const inputChangeHandler = (event) => {
+    props.chosenGrandParentCategoryOptionsChangeHandler(event.target.value);
+  };
   return (
     <Row>
       <Col>
         <Row>
-          <Col>label</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            grand parent category
+          </Col>
         </Row>
         <Row>
-          <Col>input</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            {/* grand parent category */}
+            <select name="" id="" onChange={inputChangeHandler}>
+              <option value="">grand parent category</option>
+              {props.ChosenGrandParentCategoryOptions}
+            </select>
+          </Col>
         </Row>
       </Col>
     </Row>

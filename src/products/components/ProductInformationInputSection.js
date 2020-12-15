@@ -24,6 +24,12 @@ const ProductInformationInputSection = (props) => {
             props.grandParentCategoryInitializerChangeHandler
           }
           GrandParentCategories={props.GrandParentCategories}
+          chosenGrandParentCategoryOptionsChangeHandler={
+            props.chosenGrandParentCategoryOptionsChangeHandler
+          }
+          ChosenGrandParentCategoryOptions={
+            props.ChosenGrandParentCategoryOptions
+          }
         />
         <ImageInputSection />
       </Col>

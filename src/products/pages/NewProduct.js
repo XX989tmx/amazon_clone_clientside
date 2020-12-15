@@ -301,7 +301,7 @@ const NewProduct = () => {
   };
 
   const chosenGrandParentCategoryOptionsChangeHandler = (event) => {
-    const selectedChosenGrandParentCategoryOption = event.target.value;
+    const selectedChosenGrandParentCategoryOption = event;
     console.log(selectedChosenGrandParentCategoryOption);
     setSelectedChosenGrandParentCategoryOption(
       selectedChosenGrandParentCategoryOption
@@ -371,6 +371,12 @@ const NewProduct = () => {
                     grandParentCategoryInitializerChangeHandler
                   }
                   GrandParentCategories={GrandParentCategories}
+                  chosenGrandParentCategoryOptionsChangeHandler={
+                    chosenGrandParentCategoryOptionsChangeHandler
+                  }
+                  ChosenGrandParentCategoryOptions={
+                    ChosenGrandParentCategoryOptions
+                  }
                 />
                 <SubmitButton />
               </form>
@@ -389,15 +395,6 @@ const NewProduct = () => {
         {IsGrandParentCategoriesSelected && (
           <div>
             {" "}
-            {/* grand parent category */}
-            <select
-              name=""
-              id=""
-              onChange={chosenGrandParentCategoryOptionsChangeHandler}
-            >
-              <option value="">grand parent category</option>
-              {ChosenGrandParentCategoryOptions}
-            </select>
             {/* parent category */}
             <select
               name=""
