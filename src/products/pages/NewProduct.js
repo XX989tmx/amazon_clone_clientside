@@ -385,6 +385,10 @@ const NewProduct = () => {
                   chosenChildCategoryOptionsChangeHandler={
                     chosenChildCategoryOptionsChangeHandler
                   }
+                  chosenGrandChildCategoryOptionsChangeHandler={
+                    chosenGrandChildCategoryOptionsChangeHandler
+                  }
+                  ChosenGrandChildOptions={ChosenGrandChildOptions}
                 />
                 <SubmitButton />
               </form>
@@ -403,15 +407,6 @@ const NewProduct = () => {
         {IsGrandParentCategoriesSelected && (
           <div>
             {" "}
-            {/* grand child category */}
-            <select
-              name=""
-              id=""
-              onChange={chosenGrandChildCategoryOptionsChangeHandler}
-            >
-              <option value=""></option>
-              {ChosenGrandChildOptions}
-            </select>
             {/* grand grand child category */}
             <select
               name=""

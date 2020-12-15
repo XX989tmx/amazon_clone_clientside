@@ -60,7 +60,12 @@ const TextInputSection = (props) => {
             props.chosenChildCategoryOptionsChangeHandler
           }
         />
-        <GrandChildCategoryInput />
+        <GrandChildCategoryInput
+          chosenGrandChildCategoryOptionsChangeHandler={
+            props.chosenGrandChildCategoryOptionsChangeHandler
+          }
+          ChosenGrandChildOptions={props.ChosenGrandChildOptions}
+        />
         <GrandGrandChildCategoryInput />
         <Row>
           <Col>
