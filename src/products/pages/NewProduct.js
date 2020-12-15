@@ -273,28 +273,37 @@ const NewProduct = () => {
     ));
     setChosenChildCategoryOptions(chosenChildCategoryOptions);
     //grandChildCategory string
-    const chosenGrandChildCategory =
-      chosenCategoryTree.grandChildCategory[0].grandChildCategory;
+    const chosenGrandChildCategory = chosenCategoryTree.grandChildCategory;
     console.log(chosenGrandChildCategory);
     // create options
-    const chosenGrandChildCategoryOption = (
-      <option value={chosenGrandChildCategory}>
-        {chosenGrandChildCategory}
-      </option>
-    );
-    setChosenGrandChildOptions(chosenGrandChildCategoryOption);
-    //grandGrandChildCategory :array
-    const chosenGrandGrandChildCategory =
-      chosenCategoryTree.grandChildCategory[0].grandGrandChildCategory;
-    console.log(chosenGrandGrandChildCategory);
-    // create options
-    const chosenGrandGrandChildCategoryOptions = chosenGrandGrandChildCategory.map(
+    const chosenGrandChildCategoryOption = chosenGrandChildCategory.map(
       (v, i) => (
-        <option key={i} value={v}>
-          {v}
+        <option key={i} value={v.grandChildCategory}>
+          {v.grandChildCategory}
         </option>
       )
     );
+    setChosenGrandChildOptions(chosenGrandChildCategoryOption);
+    //grandGrandChildCategory :array
+    const chosenGrandGrandChildCategory = chosenCategoryTree.grandChildCategory;
+    console.log(chosenGrandGrandChildCategory);
+    const chosenGrandGrandChildCategory2 = chosenGrandGrandChildCategory.map(
+      (v, i) => v.grandGrandChildCategory
+    );
+    let flattened = [];
+    for (let i = 0; i < chosenGrandGrandChildCategory2.length; i++) {
+      for (let j = 0; j < chosenGrandGrandChildCategory2[i].length; j++) {
+        const categoryString = chosenGrandGrandChildCategory2[i][j];
+        flattened.push(categoryString);
+      }
+    }
+
+    // create options
+    const chosenGrandGrandChildCategoryOptions = flattened.map((v, i) => (
+      <option key={i} value={v}>
+        {v}
+      </option>
+    ));
     setChosenGrandGrandChildOptions(chosenGrandGrandChildCategoryOptions);
 
     setIsGrandParentCategoriesSelected(true);
@@ -401,7 +410,8 @@ const NewProduct = () => {
                   image3ChangeHandler={image3ChangeHandler}
                   PreviewUrl4={PreviewUrl4}
                   image4ChangeHandler={image4ChangeHandler}
-                  PreviewUrl5={PreviewUrl5} image5ChangeHandler={image5ChangeHandler}
+                  PreviewUrl5={PreviewUrl5}
+                  image5ChangeHandler={image5ChangeHandler}
                 />
                 <SubmitButton />
               </form>
