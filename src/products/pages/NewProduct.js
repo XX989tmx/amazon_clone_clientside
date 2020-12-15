@@ -167,22 +167,22 @@ const NewProduct = () => {
     setDeliveryDate(event);
   };
   const brandChangeHandler = (event) => {
-    setBrand(event.target.value);
+    setBrand(event);
   };
   const stockQuantityChangeHandler = (event) => {
-    setStockQuantity(event.target.value);
+    setStockQuantity(event);
   };
   const isStockChangeHandler = (event) => {
-    setIsStock(event.target.value);
+    setIsStock(event);
   };
   const parentCategoryChangeHandler = (event) => {
-    setParentCategory(event.target.value);
+    setParentCategory(event);
   };
   const categoryChangeHandler = (event) => {
-    setCategory(event.target.value);
+    setCategory(event);
   };
   const ancestorCategoryChangeHandler = (event) => {
-    setAncestorCategory(event.target.value);
+    setAncestorCategory(event);
   };
 
   const image1ChangeHandler = (event) => {
@@ -364,6 +364,9 @@ const NewProduct = () => {
                   nameChangeHandler={nameChangeHandler}
                   priceChangeHandler={priceChangeHandler}
                   deliveryDateChangeHandler={deliveryDateChangeHandler}
+                  brandChangeHandler={brandChangeHandler}
+                  stockQuantityChangeHandler={stockQuantityChangeHandler}
+                  isStockChangeHandler={isStockChangeHandler}
                 />
                 <SubmitButton />
               </form>
@@ -375,17 +378,6 @@ const NewProduct = () => {
       <h1>NewProduct</h1>
       {Message && <h3>{Message}</h3>}
       <form action="" onSubmit={productDataSubmitHandler}>
-        <input type="text" value={Brand} onChange={brandChangeHandler} />
-        <input
-          type="number"
-          value={StockQuantity}
-          onChange={stockQuantityChangeHandler}
-        />
-        <select name="" id="isStock" onChange={isStockChangeHandler}>
-          <option value="">在庫の有無</option>
-          <option value="true">あり</option>
-          <option value="false">なし</option>
-        </select>
         <button onClick={resetCategorySelector}>
           カテゴリーをリセットする
         </button>

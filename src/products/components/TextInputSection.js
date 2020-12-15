@@ -29,9 +29,11 @@ const TextInputSection = (props) => {
         <DeliveryDateInput
           deliveryDateChangeHandler={props.deliveryDateChangeHandler}
         />
-        <BrandInput />
-        <StockQuantityInput />
-        <IsStockInput />
+        <BrandInput brandChangeHandler={props.brandChangeHandler} />
+        <StockQuantityInput
+          stockQuantityChangeHandler={props.stockQuantityChangeHandler}
+        />
+        <IsStockInput isStockChangeHandler={props.isStockChangeHandler} />
         <GrandParentCategoryInitializerInput />
         <GrandParentCategoryInput />
         <ParentCategoryInput />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -8,14 +8,28 @@ import reactBootstrap, {
   Col,
 } from "react-bootstrap";
 const StockQuantityInput = (props) => {
+  const [ProductStockQuantity, setProductStockQuantity] = useState();
+  const inputChangeHandler = (event) => {
+    setProductStockQuantity(event.target.value);
+    props.stockQuantityChangeHandler(ProductStockQuantity);
+  };
   return (
     <Row>
       <Col>
         <Row>
-          <Col>label</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            在庫数
+          </Col>
         </Row>
         <Row>
-          <Col>input</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            <input
+              type="number"
+              value={ProductStockQuantity}
+              onChange={inputChangeHandler}
+              placeholder="1"
+            />
+          </Col>
         </Row>
       </Col>
     </Row>

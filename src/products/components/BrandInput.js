@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import reactBootstrap, {
   Container,
   Alert,
@@ -7,15 +7,31 @@ import reactBootstrap, {
   Row,
   Col,
 } from "react-bootstrap";
+
 const BrandInput = (props) => {
+  const [ProductBrand, setProductBrand] = useState();
+
+  const inputChangeHandler = (event) => {
+    setProductBrand(event.target.value);
+    props.brandChangeHandler(ProductBrand);
+  };
   return (
     <Row>
       <Col>
         <Row>
-          <Col>label</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            ブランド
+          </Col>
         </Row>
         <Row>
-          <Col>input</Col>
+          <Col xs={{ offset: 1, span: 10 }} lg={{ offset: 2, span: 8 }}>
+            <input
+              type="text"
+              value={ProductBrand}
+              onChange={inputChangeHandler}
+              placeholder="ブランド名"
+            /> 
+          </Col>
         </Row>
       </Col>
     </Row>

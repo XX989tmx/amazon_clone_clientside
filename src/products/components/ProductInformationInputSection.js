@@ -17,6 +17,9 @@ const ProductInformationInputSection = (props) => {
           nameChangeHandler={props.nameChangeHandler}
           priceChangeHandler={props.priceChangeHandler}
           deliveryDateChangeHandler={props.deliveryDateChangeHandler}
+          brandChangeHandler={props.brandChangeHandler}
+          stockQuantityChangeHandler={props.stockQuantityChangeHandler}
+          isStockChangeHandler={props.isStockChangeHandler}
         />
         <ImageInputSection />
       </Col>
